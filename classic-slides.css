@@ -147,6 +147,21 @@ q {
 .font-normalsize {
     font-size: 100%;
 }
+.font-smaller1 {
+    font-size: 90%;
+}
+.font-smaller2 {
+    font-size: 80%;
+}
+.font-smaller3 {
+    font-size: 70%;
+}
+.font-smaller4 {
+    font-size: 60%;
+}
+.font-smaller5 {
+    font-size: 50%;
+}
 .font-larger1 {
     font-size: 110%;
 }
@@ -156,7 +171,7 @@ q {
 .font-larger3 {
     font-size: 130%;
 }
-.font-larger5 {
+.font-larger4 {
     font-size: 150%;
 }
 .font-larger5 {
