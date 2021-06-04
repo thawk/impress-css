@@ -241,10 +241,6 @@ a:focus {
     text-shadow: -2px 2px 3px rgba(100,100,100,0.5);
 }
 
-td {
-    padding: 0.2em;
-}
-
 /*
     Now let's style the presentation steps.
 */
@@ -511,6 +507,11 @@ td {
 
 #overview {
     pointer-events: none
+}
+
+/* tachyons.css will set box-sizing of table to border-box, overwrite that */
+.impress-enabled #impress-help {
+    box-sizing: content-box;
 }
 
 /* We need substeps to go away so they don't show up on the adjacent slide */
