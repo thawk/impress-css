@@ -36,55 +36,36 @@ git submodule add https://github.com/thawk/impress-css.git css
 * 主要的样式定义
 * 针对 impress.js<sup>*</sup> 定义了很多CSS类
 
-  | 类名              | 作用                             |
-  |-------------------|----------------------------------|
-  | .slide            | 有确定的宽度和高度，缺省没有边框 |
-  | .box              | 加边框                           |
-  | .title            | 标题页                           |
-  | .subslide         | 仅在当前步骤可见，如堆叠的页面   |
-  | .only-present     | 只在当前step可见                 |
-  | .fly-in           | 从上方飞入的效果                 |
-  | .fly-out          | 从下方飞出的效果                 |
-  | .fade-in          | 渐显                             |
-  | .fade-out         | 渐隐                             |
-  | .zoom-in          | 缩小                             |
-  | .zoom-out         | 放大                             |
-  | .table-borderless | 没有表格边框                     |
-  | .table-striped    | 奇偶行底色不同                   |
-  | .table-hover      | 鼠标放上去变化背景色             |
-  | .font-normalsize  | font-size: 100%                  |
-  | .font-larger1     | font-size: 110%                  |
-  | .font-larger2     | font-size: 120%                  |
-  | .font-larger3     | font-size: 130%                  |
-  | .font-larger4     | font-size: 150%                  |
-  | .font-larger5     | font-size: 200%                  |
-  | .font-smaller1    | font-size: 90%                   |
-  | .font-smaller2    | font-size: 80%                   |
-  | .font-smaller3    | font-size: 70%                   |
-  | .font-smaller4    | font-size: 60%                   |
-  | .font-smaller5    | font-size: 50%                   |
-  | .accent           | 重点颜色                         |
-  | .accent1          | 同.accent                        |
-  | .accent2          | 重点颜色2                        |
-  | .accent3          | 重点颜色3                        |
-  | .accent4          | 重点颜色4                        |
-  | .primary          | 主要颜色                         |
-  | .success          | 成功颜色                         |
-  | .warning          | 告警颜色                         |
-  | .error            | 错误颜色                         |
-  | .dark             | 深灰                             |
-  | .light            | 浅灰                             |
-  | .navy             | 深灰色                           |
-  | .green            | 绿色                             |
-  | .teal             | 青色                             |
-  | .blue             | 蓝色                             |
-  | .purple           | 紫色                             |
-  | .pink             | 粉色                             |
-  | .red              | 红色                             |
-  | .orange           | 橙色                             |
-  | .yellow           | 黄色                             |
-  | .grey             | 浅灰色                           |
+  | 类名               | 作用                             | 类名     | 作用      |
+  |--------------------|----------------------------------|----------|-----------|
+  | .slide             | 有确定的宽度和高度，缺省没有边框 | .accent  | 重点颜色  |
+  | .box               | 加边框                           | .accent1 | 同.accent |
+  | .title             | 标题页                           | .accent2 | 重点颜色2 |
+  | .subslide          | 仅在当前步骤可见，如堆叠的页面   | .accent3 | 重点颜色3 |
+  | .is-present        | 只在当前step可见                 | .accent4 | 重点颜色4 |
+  | .is-substep-active | 仅在当前substep激活时可见        | .primary | 主要颜色  |
+  | .fly-in            | 从上方飞入的效果                 | .success | 成功颜色  |
+  | .fly-out           | 从下方飞出的效果                 | .warning | 告警颜色  |
+  | .fade-in           | 渐显                             | .error   | 错误颜色  |
+  | .fade-out          | 渐隐                             | .dark    | 深灰      |
+  | .zoom-in           | 缩小                             | .light   | 浅灰      |
+  | .zoom-out          | 放大                             | .navy    | 深灰色    |
+  | .table-borderless  | 没有表格边框                     | .green   | 绿色      |
+  | .table-striped     | 奇偶行底色不同                   | .teal    | 青色      |
+  | .table-hover       | 鼠标放上去变化背景色             | .blue    | 蓝色      |
+  | .font-normalsize   | font-size: 100%                  | .purple  | 紫色      |
+  | .font-larger1      | font-size: 110%                  | .pink    | 粉色      |
+  | .font-larger2      | font-size: 120%                  | .red     | 红色      |
+  | .font-larger3      | font-size: 130%                  | .orange  | 橙色      |
+  | .font-larger4      | font-size: 150%                  | .yellow  | 黄色      |
+  | .font-larger5      | font-size: 200%                  | .grey    | 浅灰色    |
+  | .font-smaller1     | font-size: 90%                   |          |           |
+  | .font-smaller2     | font-size: 80%                   |          |           |
+  | .font-smaller3     | font-size: 70%                   |          |           |
+  | .font-smaller4     | font-size: 60%                   |          |           |
+  | .font-smaller5     | font-size: 50%                   |          |           |
 
+  
 ### normalize.css
 
 * https://github.com/necolas/normalize.css
@@ -96,16 +77,12 @@ git submodule add https://github.com/thawk/impress-css.git css
 * 基于 https://github.com/zenozeng/fonts.css 中选择的中文字体
 * 加入了对 impress.js<sup>*</sup> 部分元素的字体支持
 * 加入几个字体类
-  | 类名            | 作用     |
-  |-----------------|----------|
-  | .font-hei       | 黑体     |
-  | .font-kai       | 楷体     |
-  | .font-song      | 宋体     |
-  | .font-fang-song | 仿宋     |
-  | .font-body      | 正文字体 |
-  | .font-title     | 标题字体 |
-  | .font-quote     | 引用字体 |
-  | .font-code      | 代码字体 |
+  | 类名            | 作用     | 类名            | 作用     |
+  |-----------------|----------|-----------------|----------|
+  | .font-hei       | 黑体     | .font-body      | 正文字体 |
+  | .font-kai       | 楷体     | .font-title     | 标题字体 |
+  | .font-song      | 宋体     | .font-quote     | 引用字体 |
+  | .font-fang-song | 仿宋     | .font-code      | 代码字体 |
 
 ### typo.css
 
