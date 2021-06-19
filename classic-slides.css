@@ -40,7 +40,13 @@ blockquote {
 
 /*  */
 b, strong { font-weight: bold }
-h1, h2, h3, h4, h5, h6 { color: #000000 }
+h1, h2, h3, h4, h5, h6 { color: #000000; }
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
+{
+  color: #4e91e4;
+  /* font-weight: bolder; */
+}
 /* i, em { font-style: italic } */
 /*  */
 /* em { */
