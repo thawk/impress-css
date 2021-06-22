@@ -94,3 +94,15 @@ git submodule add https://github.com/thawk/impress-css.git css
 * http://tachyons.io
 * 功能更为完善的功能性样式表
 
+| 类名        | 作用                           |
+|-------------|--------------------------------|
+| .fl/.fr/.fn | float:left/right/none          |
+| .w-50       | width:50%                      |
+| .dn         | display:none                   |
+| .di         | display:inline                 |
+| .db         | display:block                  |
+| .dib        | display:inline-block           |
+| .dit        | display:inline-table           |
+| .dt         | display:table                  |
+| .pa0 ~ .pa7 | paddings(ph/pv/pl/pr/pt/pb...) |
+| .ma0 ~ .ma7 | margins                        |

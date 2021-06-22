@@ -220,12 +220,14 @@ q {
 .red {color: #ee675d;}
 .orange {color: #f78055;}
 .yellow {color: #fbc850;}
-.grey {color: #dde5ee;}
+.gray {color: #dde5ee;}
+.light-gray {color: #eeeeee;}
 
 
 /* Inline code, no Highlight.js */
 code {
     font-family: "Cutive mono","Courier New", monospace;
+    background: #eeeeee;
 }
 
 
@@ -413,15 +415,15 @@ a:focus {
 
 .title h1,
 .title h2,
-.title h3 {
-    position: absolute;
+.title h3,
+.title p {
     left: 90px; /* slide width is 1800px, so this is like a 5% margin on both sides */
     width: 90%;
     text-align: center;
 }
-.title h1 { top: 200px; }
-.title h2 { top: 400px; }
-.title h3 { top: 600px; }
+.title h1 { margin-top: 200px; }
+.title h2 { margin-top: 400px; }
+.title h3 { margin-top: 600px; }
 
 
 
