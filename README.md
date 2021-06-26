@@ -94,15 +94,18 @@ git submodule add https://github.com/thawk/impress-css.git css
 * http://tachyons.io
 * 功能更为完善的功能性样式表
 
-| 类名        | 作用                           |
-|-------------|--------------------------------|
-| .fl/.fr/.fn | float:left/right/none          |
-| .w-50       | width:50%                      |
-| .dn         | display:none                   |
-| .di         | display:inline                 |
-| .db         | display:block                  |
-| .dib        | display:inline-block           |
-| .dit        | display:inline-table           |
-| .dt         | display:table                  |
-| .pa0 ~ .pa7 | paddings(ph/pv/pl/pr/pt/pb...) |
-| .ma0 ~ .ma7 | margins                        |
+| 类名                                              | 作用                                   |
+|---------------------------------------------------|----------------------------------------|
+| .ba/.bt/.br/.bb/.bl/.bn                           | border: all/top/right/bottom/left/none |
+| .b--red/.b--blue ...                              | border-color                           |
+| .b--transparent/.b--inherit/.b--initial/.b--unset | border-color                           |
+| .fl/.fr/.fn                    | float: left/right/none                                     |
+| .tl/.tr/.tc/.tj                | text-align: left/right/center/justify                      |
+| .w1/.w2/.w3/.w4/.w5            | width: 1/2/4/8/16rem                                       |
+| .w-10,.w-20 ~ .w-100           | width: 10%/20%...100%                                      |
+| .w-25/.w-33/.w-34/.w-75        | width: 25%/33%/34%/75%                                     |
+| .w-third/.w-two-thirds/.w-auto | width: 33.33333%/66.66667%/auto                            |
+| .dn/.di/.db/.dt/.dib/.dit      | display: none/inline/block/table/inline-block/inline-table |
+| .pa0 ~ .pa7                    | paddings(ph/pv/pl/pr/pt/pb...)                             |
+| .ma0 ~ .ma7                    | margins                                                    |
+
