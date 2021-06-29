@@ -306,7 +306,7 @@ a:focus {
     text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 
     font-size: 3.75em;
-    letter-spacing: -2px;
+    /* letter-spacing: -2px; */
 
     /* background-image: url(../images/background.png); */
 }
@@ -527,3 +527,23 @@ a:focus {
 /*     transition: 2s; */
 /* } */
 
+#overview #signature {
+    font-size: 40%;
+    color: #546778;
+}
+#overview #signature a {
+    font-size: 120%;
+    text-decoration: none;
+    border: none;
+    background: none;
+    pointer-events: auto;
+}
+
+/* mermaid related */
+div.mermaid {
+    text-align: center;
+}
+svg[id^="mermaid"][width][height][viewBox] {
+    width: 80%;
+    height: auto;
+}
