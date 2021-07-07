@@ -153,37 +153,37 @@ q {
 /*     position: inline-block; */
 /* } */
 
-.font-normalsize {
+#impress .font-normalsize {
     font-size: 100%;
 }
-.font-smaller1 {
+#impress .font-smaller1 {
     font-size: 90%;
 }
-.font-smaller2 {
+#impress .font-smaller2 {
     font-size: 80%;
 }
-.font-smaller3 {
+#impress .font-smaller3 {
     font-size: 70%;
 }
-.font-smaller4 {
+#impress .font-smaller4 {
     font-size: 60%;
 }
-.font-smaller5 {
+#impress .font-smaller5 {
     font-size: 50%;
 }
-.font-larger1 {
+#impress .font-larger1 {
     font-size: 110%;
 }
-.font-larger2 {
+#impress .font-larger2 {
     font-size: 120%;
 }
-.font-larger3 {
+#impress .font-larger3 {
     font-size: 130%;
 }
-.font-larger4 {
+#impress .font-larger4 {
     font-size: 150%;
 }
-.font-larger5 {
+#impress .font-larger5 {
     font-size: 200%;
 }
 
@@ -560,7 +560,7 @@ a:focus {
     height: auto;
 }
 
-/* style for main classes in mermaid classDiagram */ 
+/* style for main classes in mermaid classDiagram */
 #impress .mermaid .main_class {
   fill: #ffdfdf;
 }
