@@ -199,6 +199,10 @@ q {
     transition: opacity 1s;
 }
 
+#overview .is-present {
+    opacity: 1;
+}
+
 .accent, .accent1 {color: #4e91e4;}
 .accent2 {color: #ee675d;}
 .accent3 {color: #ac94e8;}
@@ -448,44 +452,66 @@ a:focus {
     opacity: 0.0; /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
 }
 .present .fly-in {
-    transform:         translateY(0px);
+    transform: translateY(0px);
     opacity: 1.0;
-    transition:         2s;
+    transition: 2s;
 }
 .past .fly-out {
-    transform:         translateY(2100px);
+    transform: translateY(2100px);
     opacity: 0.0;
-    transition:         2s;
+    transition: 2s;
 }
 
 /*
    Fade-in/out is a straightforward fade. Give it enough seconds that all browsers render it clearly.
 */
+.future.fade-in,
 .future .fade-in {
     opacity: 0.0;
 }
+.present.fade-in,
 .present .fade-in {
     opacity: 1.0;
     transition: 7s;
 }
+.past.fade-out,
 .past .fade-out {
     opacity: 0.0;
     transition: 3s;
 }
+
+/*
+   Gray-in/out like fade, but it's not 100% transparent.
+*/
+.future.gray-in,
+.future .gray-in {
+    opacity: 0.3;
+}
+.present.gray-in,
+.present .gray-in {
+    opacity: 1.0;
+    transition: 7s;
+}
+.past.gray-out,
+.past .gray-out {
+    opacity: 0.3;
+    transition: 3s;
+}
+
 /*
     Zoom-in.
 */
 .future  .zoom-in {
-    transform:        scale(10);
+    transform: scale(10);
     opacity: 0.0;
 }
 .present .zoom-in {
-    transform:         scale(1);
+    transform: scale(1);
     opacity: 1.0;
     transition: 3s;
 }
 .past  .zoom-out {
-    transform:        scale(10);
+    transform: scale(10);
     opacity: 0.0;
 }
 

@@ -105,7 +105,14 @@ git submodule add https://github.com/thawk/impress-css.git css
 | .w-10,.w-20 ~ .w-100                              | width: 10%/20%...100%                                      |
 | .w-25/.w-33/.w-34/.w-75                           | width: 25%/33%/34%/75%                                     |
 | .w-third/.w-two-thirds/.w-auto                    | width: 33.33333%/66.66667%/auto                            |
+| .h-auto/h-inherit                                 | height: auto/inherit                                       |
+| .h1/.h2/.h3/.h4/.h5                               | height: 1/2/4/8/16rem                                      |
+| .h-25/.h-50/.h-75/.h-100                          | height: 25%/50%/75%/100%                                   |
+| .vh-25/.vh-50/.vh-75/.vh-100                      | height: 25vh/50vh/75vh/100vh                               |
+| .min-h-100/min-vh-100                             | min-height: 100%/100vh                                     |
 | .dn/.di/.db/.dt/.dib/.dit                         | display: none/inline/block/table/inline-block/inline-table |
 | .pa0 ~ .pa7                                       | paddings(ph/pv/pl/pr/pt/pb...)                             |
 | .ma0 ~ .ma7                                       | margins                                                    |
+| .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                 |
+
 
