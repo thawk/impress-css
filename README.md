@@ -94,28 +94,30 @@ git submodule add https://github.com/thawk/impress-css.git css
 * http://tachyons.io
 * 功能更为完善的功能性样式表
 
-| 类名                                              | 作用                                                       |
-|---------------------------------------------------|------------------------------------------------------------|
-| .ba/.bt/.br/.bb/.bl/.bn                           | border: all/top/right/bottom/left/none                     |
-| .b--red/.b--blue ...                              | border-color                                               |
-| .b--transparent/.b--inherit/.b--initial/.b--unset | border-color                                               |
-| .fl/.fr/.fn                                       | float: left/right/none                                     |
-| .tl/.tr/.tc/.tj                                   | text-align: left/right/center/justify                      |
-| .w1/.w2/.w3/.w4/.w5                               | width: 1/2/4/8/16rem                                       |
-| .w-10,.w-20 ~ .w-100                              | width: 10%/20%...100%                                      |
-| .w-25/.w-33/.w-34/.w-75                           | width: 25%/33%/34%/75%                                     |
-| .w-third/.w-two-thirds/.w-auto                    | width: 33.33333%/66.66667%/auto                            |
-| .h-auto/h-inherit                                 | height: auto/inherit                                       |
-| .h1/.h2/.h3/.h4/.h5                               | height: 1/2/4/8/16rem                                      |
-| .h-25/.h-50/.h-75/.h-100                          | height: 25%/50%/75%/100%                                   |
-| .vh-25/.vh-50/.vh-75/.vh-100                      | height: 25vh/50vh/75vh/100vh                               |
-| .min-h-100/min-vh-100                             | min-height: 100%/100vh                                     |
-| .dn/.di/.db/.dt/.dib/.dit                         | display: none/inline/block/table/inline-block/inline-table |
-| .pa0 ~ .pa7                                       | paddings(ph/pv/pl/pr/pt/pb...)                             |
-| .ma0 ~ .ma7                                       | margins                                                    |
-| .center/.ml-auto/.mr-auto                         | margin-left: auto; margin-right: auto;                     |
-| .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                 |
-| .f-headline/.f-subheadline/.f1 ~ .f5 ~ .f7        | font-size: 6rem/5rem/3rem ~ 1rem ~ 0.75rem                 |
-| .i/.fs-normal                                     | font-style: italic/normal                                  |
-
+| 类名                                              | 作用                                                         |
+|---------------------------------------------------|--------------------------------------------------------------|
+| .ba/.bt/.br/.bb/.bl/.bn                           | border: all/top/right/bottom/left/none                       |
+| .b--red/.b--blue ...                              | border-color                                                 |
+| .b--transparent/.b--inherit/.b--initial/.b--unset | border-color                                                 |
+| .fl/.fr/.fn                                       | float: left/right/none                                       |
+| .tl/.tr/.tc/.tj                                   | text-align: left/right/center/justify                        |
+| .w1/.w2/.w3/.w4/.w5                               | width: 1/2/4/8/16rem                                         |
+| .w-10,.w-20 ~ .w-100                              | width: 10%/20%...100%                                        |
+| .w-25/.w-33/.w-34/.w-75                           | width: 25%/33%/34%/75%                                       |
+| .w-third/.w-two-thirds/.w-auto                    | width: 33.33333%/66.66667%/auto                              |
+| .h-auto/h-inherit                                 | height: auto/inherit                                         |
+| .h1/.h2/.h3/.h4/.h5                               | height: 1/2/4/8/16rem                                        |
+| .h-25/.h-50/.h-75/.h-100                          | height: 25%/50%/75%/100%                                     |
+| .vh-25/.vh-50/.vh-75/.vh-100                      | height: 25vh/50vh/75vh/100vh                                 |
+| .min-h-100/min-vh-100                             | min-height: 100%/100vh                                       |
+| .dn/.di/.db/.dt/.dib/.dit                         | display: none/inline/block/table/inline-block/inline-table   |
+| .pa0 ~ .pa7                                       | paddings(ph/pv/pl/pr/pt/pb...)                               |
+| .ma0 ~ .ma7                                       | margins                                                      |
+| .center/.ml-auto/.mr-auto                         | margin-left: auto; margin-right: auto;                       |
+| .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                   |
+| .f-headline/.f-subheadline/.f1 ~ .f5 ~ .f7        | font-size: 6rem/5rem/3rem ~ 1rem ~ 0.75rem                   |
+| .i/.fs-normal                                     | font-style: italic/normal                                    |
+| .measure/.measure-narrow/.measure-wide            | max-width: 30/34/20em。每行约 66/45/80 个字符                |
+| .indent/.small-caps/.truncate                     | 首行缩进/全大写/截断溢出文字                                 |
+| .lh-copy/.lh-title/.lh-solid                      | 行高，分别用于普通正文、标题行单行文本，提供1.5/1.25/1的行高 |
 
