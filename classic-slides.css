@@ -47,6 +47,11 @@ h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
   color: #4e91e4;
   /* font-weight: bolder; */
 }
+
+.markdown strong {
+  color: #ee675d;
+}
+
 /* i, em { font-style: italic } */
 /*  */
 /* em { */
