@@ -114,5 +114,7 @@ git submodule add https://github.com/thawk/impress-css.git css
 | .pa0 ~ .pa7                                       | paddings(ph/pv/pl/pr/pt/pb...)                             |
 | .ma0 ~ .ma7                                       | margins                                                    |
 | .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                 |
+| .f-headline/.f-subheadline/.f1 ~ .f5 ~ .f7        | font-size: 6rem/5rem/3rem ~ 1rem ~ 0.75rem                 |
+| .i/.fs-normal                                     | font-style: italic/normal                                  |
 
 
