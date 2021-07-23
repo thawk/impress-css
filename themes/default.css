@@ -1,0 +1,114 @@
+body {
+    background: rgb(215, 215, 215);
+    color: rgb(70, 70, 70);
+}
+
+blockquote {
+  color: #333;
+  border-left-color: #1abc9c;
+}
+
+h1, h2, h3, h4, h5, h6 { color: #000000; }
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
+{
+  color: #4e91e4;
+  /* font-weight: bolder; */
+}
+
+.markdown strong {
+  color: #ee675d;
+}
+
+#impress table {
+  border-color: #646464;
+}
+
+#impress th,
+#impress td {
+  border-top-color: #646464;
+}
+
+#impress thead th,
+#impress thead td {
+  border-bottom-color: #646464;
+}
+
+#impress table tbody + tbody {
+  border-top-color: #646464;
+}
+#impress table table {
+  background-color: #fff;
+}
+
+#impress .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#impress .table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+q {
+    text-shadow: 0 6px 6px rgba(0, 0, 0, .3);
+}
+
+.accent, .accent1 {color: #4e91e4;}
+.accent2 {color: #ee675d;}
+.accent3 {color: #ac94e8;}
+.accent4 {color: #60d2b6;}
+
+/* color codes from siimple css.
+ * https://docs.siimple.xyz/getting-started/theming.html
+ */
+.primary {color: #4e91e4;}
+.success {color: #4acf7f;}
+.warning {color: #fbc850;}
+.error {color: #ee675d;}
+.dark {color: #546778;}
+.light {color: #dde5ee;}
+
+a {
+    background: rgba(200,200,200,0.2);
+    text-shadow: -2px 2px 4px rgba(100,100,100,0.9);
+    border-bottom-color: rgba(100,100,100,0.2);
+    border-left-color:   rgba(100,100,100,0.2);
+
+    transition:         0.5s;
+}
+a:hover,
+a:focus {
+    background: rgba(200,200,200,1);
+    text-shadow: -2px 2px 3px rgba(100,100,100,0.5);
+}
+
+.box {
+    background-color: white;
+    border-color: rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+.slide {
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+}
+
+.slide.active,
+.slide.active * {
+    /*border: 3px solid red;*/
+}
+
+/* Highlight.js used for coloring pre > code blocks. */
+.slide pre > code {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+#overview #signature {
+    color: #546778;
+}
+
+/* style for main classes in mermaid classDiagram */
+#impress .mermaid .main_class {
+  fill: #ffdfdf;
+}
+

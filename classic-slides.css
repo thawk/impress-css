@@ -31,26 +31,14 @@ body {
 /* 块/段落引用 */
 blockquote {
   position: relative;
-  color: #333;
   font-weight: 400;
-  border-left: 1px solid #1abc9c;
+  border-left: 1px solid;
   padding-left: 1em;
   margin: 1em 3em 1em 2em;
 }
 
 /*  */
 b, strong { font-weight: bold }
-h1, h2, h3, h4, h5, h6 { color: #000000; }
-h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
-h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
-{
-  color: #4e91e4;
-  /* font-weight: bolder; */
-}
-
-.markdown strong {
-  color: #ee675d;
-}
 
 /* i, em { font-style: italic } */
 /*  */
@@ -74,7 +62,7 @@ h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
   background-color: transparent;
   /* border-spacing: 0; */
   /* color: #212529; */
-  border: 1px solid #646464;
+  border: 1px solid;
   margin-left: auto;
   margin-right: auto;
 }
@@ -88,11 +76,11 @@ h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
 #impress td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #646464;
+  border-top: 1px solid;
 }
 #impress thead th,
 #impress thead td {
-  border-bottom: 2px solid #646464;
+  border-bottom: 2px solid;
 }
 #impress thead th {
   vertical-align: bottom;
@@ -104,25 +92,13 @@ h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
   border: none;
 }
 #impress table tbody + tbody {
-  border-top: 2px solid #646464;
-}
-#impress table table {
-  background-color: #fff;
-}
-
-#impress .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-#impress .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  border-top: 2px solid;
 }
 
 q {
     /* font-family: 'PT Serif'; */
     font-style: italic;
     /* font-weight: 400;     */
-    text-shadow: 0 6px 6px rgba(0, 0, 0, .3);
 }
 
 .slide q {
@@ -208,21 +184,6 @@ q {
     opacity: 1;
 }
 
-.accent, .accent1 {color: #4e91e4;}
-.accent2 {color: #ee675d;}
-.accent3 {color: #ac94e8;}
-.accent4 {color: #60d2b6;}
-
-/* color codes from siimple css.
- * https://docs.siimple.xyz/getting-started/theming.html
- */
-.primary {color: #4e91e4;}
-.success {color: #4acf7f;}
-.warning {color: #fbc850;}
-.error {color: #ee675d;}
-.dark {color: #546778;}
-.light {color: #dde5ee;}
-
 .navy {color: #546778;}
 .green {color: #93d260;}
 .teal {color: #60d2b6;}
@@ -235,29 +196,23 @@ q {
 .gray {color: #dde5ee;}
 .light-gray {color: #eeeeee;}
 
-
 /* Inline code, no Highlight.js */
 code {
     font-family: "Cutive mono","Courier New", monospace;
 }
 
-
 a {
     color: inherit;
     text-decoration: none;
     padding: 0 0.1em;
-    background: rgba(200,200,200,0.2);
-    text-shadow: -2px 2px 4px rgba(100,100,100,0.9);
     border-radius: 0.2em;
-    border-bottom: 3px solid rgba(100,100,100,0.2);
-    border-left:   3px solid rgba(100,100,100,0.2);
+    border-bottom: 3px solid;
+    border-left:   3px solid;
 
     transition:         0.5s;
 }
 a:hover,
 a:focus {
-    background: rgba(200,200,200,1);
-    text-shadow: -2px 2px 3px rgba(100,100,100,0.5);
 }
 
 /*
@@ -307,10 +262,8 @@ a:focus {
 .impress-enabled .step.active { opacity: 1 }
 
 .box {
-    background-color: white;
-    border: 2px solid rgba(0, 0, 0, .3);
+    border: 2px solid;
     border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
 /*
@@ -324,17 +277,10 @@ a:focus {
     height: 1000px;
     padding: 2rem 3rem;
 
-    text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
-
     /* font-size: 3.75em; */
     /* letter-spacing: -2px; */
 
     /* background-image: url(../images/background.png); */
-}
-
-.slide.active,
-.slide.active * {
-    OFFborder: 3px solid red;
 }
 
 /* Fix for slides with data-z != 0 */
@@ -367,11 +313,6 @@ a:focus {
 .slide pre {
     font-size: 0.6em;
     line-height: 0.7em;
-}
-
-/* Highlight.js used for coloring pre > code blocks. */
-.slide pre > code {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .slide input {
@@ -572,8 +513,8 @@ a:focus {
 
 #overview #signature {
     font-size: 40%;
-    color: #546778;
 }
+
 #overview #signature a {
     font-size: 120%;
     text-decoration: none;
@@ -591,7 +532,3 @@ a:focus {
     height: auto;
 }
 
-/* style for main classes in mermaid classDiagram */
-#impress .mermaid .main_class {
-  fill: #ffdfdf;
-}
