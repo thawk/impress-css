@@ -1,16 +1,16 @@
 :root {
-    --bg_color: 215, 215, 215;
-    --text_color: 70, 70, 70;
-    --box_bg_color: 255, 255, 255, 1;
-    --table_bg_color: 255, 255, 255;
-    --title_color: 0, 0, 0; /* #000000 */
-    --highlight_color1: 78, 145, 228; /* #4e91e4 */
-    --highlight_color2: 238, 103, 93; /* #ee675d */
+    --bg_color: 70, 137, 102; /* #468966 */
+    --text_color: 255, 238, 137; /* #ffee89 */ 
+    --box_bg_color: 255, 255, 255, 0.1; /* #fff0a5 */
+    --table_bg_color: 255, 255, 255; /* #ffffff */
+    --title_color: 255, 176, 59; /* #ffb03b */
+    --highlight_color1: 142, 40, 0; /* #8e2800 */
+    --highlight_color2: 182, 73, 38; /* #b64926 */
     --blockquote_color: 51, 51, 51; /* #333333 */
-    --blockquote_border_color: 26, 188, 159; /* #1abc9c */
-    --border_color: 100, 100, 100;
-    --a_bg_color: 200, 200, 200;
-    --shadow_color: 0, 0, 0;
+    --blockquote_border_color: 255, 176, 59; /* #ffb03b */
+    --border_color: 100, 100, 100; /* #646464 */
+    --a_bg_color: 200, 200, 200; /* #c8c8c8 */
+    --shadow_color: 0, 0, 0; /* #000000 */
 }
 
 body {

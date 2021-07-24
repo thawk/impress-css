@@ -1,16 +1,22 @@
 :root {
-    --bg_color: 215, 215, 215;
-    --text_color: 70, 70, 70;
-    --box_bg_color: 255, 255, 255, 1;
-    --table_bg_color: 255, 255, 255;
-    --title_color: 0, 0, 0; /* #000000 */
-    --highlight_color1: 78, 145, 228; /* #4e91e4 */
-    --highlight_color2: 238, 103, 93; /* #ee675d */
-    --blockquote_color: 51, 51, 51; /* #333333 */
-    --blockquote_border_color: 26, 188, 159; /* #1abc9c */
-    --border_color: 100, 100, 100;
-    --a_bg_color: 200, 200, 200;
-    --shadow_color: 0, 0, 0;
+    --color-1: 28,  142, 242; /* #1D8FF2 */
+    --color-2: 17,  96,  165; /* #1261A6 */
+    --color-3: 61,  172, 242; /* #3DADF2 */
+    --color-4: 242, 242, 242; /* #F2F2F2 */ 
+    --color-5: 80,  195, 242; /* #50C4F2 */
+
+    --bg_color:                var(--color-4);
+    --text_color:              var(--color-1);
+    --box_bg_color:            0,   0,   0;
+    --table_bg_color:          255, 255, 255;
+    --title_color:             var(--color-3);
+    --highlight_color1:        78,  145, 228; /* #4e91e4 */
+    --highlight_color2:        238, 103, 93;  /* #ee675d */
+    --blockquote_color:        51,  51,  51;  /* #333333 */
+    --blockquote_border_color: 26,  188, 159; /* #1abc9c */
+    --border_color:            17,  96,  165; /* #1261A6 */
+    --a_bg_color:              200, 200, 200;
+    --shadow_color:            0,   0,   0;
 }
 
 body {
@@ -98,7 +104,7 @@ a:focus {
 }
 
 .box {
-    background-color: rgba(var(--box_bg_color));
+    background-color: rgba(var(--box_bg_color), 0.1);
     border-color: rgba(var(--shadow_color), .3);
     box-shadow: 0 4px 8px rgba(var(--shadow_color), .1);
 }
