@@ -489,13 +489,6 @@ a:focus {
     text-align: left;
 }
 
-#impress .substep.substep .is-substep-active {
-    opacity: 0;
-}
-#impress .substep.substep-active .is-substep-active {
-    opacity: 1;
-}
-
 #overview {
     pointer-events: none
 }

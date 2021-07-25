@@ -5,18 +5,33 @@
     --color-4: 242, 242, 242; /* #F2F2F2 */ 
     --color-5: 80,  195, 242; /* #50C4F2 */
 
-    --bg_color:                var(--color-4);
-    --text_color:              var(--color-1);
-    --box_bg_color:            0,   0,   0;
+    --bg_color:                var(--color-5);
+    --text_color:              black;/*var(--color-4);*/
+    --box_bg_color:            255, 255, 255;
     --table_bg_color:          255, 255, 255;
-    --title_color:             var(--color-3);
-    --highlight_color1:        78,  145, 228; /* #4e91e4 */
+    --title_color:             var(--color-4);
+    --highlight_color1:        var(--color-2);
     --highlight_color2:        238, 103, 93;  /* #ee675d */
     --blockquote_color:        51,  51,  51;  /* #333333 */
     --blockquote_border_color: 26,  188, 159; /* #1abc9c */
     --border_color:            17,  96,  165; /* #1261A6 */
-    --a_bg_color:              200, 200, 200;
-    --shadow_color:            0,   0,   0;
+    --a_bg_color:              200, 200, 20j;
+    --shadow_color:            var(--color-2);
+    --title_shadow_color:      var(--color-2);
+}
+
+li li {
+    list-style: none;
+    /* color: rgb(var(--highlight_color1)); */
+}
+
+li li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(var(--title_color)); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 body {
@@ -29,7 +44,10 @@ blockquote {
   border-left-color: var(--blockquote_border_color);
 }
 
-h1, h2, h3, h4, h5, h6 { color: rgb(var(--title_color)); }
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(var(--title_color));
+  text-shadow: -2px 2px 4px rgba(var(--title_shadow_color), 0.9);
+}
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
