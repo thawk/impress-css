@@ -498,6 +498,20 @@ a:focus {
     box-sizing: content-box;
 }
 
+/* reset all substep at overview */
+.impress-on-overview #impress .step .substep {
+  opacity: 0;
+}
+
+#impress .step .substep.substep-visible .strike-on-substep,
+#impress .step .substep.substep-visible.strike-on-substep {
+  text-decoration: line-through;
+}
+
+#impress .step .substep.strike-on-substep {
+  opacity: 1;
+}
+
 /* We need substeps to go away so they don't show up on the adjacent slide */
 /* #impress .step.past .substep.substep-visible { */
 /*     opacity: 0; */

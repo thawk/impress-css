@@ -6,12 +6,13 @@
     --color-5: 80,  195, 242; /* #50C4F2 */
 
     --bg_color:                var(--color-5);
-    --text_color:              black;/*var(--color-4);*/
+    --text_color:              var(--color-2);
     --box_bg_color:            255, 255, 255;
     --table_bg_color:          255, 255, 255;
     --title_color:             var(--color-4);
     --highlight_color1:        var(--color-2);
-    --highlight_color2:        238, 103, 93;  /* #ee675d */
+    --highlight_color2:        var(--color-4);
+    --highlight_color3:        238, 103, 93;  /* #ee675d */
     --blockquote_color:        51,  51,  51;  /* #333333 */
     --blockquote_border_color: 26,  188, 159; /* #1abc9c */
     --border_color:            17,  96,  165; /* #1261A6 */
@@ -20,9 +21,24 @@
     --title_shadow_color:      var(--color-2);
 }
 
+li {
+    list-style: none;
+    color: rgb(var(--title_color));
+}
+
+li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(var(--text_color)); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
 li li {
     list-style: none;
-    /* color: rgb(var(--highlight_color1)); */
+    color: rgb(var(--text_color));
+    margin-left: 0.5em;
 }
 
 li li::before {
@@ -32,6 +48,11 @@ li li::before {
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#impress .step .substep.substep-visible .strike-on-substep,
+#impress .step .substep.substep-visible.strike-on-substep {
+    text-decoration-color: rgb(var(--highlight_color1));
 }
 
 body {
@@ -94,6 +115,7 @@ q {
     text-shadow: 0 6px 6px rgba(var(--shadow_color), .3);
 }
 
+.noaccent {color: rgb(var(--text_color));}
 .accent, .accent1 {color: rgb(var(--highlight_color1));}
 .accent2 {color: rgb(var(--highlight_color2));}
 .accent3 {color: #ac94e8;}

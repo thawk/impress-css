@@ -23,10 +23,11 @@ git submodule add https://github.com/thawk/impress-css.git css
 我通常使用以下样式表组合：
 
 ```html
-<link href="css/basscss.min.css" rel="stylesheet" />
+<link href="css/tachyons.min.css" rel="stylesheet" />
+<link href="impress.js/css/impress-common.css" rel="stylesheet" />
 <link href="css/fonts.css" rel="stylesheet" />
 <link href="css/classic-slides.css" rel="stylesheet" />
-<link href="impress.js/css/impress-common.css" rel="stylesheet" />
+<link href="css/themes/default" rel="stylesheet" />
 ```
 
 ## 主要样式表文件
