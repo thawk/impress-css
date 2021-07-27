@@ -1,12 +1,12 @@
 @charset "UTF-8";
 li {
   list-style: none;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 li::before {
   content: "•";
-  color: #1261A6;
+  color: #1261a6;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -15,40 +15,40 @@ li::before {
 
 li li::before {
   content: "•";
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 li li {
   list-style: none;
-  color: #1261A6;
+  color: #1261a6;
   margin-left: 0.5em;
 }
 
 .step li strong,
 .step li .accent {
-  color: #ee675d;
+  color: #003EA8;
 }
 
 .step li li strong,
 .step li li .accent {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 #impress .step .substep.substep-visible .strike-on-substep,
 #impress .step .substep.substep-visible.strike-on-substep,
 #impress .step li li.substep.substep-visible .strike-on-substep,
 #impress .step li li.substep.substep-visible.strike-on-substep {
-  text-decoration-color: #F2F2F2;
+  text-decoration-color: #f2f2f2;
 }
 
 #impress .step li.substep.substep-visible .strike-on-substep,
 #impress .step li.substep.substep-visible.strike-on-substep {
-  text-decoration-color: #ee675d;
+  text-decoration-color: #003EA8;
 }
 
 body {
-  background: #50C4F2;
-  color: #1261A6;
+  background: #50c4f2;
+  color: #1261a6;
 }
 
 blockquote {
@@ -57,36 +57,36 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #F2F2F2;
+  color: #f2f2f2;
   text-shadow: -2px 2px 4px rgba(15, 151, 205, 0.9);
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
-  color: #ee675d;
+  color: #003EA8;
   /* font-weight: bolder; */
 }
 
 .markdown strong {
-  color: #ee675d;
+  color: #003EA8;
 }
 
 #impress table {
-  border-color: #F2F2F2;
+  border-color: #f2f2f2;
 }
 
 #impress th,
 #impress td {
-  border-top-color: #F2F2F2;
+  border-top-color: #f2f2f2;
 }
 
 #impress thead th,
 #impress thead td {
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #f2f2f2;
 }
 
 #impress table tbody + tbody {
-  border-top-color: #F2F2F2;
+  border-top-color: #f2f2f2;
 }
 
 #impress table table {
@@ -106,15 +106,15 @@ q {
 }
 
 .noaccent {
-  color: #1261A6;
+  color: #1261a6;
 }
 
 .accent, .accent1 {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .accent2 {
-  color: #ee675d;
+  color: #003EA8;
 }
 
 .accent3 {
