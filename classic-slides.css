@@ -518,6 +518,14 @@ a:focus {
 /*     transition: 2s; */
 /* } */
 
+.impress-on-overview #overview #signature {
+  opacity: 1;
+}
+
+#overview #signature {
+  opacity: 0;
+}
+
 #overview #signature {
     font-size: 40%;
 }
