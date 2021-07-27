@@ -498,11 +498,6 @@ a:focus {
     box-sizing: content-box;
 }
 
-/* reset all substep at overview */
-.impress-on-overview #impress .step .substep {
-  opacity: 0;
-}
-
 #impress .step .substep.substep-visible .strike-on-substep,
 #impress .step .substep.substep-visible.strike-on-substep {
   text-decoration: line-through;

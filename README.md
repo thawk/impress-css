@@ -97,28 +97,34 @@ git submodule add https://github.com/thawk/impress-css.git css
 
 | 类名                                              | 作用                                                         |
 |---------------------------------------------------|--------------------------------------------------------------|
-| .ba/.bt/.br/.bb/.bl/.bn                           | border: all/top/right/bottom/left/none                       |
-| .b--red/.b--blue ...                              | border-color                                                 |
-| .b--transparent/.b--inherit/.b--initial/.b--unset | border-color                                                 |
-| .fl/.fr/.fn                                       | float: left/right/none                                       |
-| .tl/.tr/.tc/.tj                                   | text-align: left/right/center/justify                        |
+| .ba/.bt/.br/.bb/.bl/.bn                           | 指定方向设置边框，border: all/top/right/bottom/left/none     |
+| .b--red/.b--blue ...                              | 边框颜色，.b--white和.b--black后面可以-90~-10/05/025/0.125   |
+| .b--transparent/.b--inherit/.b--initial/.b--unset | 特殊边框颜色                                                 |
+| .b--dotted/.b--dashed/.b--solid/.b--none          | 边框样式，border-style: dotted/dashed/solid/none             |
+| .bw0/.bw1 ~ .bw5                                  | 边框宽度，border-width: 0/.125/.25/.5/1/2 rem                |
+| .bt-0/.br-0/.bb-0/.bl-0                           | 上/右/下/左方边框宽度为0                                     |
 | .w1/.w2/.w3/.w4/.w5                               | width: 1/2/4/8/16rem                                         |
 | .w-10,.w-20 ~ .w-100                              | width: 10%/20%...100%                                        |
 | .w-25/.w-33/.w-34/.w-75                           | width: 25%/33%/34%/75%                                       |
 | .w-third/.w-two-thirds/.w-auto                    | width: 33.33333%/66.66667%/auto                              |
+| .mw-100/.mw1 ~ .mw9/.mw-none                      | 最大宽度，max-width: 100%/1rem/2rem/4rem...96rem/none        |
+| .measure/.measure-narrow/.measure-wide            | max-width: 30/34/20em。每行约 66/45/80 个字符                |
 | .h-auto/h-inherit                                 | height: auto/inherit                                         |
 | .h1/.h2/.h3/.h4/.h5                               | height: 1/2/4/8/16rem                                        |
 | .h-25/.h-50/.h-75/.h-100                          | height: 25%/50%/75%/100%                                     |
 | .vh-25/.vh-50/.vh-75/.vh-100                      | height: 25vh/50vh/75vh/100vh                                 |
 | .min-h-100/min-vh-100                             | min-height: 100%/100vh                                       |
 | .dn/.di/.db/.dt/.dib/.dit                         | display: none/inline/block/table/inline-block/inline-table   |
-| .pa0 ~ .pa7                                       | paddings(ph/pv/pl/pr/pt/pb...)                               |
-| .ma0 ~ .ma7                                       | margins                                                      |
+| .pa0 ~ .pa7                                       | paddings，0/.25/.5/1/2/4/8/16rem。ph/pv/pl/pr/pt/pb指定方向  |
+| .ma0 ~ .ma7                                       | margins，0/.25/.5/1/2/4/8/16rem。mh/mv/ml/mr/mt/mb指定方向   |
 | .center/.ml-auto/.mr-auto                         | margin-left: auto; margin-right: auto;                       |
-| .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                   |
 | .f-headline/.f-subheadline/.f1 ~ .f5 ~ .f7        | font-size: 6rem/5rem/3rem ~ 1rem ~ 0.75rem                   |
 | .i/.fs-normal                                     | font-style: italic/normal                                    |
-| .measure/.measure-narrow/.measure-wide            | max-width: 30/34/20em。每行约 66/45/80 个字符                |
 | .indent/.small-caps/.truncate                     | 首行缩进/全大写/截断溢出文字                                 |
+| .tl/.tr/.tc/.tj                                   | 水平对齐，text-align: left/right/center/justify              |
+| .v-base/.v-top/.v-mid/.v-btm                      | vertical-align: baseline/top/middle/bottom                   |
 | .lh-copy/.lh-title/.lh-solid                      | 行高，分别用于普通正文、标题行单行文本，提供1.5/1.25/1的行高 |
+| .o-0/.o-025/.o-05/.o-10/.o-20 ~ /.o-100           | 不透光率，opacity: 0/.025/.05/.1/.2 ~ 1                      |
+| .cf/.cl/.cr/.cb/.cn                               | clear，clearfix/clear: left/right/both/none                  |
+| .fl/.fr/.fn                                       | 浮动，float: left/right/none，父节点应设置.cf                |
 
