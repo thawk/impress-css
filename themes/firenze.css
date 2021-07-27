@@ -1,124 +1,192 @@
-:root {
-    --bg_color: 70, 137, 102; /* #468966 */
-    --text_color: 255, 238, 137; /* #ffee89 */ 
-    --box_bg_color: 255, 255, 255, 0.1; /* #fff0a5 */
-    --table_bg_color: 255, 255, 255; /* #ffffff */
-    --title_color: 255, 176, 59; /* #ffb03b */
-    --highlight_color1: 142, 40, 0; /* #8e2800 */
-    --highlight_color2: 182, 73, 38; /* #b64926 */
-    --blockquote_color: 51, 51, 51; /* #333333 */
-    --blockquote_border_color: 255, 176, 59; /* #ffb03b */
-    --border_color: 100, 100, 100; /* #646464 */
-    --a_bg_color: 200, 200, 200; /* #c8c8c8 */
-    --shadow_color: 0, 0, 0; /* #000000 */
+@charset "UTF-8";
+li {
+  list-style: none;
+  color: #b64926;
+}
+
+li::before {
+  content: "•";
+  color: #468966;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li li::before {
+  content: "•";
+  color: #b64926;
+}
+
+li li {
+  list-style: none;
+  color: #468966;
+  margin-left: 0.5em;
+}
+
+.step li strong,
+.step li .accent {
+  color: #8e2800;
+}
+
+.step li li strong,
+.step li li .accent {
+  color: #b64926;
+}
+
+#impress .step .substep.substep-visible .strike-on-substep,
+#impress .step .substep.substep-visible.strike-on-substep,
+#impress .step li li.substep.substep-visible .strike-on-substep,
+#impress .step li li.substep.substep-visible.strike-on-substep {
+  text-decoration-color: #b64926;
+}
+
+#impress .step li.substep.substep-visible .strike-on-substep,
+#impress .step li.substep.substep-visible.strike-on-substep {
+  text-decoration-color: #8e2800;
 }
 
 body {
-    background: rgb(var(--bg_color));
-    color: rgb(var(--text_color));
+  background: #ffee89;
+  color: #468966;
 }
 
 blockquote {
-  color: rgb(var(--blockquote_color));
-  border-left-color: var(--blockquote_border_color);
+  color: rgba(70, 137, 102, 0.7);
+  border-left-color: #1abc9c;
 }
 
-h1, h2, h3, h4, h5, h6 { color: rgb(var(--title_color)); }
+h1, h2, h3, h4, h5, h6 {
+  color: #b64926;
+  text-shadow: -2px 2px 4px rgba(255, 223, 35, 0.9);
+}
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
-h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
-{
-  color: rgb(var(--highlight_color1));
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
+  color: #8e2800;
   /* font-weight: bolder; */
 }
 
 .markdown strong {
-  color: rgv(var(--highlight_color2));
+  color: #8e2800;
 }
 
 #impress table {
-  border-color: rgb(var(--border_color));
+  border-color: #b64926;
 }
 
 #impress th,
 #impress td {
-  border-top-color: rgb(var(--border_color));
+  border-top-color: #b64926;
 }
 
 #impress thead th,
 #impress thead td {
-  border-bottom-color: rgb(var(--border_color));
+  border-bottom-color: #b64926;
 }
 
 #impress table tbody + tbody {
-  border-top-color: rgb(var(--border_color));
+  border-top-color: #b64926;
 }
 
 #impress table table {
-  background-color: rgb(var(--table_bg_color));
+  background-color: #fffdef;
 }
 
 #impress .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(var(--shadow_color), 0.05);
+  background-color: rgba(182, 73, 38, 0.05);
 }
 
 #impress .table-hover tbody tr:hover {
-  background-color: rgba(var(--shadow_color), 0.075);
+  background-color: rgba(182, 73, 38, 0.075);
 }
 
 q {
-    text-shadow: 0 6px 6px rgba(var(--shadow_color), .3);
+  text-shadow: 0 6px 6px rgba(182, 73, 38, 0.3);
 }
 
-.accent, .accent1 {color: rgb(var(--highlight_color1));}
-.accent2 {color: rgb(var(--highlight_color2));}
-.accent3 {color: #ac94e8;}
-.accent4 {color: #60d2b6;}
+.noaccent {
+  color: #468966;
+}
+
+.accent, .accent1 {
+  color: #b64926;
+}
+
+.accent2 {
+  color: #8e2800;
+}
+
+.accent3 {
+  color: #ac94e8;
+}
+
+.accent4 {
+  color: #60d2b6;
+}
 
 /* color codes from siimple css.
  * https://docs.siimple.xyz/getting-started/theming.html
  */
-.primary {color: #4e91e4;}
-.success {color: #4acf7f;}
-.warning {color: #fbc850;}
-.error {color: #ee675d;}
-.dark {color: #546778;}
-.light {color: #dde5ee;}
+.primary {
+  color: #4e91e4;
+}
+
+.success {
+  color: #4acf7f;
+}
+
+.warning {
+  color: #fbc850;
+}
+
+.error {
+  color: #ee675d;
+}
+
+.dark {
+  color: #546778;
+}
+
+.light {
+  color: #dde5ee;
+}
 
 a {
-    background: rgba(var(--a_bg_color),0.2);
-    text-shadow: -2px 2px 4px rgba(var(--border_color),0.9);
-    border-bottom-color: rgba(var(--border_color),0.2);
-    border-left-color:   rgba(var(--border_color),0.2);
+  background: rgba(255, 237, 137, 0.2);
+  text-shadow: -2px 2px 4px rgba(255, 223, 35, 0.9);
+  border-bottom-color: rgba(182, 73, 38, 0.2);
+  border-left-color: rgba(182, 73, 38, 0.2);
 }
+
 a:hover,
 a:focus {
-    background: rgba(var(--a_bg_color),1);
-    text-shadow: -2px 2px 3px rgba(var(--border_color),0.5);
+  background: #ffed89;
+  text-shadow: -2px 2px 3px rgba(255, 223, 35, 0.5);
 }
 
 .box {
-    background-color: rgba(var(--box_bg_color));
-    border-color: rgba(var(--shadow_color), .3);
-    box-shadow: 0 4px 8px rgba(var(--shadow_color), .1);
+  background-color: #fff5bc;
+  border-color: rgba(182, 73, 38, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 223, 35, 0.1);
 }
 
 .slide {
-    text-shadow: 0 3px 3px rgba(var(--shadow_color), .2);
+  text-shadow: 0 3px 3px rgba(255, 223, 35, 0.2);
 }
 
 .slide.active,
 .slide.active * {
-    /*border: 3px solid red;*/
+  /*border: 3px solid red;*/
 }
 
 /* Highlight.js used for coloring pre > code blocks. */
 .slide pre > code {
-    text-shadow: 0 0 0 rgba(var(--shadow_color), 0);
+  text-shadow: 0 0 0 rgba(255, 223, 35, 0);
 }
 
 #overview #signature {
-    color: #546778;
+  color: #546778;
 }
 
 /* style for main classes in mermaid classDiagram */
@@ -126,3 +194,4 @@ a:focus {
   fill: #ffdfdf;
 }
 
+/*# sourceMappingURL=firenze.css.map */

@@ -1,0 +1,8 @@
+@use 'common' with (
+    $dark-theme: false,
+    $bg-color: #cccccc,
+    $text-color: #464646,
+    $primary-color: #4e91e4, 
+    $accent-color: #ee675d, 
+);
+

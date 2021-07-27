@@ -1,0 +1,187 @@
+@use "sass:color";
+
+$dark-theme: false !default;
+$bg-color: #cccccc !default;
+$text-color: #464646 !default;
+$primary-color: #4e91e4 !default;
+$accent-color : #ee675d !default;
+$title-color: $primary-color !default;
+$blockquote-color: rgba($text-color, 0.7) !default;
+$blockquote-border-color: #1abc9c !default;
+
+$box-bg-color: color.adjust($bg-color, $lightness: 10%);
+$table-bg-color: color.adjust($bg-color, $lightness: 20%);
+$shadow-color: color.adjust($bg-color, $lightness: -20%);
+@if $dark-theme {
+    $box-bg-color: color.adjust($bg-color, $lightness: -10%);
+    $table-bg-color: color.adjust($bg-color, $lightness: -20%);
+    $shadow-color: color.adjust($bg-color, $lightness: 20%);
+}
+
+$border-color: $primary-color;
+$a-bg-color: color.mix($primary-color, $bg-color, 0.5);
+
+li {
+    list-style: none;
+    color: $title-color;
+}
+
+li::before {
+  content: "\2022";
+  color: $text-color;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li li::before {
+  content: "\2022";
+  color: $title-color;
+}
+
+li li {
+    list-style: none;
+    color: $text-color;
+    margin-left: 0.5em;
+}
+
+.step li strong,
+.step li .accent {
+    color: $accent-color;
+}
+
+.step li li strong,
+.step li li .accent {
+    color: $title-color;
+}
+
+#impress .step .substep.substep-visible .strike-on-substep,
+#impress .step .substep.substep-visible.strike-on-substep,
+#impress .step li li.substep.substep-visible .strike-on-substep,
+#impress .step li li.substep.substep-visible.strike-on-substep {
+    text-decoration-color: $title-color;
+}
+
+#impress .step li.substep.substep-visible .strike-on-substep,
+#impress .step li.substep.substep-visible.strike-on-substep {
+    text-decoration-color: $accent-color;
+}
+
+body {
+    background: $bg-color;
+    color: $text-color;
+}
+
+blockquote {
+  color: $blockquote-color;
+  border-left-color: $blockquote-border-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $title-color;
+  text-shadow: -2px 2px 4px rgba($shadow-color, 0.9);
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b
+{
+  color: $accent-color;
+  /* font-weight: bolder; */
+}
+
+.markdown strong {
+  color: $accent-color;
+}
+
+#impress table {
+  border-color: $border-color;
+}
+
+#impress th,
+#impress td {
+  border-top-color: $border-color;
+}
+
+#impress thead th,
+#impress thead td {
+  border-bottom-color: $border-color;
+}
+
+#impress table tbody + tbody {
+  border-top-color: $border-color;
+}
+
+#impress table table {
+  background-color: $table-bg-color;
+}
+
+#impress .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba($border-color, 0.05);
+}
+
+#impress .table-hover tbody tr:hover {
+  background-color: rgba($border-color, 0.075);
+}
+
+q {
+    text-shadow: 0 6px 6px rgba($border-color, .3);
+}
+
+.noaccent {color: $text-color;}
+.accent, .accent1 {color: $title-color;}
+.accent2 {color: $accent-color;}
+.accent3 {color: #ac94e8;}
+.accent4 {color: #60d2b6;}
+
+/* color codes from siimple css.
+ * https://docs.siimple.xyz/getting-started/theming.html
+ */
+.primary {color: #4e91e4;}
+.success {color: #4acf7f;}
+.warning {color: #fbc850;}
+.error {color: #ee675d;}
+.dark {color: #546778;}
+.light {color: #dde5ee;}
+
+a {
+    background: rgba($a-bg-color,0.2);
+    text-shadow: -2px 2px 4px rgba($shadow-color,0.9);
+    border-bottom-color: rgba($border-color,0.2);
+    border-left-color:   rgba($border-color,0.2);
+}
+a:hover,
+a:focus {
+    background: rgba($a-bg-color,1);
+    text-shadow: -2px 2px 3px rgba($shadow-color,0.5);
+}
+
+.box {
+    background-color: $box-bg-color;
+    border-color: rgba($border-color, .3);
+    box-shadow: 0 4px 8px rgba($shadow-color, .1);
+}
+
+.slide {
+    text-shadow: 0 3px 3px rgba($shadow-color, .2);
+}
+
+.slide.active,
+.slide.active * {
+    /*border: 3px solid red;*/
+}
+
+/* Highlight.js used for coloring pre > code blocks. */
+.slide pre > code {
+    text-shadow: 0 0 0 rgba($shadow-color, 0);
+}
+
+#overview #signature {
+    color: #546778;
+}
+
+/* style for main classes in mermaid classDiagram */
+#impress .mermaid .main_class {
+  fill: #ffdfdf;
+}
+
