@@ -10,8 +10,8 @@
     --box_bg_color:            255, 255, 255;
     --table_bg_color:          255, 255, 255;
     --title_color:             var(--color-4);
-    --highlight_color1:        var(--color-2);
-    --highlight_color2:        var(--color-4);
+    --highlight_color1:        var(--color-4);
+    --highlight_color2:        238, 103, 93;  /* #ee675d */
     --highlight_color3:        238, 103, 93;  /* #ee675d */
     --blockquote_color:        51,  51,  51;  /* #333333 */
     --blockquote_border_color: 26,  188, 159; /* #1abc9c */
@@ -39,6 +39,16 @@ li li {
     list-style: none;
     color: rgb(var(--text_color));
     margin-left: 0.5em;
+}
+
+.step li strong,
+.step li .accent {
+    color: rgb(var(--text_color));
+}
+
+.step li li strong,
+.step li li .accent {
+    color: rgb(var(--highlight_color1));
 }
 
 li li::before {
