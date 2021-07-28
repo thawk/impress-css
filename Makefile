@@ -8,3 +8,7 @@ all: $(TARGETS)
 themes/%.css:src/%.scss
 	npx sass --no-error-css $< $@
 
+.PHONY: clean
+clean:
+	rm $(TARGETS)
+
