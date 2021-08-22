@@ -135,4 +135,4 @@ git submodule add https://github.com/thawk/impress-css.git css
 | .content-start/-end/-center/-between/-around/-stretch     | flex容器多个主轴行之间的分布方式，align-content              |
 | .self-start/-end/-center/-baseline/-stretch               | flex元素覆盖容器的align-items设定。align-self                |
 | .order-0/.order-1 ~ .order-8/.order-last                  | flex元素顺序，order: 0/1 ~ /99999                            |
-| .flex-auto/.flex-none                                     | flex元素属性                                                 |
+| .flex-auto/.flex-none                                     | flex元素属性，flex: 1 1 auto和flex: none                                                 |
