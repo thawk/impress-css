@@ -23,105 +23,105 @@ ol ol ol {
 }
 
 li {
-  color: #4e91e4;
+  color: #D9BE6C;
 }
 
 li li {
-  color: #464646;
+  color: #FFFFFF;
   margin-left: 0.5em;
 }
 
 .step li strong,
 .step li .accent {
-  color: #ee675d;
+  color: #BF6341;
 }
 
 .step li li strong,
 .step li li .accent {
-  color: #4e91e4;
+  color: #D9BE6C;
 }
 
 #impress .step .substep.substep-visible .strike-on-substep,
 #impress .step .substep.substep-visible.strike-on-substep,
 #impress .step li li.substep.substep-visible .strike-on-substep,
 #impress .step li li.substep.substep-visible.strike-on-substep {
-  text-decoration-color: #4e91e4;
+  text-decoration-color: #D9BE6C;
 }
 
 #impress .step li.substep.substep-visible .strike-on-substep,
 #impress .step li.substep.substep-visible.strike-on-substep {
-  text-decoration-color: #ee675d;
+  text-decoration-color: #BF6341;
 }
 
 body {
-  background: #cccccc;
-  color: #464646;
+  background: #0D0D0D;
+  color: #FFFFFF;
 }
 
 blockquote {
-  color: rgba(70, 70, 70, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   border-left-color: #1abc9c;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #4e91e4;
-  text-shadow: -2px 2px 4px rgba(153, 153, 153, 0.9);
+  color: #D9BE6C;
+  text-shadow: -2px 2px 4px rgba(64, 64, 64, 0.9);
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
-  color: #ee675d;
+  color: #BF6341;
   /* font-weight: bolder; */
 }
 
 .markdown strong {
-  color: #ee675d;
+  color: #BF6341;
 }
 
 #impress table {
-  border-color: #4e91e4;
+  border-color: #D9BE6C;
 }
 
 #impress th,
 #impress td {
-  border-top-color: #4e91e4;
+  border-top-color: #D9BE6C;
 }
 
 #impress thead th,
 #impress thead td {
-  border-bottom-color: #4e91e4;
+  border-bottom-color: #D9BE6C;
 }
 
 #impress table tbody + tbody {
-  border-top-color: #4e91e4;
+  border-top-color: #D9BE6C;
 }
 
 #impress table table {
-  background-color: white;
+  background-color: black;
 }
 
 #impress .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(78, 145, 228, 0.05);
+  background-color: rgba(217, 190, 108, 0.05);
 }
 
 #impress .table-hover tbody tr:hover {
-  background-color: rgba(78, 145, 228, 0.075);
+  background-color: rgba(217, 190, 108, 0.075);
 }
 
 q {
-  text-shadow: 0 6px 6px rgba(78, 145, 228, 0.3);
+  text-shadow: 0 6px 6px rgba(217, 190, 108, 0.3);
 }
 
 .noaccent {
-  color: #464646;
+  color: #FFFFFF;
 }
 
 .accent, .accent1 {
-  color: #4e91e4;
+  color: #D9BE6C;
 }
 
 .accent2 {
-  color: #ee675d;
+  color: #BF6341;
 }
 
 .accent3 {
@@ -160,26 +160,26 @@ q {
 }
 
 a {
-  background: rgba(203, 204, 204, 0.2);
-  text-shadow: -2px 2px 4px rgba(153, 153, 153, 0.9);
-  border-bottom-color: rgba(78, 145, 228, 0.2);
-  border-left-color: rgba(78, 145, 228, 0.2);
+  background: rgba(14, 14, 13, 0.2);
+  text-shadow: -2px 2px 4px rgba(64, 64, 64, 0.9);
+  border-bottom-color: rgba(217, 190, 108, 0.2);
+  border-left-color: rgba(217, 190, 108, 0.2);
 }
 
 a:hover,
 a:focus {
-  background: #cbcccc;
-  text-shadow: -2px 2px 3px rgba(153, 153, 153, 0.5);
+  background: #0e0e0d;
+  text-shadow: -2px 2px 3px rgba(64, 64, 64, 0.5);
 }
 
 .box {
-  background-color: #e6e6e6;
-  border-color: rgba(78, 145, 228, 0.3);
-  box-shadow: 0 4px 8px rgba(153, 153, 153, 0.1);
+  background-color: black;
+  border-color: rgba(217, 190, 108, 0.3);
+  box-shadow: 0 4px 8px rgba(64, 64, 64, 0.1);
 }
 
 .slide {
-  text-shadow: 0 3px 3px rgba(153, 153, 153, 0.2);
+  text-shadow: 0 3px 3px rgba(64, 64, 64, 0.2);
 }
 
 .slide.flex {
@@ -193,7 +193,7 @@ a:focus {
 
 /* Highlight.js used for coloring pre > code blocks. */
 .slide pre > code {
-  text-shadow: 0 0 0 rgba(153, 153, 153, 0);
+  text-shadow: 0 0 0 rgba(64, 64, 64, 0);
 }
 
 #overview #signature {
@@ -205,4 +205,4 @@ a:focus {
   fill: #ffdfdf;
 }
 
-/*# sourceMappingURL=default.css.map */
+/*# sourceMappingURL=black-orange.css.map */
