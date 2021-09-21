@@ -1,8 +1,8 @@
 @use "sass:color";
 
-$dark-theme: false !default;
 $bg-color: #cccccc !default;
 $text-color: #464646 !default;
+$dark-theme: (color.lightness($bg-color) < 50) !default;
 $title-color: #4e91e4 !default;
 $accent-color : #ee675d !default;
 $blockquote-color: rgba($text-color, 0.7) !default;
