@@ -1,0 +1,9 @@
+// from atom-one-dark.css
+@use 'common' with (
+    $bg-color: #282c34,
+    $text-color: #abb2bf,
+    $title-color: #61aeee,
+    $accent-color: #c678dd, 
+    $border-color: #5c6370, 
+    $link-color: #61aeee, 
+);

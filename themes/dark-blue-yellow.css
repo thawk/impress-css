@@ -139,7 +139,7 @@ q {
 }
 
 a {
-  background: rgba(10, 16, 47, 0.2);
+  color: #FFFFFF;
   text-shadow: -2px 2px 4px rgba(25, 42, 133, 0.9);
   border-bottom-color: rgba(242, 226, 5, 0.2);
   border-left-color: rgba(242, 226, 5, 0.2);
@@ -161,8 +161,23 @@ a:hover, a:focus {
 .slide.flex {
   display: flex;
 }
-.slide pre > code {
+.slide pre {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+pre > code {
+  display: block;
   text-shadow: 0 0 0 rgba(25, 42, 133, 0);
+  color: #FFFFFF;
+  background-color: #010104;
+  padding: 0.5em;
+  border: 2px solid rgba(242, 226, 5, 0.3);
+}
+
+.box pre > code {
+  background-color: black;
 }
 
 #overview #signature {

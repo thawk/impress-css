@@ -1,0 +1,9 @@
+// from gruvbox-dark-hard.css
+@use 'common' with (
+    $bg-color: #1d2021,
+    $text-color: #d5c4a1,
+    $title-color: #fabd2f,
+    $accent-color: #8ec07c, 
+    $border-color: #665c54, 
+    $link-color: #fe8019, 
+);
