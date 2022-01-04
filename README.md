@@ -1,3 +1,5 @@
+# 常用CSS样式说明
+
 个人用于 impress.js<sup>*</sup> 展示的CSS样式表。
 
 ## 用法
@@ -121,12 +123,12 @@ git submodule add https://github.com/thawk/impress-css.git css
 | .f-headline/.f-subheadline/.f1 ~ .f5 ~ .f7                | font-size: 6rem/5rem/3rem ~ 1rem ~ 0.75rem                   |
 | .i/.fs-normal                                             | font-style: italic/normal                                    |
 | .indent/.small-caps/.truncate                             | 首行缩进/全大写/截断溢出文字                                 |
-| .tl/.tr/.tc/.tj                                           | 水平对齐，text-align: left/right/center/justify              |
+| .tl/.tr/.tc/.tj                                           | **水平对齐**，text-align: left/right/center/justify          |
 | .v-base/.v-top/.v-mid/.v-btm                              | vertical-align: baseline/top/middle/bottom                   |
 | .lh-copy/.lh-title/.lh-solid                              | 行高，分别用于普通正文、标题行单行文本，提供1.5/1.25/1的行高 |
 | .o-0/.o-025/.o-05/.o-10/.o-20 ~ /.o-100                   | 不透光率，opacity: 0/.025/.05/.1/.2 ~ 1                      |
 | .cf/.cl/.cr/.cb/.cn                                       | clear，clearfix/clear: left/right/both/none                  |
-| .fl/.fr/.fn                                               | 浮动，float: left/right/none，父节点应设置.cf                |
+| .fl/.fr/.fn                                               | 浮动，float: left/right/none，**父节点应设置.cf**            |
 | .flex/.inline-flex                                        | flex容器，display: flex/inline-flex                          |
 | .flex-column/.flex-row/.flex-wrap/.flex-nowrap            | flex容器，设定主轴方向                                       |
 | .flex-wrap-reverse/.flex-column-reverse/.flex-row-reverse | flex容器，设定主轴方向                                       |
@@ -135,4 +137,6 @@ git submodule add https://github.com/thawk/impress-css.git css
 | .content-start/-end/-center/-between/-around/-stretch     | flex容器多个主轴行之间的分布方式，align-content              |
 | .self-start/-end/-center/-baseline/-stretch               | flex元素覆盖容器的align-items设定。align-self                |
 | .order-0/.order-1 ~ .order-8/.order-last                  | flex元素顺序，order: 0/1 ~ /99999                            |
-| .flex-auto/.flex-none                                     | flex元素属性，flex: 1 1 auto和flex: none                                                 |
+| .flex-auto/.flex-none                                     | flex元素属性，flex: 1 1 auto和flex: none                     |
+| .list                                                     | 不显示列表标记                                               |
+| .absolute/.relative/.static/.fixed                        | position:absolute/relative/static/fixed                      |
