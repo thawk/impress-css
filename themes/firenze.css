@@ -19,10 +19,10 @@ ol ol ol {
 }
 
 li {
-  color: #b64926;
+  color: #468966;
 }
 li li {
-  color: #468966;
+  color: #b64926;
   margin-left: 0.5em;
 }
 
@@ -187,6 +187,11 @@ pre > code {
 /* style for main classes in mermaid classDiagram */
 #impress .mermaid .main_class {
   fill: #ffdfdf;
+}
+
+/* SVG styles */
+path {
+  stroke: #468966;
 }
 
 /*# sourceMappingURL=firenze.css.map */

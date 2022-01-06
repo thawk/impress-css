@@ -19,10 +19,10 @@ ol ol ol {
 }
 
 li {
-  color: #4078f2;
+  color: #383a42;
 }
 li li {
-  color: #383a42;
+  color: #c18401;
   margin-left: 0.5em;
 }
 
@@ -187,6 +187,11 @@ pre > code {
 /* style for main classes in mermaid classDiagram */
 #impress .mermaid .main_class {
   fill: #ffdfdf;
+}
+
+/* SVG styles */
+path {
+  stroke: #383a42;
 }
 
 /*# sourceMappingURL=atom-one-light.css.map */

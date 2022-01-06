@@ -10,22 +10,34 @@ filename="$1"
 bg_color=$(sed -n -e '1,/^\.hljs/d; /^[ \t]*background:[ \t]*\(#[0-9a-fA-F]*\).*/{s//\1/;p;q;}' "$filename")
 
 get_color() {
-  filename="$1"
-  class="$2"
-  attr="$3"
+  local filename="$1"
+  local class="$2"
+  local attr="$3"
   cat "$filename" |
     sed -nE -e "1,/^\.${class}/d; /^[ \t]*${attr}:[ \t]*(#?[[:alnum:]]+).*/{s//\1/;p;q;}"
+}
+
+color_line() {
+  local dest="$1"
+  local filename="$2"
+  local class="$3"
+  local attr="$4"
+
+  local color=$(get_color "$filename" "$class" "$attr")
+  if [[ -n "$color" ]]; then
+    echo "\$${dest}: ${color},"
+  fi
 }
 
 cat <<-EOS
 // from $(basename "$filename")
 @use 'common' with (
-    \$bg-color: $(get_color "$filename" "hljs" "background"),
-    \$text-color: $(get_color "$filename" "hljs" "color"),
-    \$title-color: $(get_color "$filename" "hljs-title" "color"),
-    \$list-alt-color: $(get_color "$filename" "hljs-built_in" "color"),
-    \$accent-color: $(get_color "$filename" "hljs-keyword" "color"), 
-    \$border-color: $(get_color "$filename" "hljs-comment" "color"), 
-    \$link-color: $(get_color "$filename" "hljs-link" "color"), 
+    $(color_line bg-color       "$filename" "hljs"         "background")
+    $(color_line text-color     "$filename" "hljs"         "color")
+    $(color_line title-color    "$filename" "hljs-title"   "color")
+    $(color_line list-alt-color "$filename" "hljs-built_in" "color")
+    $(color_line accent-color   "$filename" "hljs-keyword" "color")
+    $(color_line border-color   "$filename" "hljs-comment" "color")
+    $(color_line link-color     "$filename" "hljs-link"    "color")
 );
 EOS
