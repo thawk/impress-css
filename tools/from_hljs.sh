@@ -8,7 +8,6 @@ fi
 
 filename="$1"
 bg_color=$(sed -n -e '1,/^\.hljs/d; /^[ \t]*background:[ \t]*\(#[0-9a-fA-F]*\).*/{s//\1/;p;q;}' "$filename")
-bg_color=$(sed -n -e '1,/^\.hljs/d; /^[ \t]*background:[ \t]*\(#[0-9a-fA-F]*\).*/{s//\1/;p;q;}' "$filename")
 
 get_color() {
   filename="$1"
@@ -24,6 +23,7 @@ cat <<-EOS
     \$bg-color: $(get_color "$filename" "hljs" "background"),
     \$text-color: $(get_color "$filename" "hljs" "color"),
     \$title-color: $(get_color "$filename" "hljs-title" "color"),
+    \$list-alt-color: $(get_color "$filename" "hljs-built_in" "color"),
     \$accent-color: $(get_color "$filename" "hljs-keyword" "color"), 
     \$border-color: $(get_color "$filename" "hljs-comment" "color"), 
     \$link-color: $(get_color "$filename" "hljs-link" "color"), 

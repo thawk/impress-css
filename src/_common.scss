@@ -7,6 +7,8 @@ $title-color: #4e91e4 !default;
 $accent-color : #ee675d !default;
 $blockquote-color: rgba($text-color, 0.7) !default;
 $blockquote-border-color: #1abc9c !default;
+$list-color: $text-color !default;
+$list-alt-color: $title-color !default;
 
 $box-bg-color:   color.adjust($bg-color, $lightness: if($dark-theme, -10%,  10%)) !default;
 $table-bg-color: color.adjust($bg-color, $lightness: if($dark-theme, -20%,  20%)) !default;
@@ -62,10 +64,10 @@ ol {
 }
 
 li {
-  color: $title-color;
+  color: $list-color;
 
   li {
-    color: $text-color;
+    color: $list-alt-color;
     margin-left: 0.5em;
   }
 }
@@ -236,5 +238,10 @@ pre > code {
   .main_class {
     fill: #ffdfdf;
   }
+}
+
+/* SVG styles */
+path {
+  stroke: $text-color;
 }
 
