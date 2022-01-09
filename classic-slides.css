@@ -384,8 +384,7 @@ a:focus {
 .title h2,
 .title h3,
 .title p {
-    left: 90px; /* slide width is 1800px, so this is like a 5% margin on both sides */
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 .title h1 { margin-top: 200px; }
