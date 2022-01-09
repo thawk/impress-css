@@ -85,10 +85,12 @@ b, strong { font-weight: bold }
 #impress thead th {
   vertical-align: bottom;
 }
-#impress .table-borderless th,
-#impress .table-borderless td,
-#impress .table-borderless thead th,
-#impress .table-borderless thead td {
+
+#impress table.borderless,
+#impress table.borderless th,
+#impress table.borderless td,
+#impress table.borderless thead th,
+#impress table.borderless thead td {
   border: none;
 }
 #impress table tbody + tbody {
@@ -169,18 +171,18 @@ q {
 }
 
 
-.future .is-present,
-.past .is-present {
+.future .is-curr-step,
+.past .is-curr-step {
     opacity: 0;
     transition: opacity 1s;
 }
 
-.present .is-present {
+.present .is-curr-step {
     opacity: 1;
     transition: opacity 1s;
 }
 
-#overview .is-present {
+#overview .is-curr-step {
     opacity: 1;
 }
 
@@ -233,6 +235,10 @@ a:focus {
 }
 
 /* more text, smaller font size */
+.more-text {
+    font-size: 80%;
+}
+
 .more-text .step {
     font-size: 65%;
 }
@@ -383,8 +389,11 @@ a:focus {
     text-align: center;
 }
 .title h1 { margin-top: 200px; }
-.title h2 { margin-top: 400px; }
-.title h3 { margin-top: 600px; }
+.title h2 { margin-top: 200px; }
+.title h1 + h2 { margin-top: 400px; }
+.title h3 { margin-top: 200px; }
+.title h2 + h3 { margin-top: 400px; }
+.title h1 + h2 + h3 { margin-top: 600px; }
 
 
 
@@ -507,6 +516,33 @@ a:focus {
   opacity: 1;
 }
 
+#impress .step .substep .is-curr-substep {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#impress .step .substep.is-curr-substep,
+#impress .step .substep .is-curr-substep {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#impress .step .substep.substep-active.is-curr-substep,
+#impress .step .substep.substep-active .is-curr-substep {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#impress .step .substep.is-curr-substep.remove,
+#impress .step .substep .is-curr-substep.remove {
+  display: none;
+}
+
+#impress .step .substep.substep-active.is-curr-substep.remove,
+#impress .step .substep.substep-active .is-curr-substep.remove {
+  display: initial;
+}
+
 /* We need substeps to go away so they don't show up on the adjacent slide */
 /* #impress .step.past .substep.substep-visible { */
 /*     opacity: 0; */
@@ -515,6 +551,14 @@ a:focus {
 
 .impress-on-overview #overview #signature {
   opacity: 1;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #overview #signature {

@@ -69,6 +69,9 @@ li {
   li {
     color: $list-alt-color;
     margin-left: 0.5em;
+    li {
+      color: $list-color;
+    }
   }
 }
 
@@ -80,6 +83,11 @@ li {
   li {
     strong, .accent {
       color: $title-color;
+    }
+    li {
+      strong, .accent {
+        color: $accent-color;
+      }
     }
   }
 }
@@ -125,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.markdown strong {
+strong {
   color: $accent-color;
 }
 
@@ -152,11 +160,11 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  .table-striped tbody tr:nth-of-type(odd) {
+  table.striped tbody tr:nth-of-type(odd) {
     background-color: rgba($border-color, 0.05);
   }
 
-  .table-hover tbody tr:hover {
+  table.hover tbody tr:hover {
     background-color: rgba($border-color, 0.075);
   }
 }
@@ -166,8 +174,8 @@ q {
 }
 
 .noaccent         { color: $text-color; }
-.accent, .accent1 { color: $title-color; }
-.accent2          { color: $accent-color; }
+.accent, .accent1 { color: $accent-color; }
+.accent2          { color: $title-color; }
 .accent3          { color: #ac94e8; }
 .accent4          { color: #60d2b6; }
 

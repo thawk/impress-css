@@ -25,11 +25,17 @@ li li {
   color: #397300;
   margin-left: 0.5em;
 }
+li li li {
+  color: #444;
+}
 
 .step li strong, .step li .accent {
   color: #880000;
 }
 .step li li strong, .step li li .accent {
+  color: #880000;
+}
+.step li li li strong, .step li li li .accent {
   color: #880000;
 }
 
@@ -61,7 +67,7 @@ h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h
   color: #880000;
 }
 
-.markdown strong {
+strong {
   color: #880000;
 }
 
@@ -80,10 +86,10 @@ h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h
 #impress thead th, #impress thead td {
   border-bottom-color: #888888;
 }
-#impress .table-striped tbody tr:nth-of-type(odd) {
+#impress table.striped tbody tr:nth-of-type(odd) {
   background-color: rgba(136, 136, 136, 0.05);
 }
-#impress .table-hover tbody tr:hover {
+#impress table.hover tbody tr:hover {
   background-color: rgba(136, 136, 136, 0.075);
 }
 

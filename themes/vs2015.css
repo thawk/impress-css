@@ -25,12 +25,18 @@ li li {
   color: #4EC9B0;
   margin-left: 0.5em;
 }
+li li li {
+  color: #DCDCDC;
+}
 
 .step li strong, .step li .accent {
   color: #569CD6;
 }
 .step li li strong, .step li li .accent {
   color: #DCDCDC;
+}
+.step li li li strong, .step li li li .accent {
+  color: #569CD6;
 }
 
 #impress .step .substep.substep-visible.strike-on-substep, #impress .step .substep.substep-visible .strike-on-substep {
@@ -61,7 +67,7 @@ h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h
   color: #569CD6;
 }
 
-.markdown strong {
+strong {
   color: #569CD6;
 }
 
@@ -80,10 +86,10 @@ h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h
 #impress thead th, #impress thead td {
   border-bottom-color: #57A64A;
 }
-#impress .table-striped tbody tr:nth-of-type(odd) {
+#impress table.striped tbody tr:nth-of-type(odd) {
   background-color: rgba(87, 166, 74, 0.05);
 }
-#impress .table-hover tbody tr:hover {
+#impress table.hover tbody tr:hover {
   background-color: rgba(87, 166, 74, 0.075);
 }
 
@@ -96,11 +102,11 @@ q {
 }
 
 .accent, .accent1 {
-  color: #DCDCDC;
+  color: #569CD6;
 }
 
 .accent2 {
-  color: #569CD6;
+  color: #DCDCDC;
 }
 
 .accent3 {
