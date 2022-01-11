@@ -29,16 +29,6 @@ li li li {
   color: #444;
 }
 
-.step li strong, .step li .accent {
-  color: #880000;
-}
-.step li li strong, .step li li .accent {
-  color: #880000;
-}
-.step li li li strong, .step li li li .accent {
-  color: #880000;
-}
-
 #impress .step .substep.substep-visible.strike-on-substep, #impress .step .substep.substep-visible .strike-on-substep {
   text-decoration-color: #880000;
 }

@@ -75,24 +75,6 @@ li {
   }
 }
 
-.step li {
-  strong, .accent {
-    color: $accent-color;
-  }
-
-  li {
-    strong, .accent {
-      color: $title-color;
-    }
-    li {
-      strong, .accent {
-        color: $accent-color;
-      }
-    }
-  }
-}
-
-
 #impress .step {
   .substep.substep-visible {
     &.strike-on-substep, .strike-on-substep {

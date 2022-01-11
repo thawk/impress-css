@@ -569,6 +569,7 @@ a:focus {
 }
 
 #overview #signature a {
+    font-family: "PT Serif";
     font-size: 120%;
     text-decoration: none;
     border: none;
