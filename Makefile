@@ -1,12 +1,14 @@
-all: css
+# Listing all sources
+SOURCES = $(wildcard src/[^_]*.scss)
 
-%:
-	@:
+TARGETS = $(patsubst %, themes/%, $(notdir $(SOURCES:.scss=.css)))
 
-.PHONY: css
-css:
-	@make -C impressjs/css
+all: $(TARGETS)
+
+themes/%.css:src/%.scss src/_common.scss
+	npx sass --no-error-css $< $@
 
 .PHONY: clean
 clean:
-	@make -C impressjs/css clean
+	rm $(TARGETS)
+
