@@ -1,14 +1,27 @@
 # 常用CSS样式说明
 
-个人用于 impress.js<sup>*</sup> 展示的CSS样式表。
+个人用于 impress.js<sup>*</sup> 展示的CSS样式表。位于 https://github.com/thawk/impress-css 。
 
 ## 用法
 
-我通常使用 ``git submodule add`` 命令把这个库加到我的展示目录下的``css``子目录。
+可以使用 ``git submodule add`` 命令或者 ``git subtree add`` 命令把这个库加到展示目录下的``css``子目录。
 
-```sh
-git submodule add https://github.com/thawk/impress-css.git css
-```
+- `git submodule`
+  ```sh
+  git submodule add https://github.com/thawk/impress-css.git css
+  git submodule init
+  ```
+- `git subtree add`
+  - Add git subtree
+    [source,sh]
+    ----
+    git subtree add --prefix css https://github.com/thawk/impress-css master --squash
+    ----
+  - Update git subtree
+    [source,sh]
+    ----
+    git subtree pull --prefix css https://github.com/thawk/impress-css master --squash
+    ----
 
 最终的目录结构（``impress.js``目录可以使用原版的[impress.js](https://github.com/impress/impress.js)，我自己使用[体积更小的版本](https://github.com/thawk/impress-shim)）：
 ```
