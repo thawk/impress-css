@@ -13,15 +13,20 @@
   ```
 - `git subtree add`
   - Add git subtree
-    [source,sh]
-    ----
+    ```sh
     git subtree add --prefix css https://github.com/thawk/impress-css master --squash
-    ----
+    ```
   - Update git subtree
-    [source,sh]
-    ----
+    ```sh
     git subtree pull --prefix css https://github.com/thawk/impress-css master --squash
-    ----
+    ```
+  - 添加一个remote可以简化操作
+    ```sh
+    git remote add -f impress-css https://github.com/thawk/impress-css
+    git subtree add  --prefix css impress-css master --squash
+    git subtree pull --prefix css impress-css master --squash
+    git subtree push --prefix css impress-css master
+    ```
 
 最终的目录结构（``impress.js``目录可以使用原版的[impress.js](https://github.com/impress/impress.js)，我自己使用[体积更小的版本](https://github.com/thawk/impress-shim)）：
 ```
