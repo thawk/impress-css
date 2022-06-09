@@ -36,7 +36,7 @@ li li li {
   text-decoration-color: #880000;
 }
 #impress .step li.substep.substep-visible.strike-on-substep, #impress .step li.substep.substep-visible .strike-on-substep {
-  text-decoration-color: #880000;
+  text-decoration-color: #880088;
 }
 
 body {
@@ -54,11 +54,11 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: -2px 2px 4px rgba(189, 189, 189, 0.9);
 }
 h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h5 b, h6 strong, h6 b {
-  color: #880000;
+  color: #880088;
 }
 
 strong {
-  color: #880000;
+  color: #880088;
 }
 
 #impress table {
@@ -92,7 +92,7 @@ q {
 }
 
 .accent, .accent1 {
-  color: #880000;
+  color: #880088;
 }
 
 .accent2 {

@@ -57,39 +57,61 @@
 * 主要的样式定义
 * 针对 impress.js<sup>*</sup> 定义了很多CSS类
 
-  | 类名             | 作用                                | 类名     | 作用             |
-  |------------------|-------------------------------------|----------|------------------|
-  | .slide           | 有确定的宽度和高度，缺省没有边框    | .accent  | 重点颜色         |
-  | .box             | 加边框                              | .accent1 | 同.accent        |
-  | .title           | 标题页                              | .accent2 | 重点颜色2        |
-  | .subslide        | 仅在当前步骤可见，如堆叠的页面      | .accent3 | 重点颜色3        |
-  | .is-curr-step    | 只在当前step可见                    | .accent4 | 重点颜色4        |
-  | .is-curr-substep | 仅在当前substep激活时可见           | .primary | 主要颜色         |
-  | .remove          | 配合.is-curr-substep，删除而非隐藏  | .primary | 主要颜色         |
-  | .fly-in          | 从上方飞入的效果                    | .success | 成功颜色         |
-  | .fly-out         | 从下方飞出的效果                    | .warning | 告警颜色         |
-  | .fade-in         | 渐显                                | .error   | 错误颜色         |
-  | .fade-out        | 渐隐                                | .dark    | 深灰             |
-  | .zoom-in         | 缩小                                | .light   | 浅灰             |
-  | .zoom-out        | 放大                                | .navy    | 深灰色           |
-  | .borderless      | 应用到table上，没有表格边框         | .green   | 绿色             |
-  | .striped         | 应用到table上，奇偶行底色不同       | .teal    | 青色             |
-  | .hover           | 应用到table上，鼠标放上去变化背景色 | .blue    | 蓝色             |
-  | .font-normalsize | font-size: 100%                     | .purple  | 紫色             |
-  | .font-larger1    | font-size: 110%                     | .pink    | 粉色             |
-  | .font-larger2    | font-size: 120%                     | .red     | 红色             |
-  | .font-larger3    | font-size: 130%                     | .orange  | 橙色             |
-  | .font-larger4    | font-size: 150%                     | .yellow  | 黄色             |
-  | .font-larger5    | font-size: 200%                     | .grey    | 浅灰色           |
-  | .font-smaller1   | font-size: 90%                      |          |                  |
-  | .font-smaller2   | font-size: 80%                      |          |                  |
-  | .font-smaller3   | font-size: 70%                      |          |                  |
-  | .font-smaller4   | font-size: 60%                      |          |                  |
-  | .font-smaller5   | font-size: 50%                      |          |                  |
-  | .more-text       | 容纳更多内容。用于#impress或.step   |          |                  |
-  | .visible         | visibility: visible;                |          |                  |
-  | .hidden          | visibility: hidden;                 |          | 隐藏元素，只占位 |
-
+  | 类名             | 作用                                 |
+  |------------------|--------------------------------------|
+  | .slide           | 有确定的宽度和高度，缺省没有边框     |
+  | .box             | 加边框                               |
+  | .title           | 标题页                               |
+  | .subslide        | 仅在当前步骤可见，如堆叠的页面       |
+  | .substep         | 该元素按键后才显示                   |
+  | .is-curr-step    | 只在当前step可见                     |
+  | .is-curr-substep | 仅在当前substep激活时可见            |
+  | .remove          | 配合.is-curr-substep，删除而非隐藏   |
+  | .fly-in          | 从上方飞入的效果                     |
+  | .fly-out         | 从下方飞出的效果                     |
+  | .fade-in         | 渐显                                 |
+  | .fade-out        | 渐隐                                 |
+  | .zoom-in         | 缩小                                 |
+  | .zoom-out        | 放大                                 |
+  | .borderless      | 应用到table上，没有表格边框          |
+  | .striped         | 应用到table上，奇偶行底色不同        |
+  | .hover           | 应用到table上，鼠标放上去变化背景色  |
+  | .font-normalsize | font-size: 100%                      |
+  | .font-larger1    | font-size: 110%                      |
+  | .font-larger2    | font-size: 120%                      |
+  | .font-larger3    | font-size: 130%                      |
+  | .font-larger4    | font-size: 150%                      |
+  | .font-larger5    | font-size: 200%                      |
+  | .font-smaller1   | font-size: 90%                       |
+  | .font-smaller2   | font-size: 80%                       |
+  | .font-smaller3   | font-size: 70%                       |
+  | .font-smaller4   | font-size: 60%                       |
+  | .font-smaller5   | font-size: 50%                       |
+  | .more-text       | 容纳更多内容。用于#impress或.step    |
+  | .visible         | visibility: visible;                 |
+  | .hidden          | visibility: hidden; 隐藏元素，只占位 |
+  | .accent          | 重点颜色                             |
+  | .accent1         | 同.accent                            |
+  | .accent2         | 重点颜色2                            |
+  | .accent3         | 重点颜色3                            |
+  | .accent4         | 重点颜色4                            |
+  | .primary         | 主要颜色                             |
+  | .primary         | 主要颜色                             |
+  | .success         | 成功颜色                             |
+  | .warning         | 告警颜色                             |
+  | .error           | 错误颜色                             |
+  | .dark            | 深灰                                 |
+  | .light           | 浅灰                                 |
+  | .navy            | 深灰色                               |
+  | .green           | 绿色                                 |
+  | .teal            | 青色                                 |
+  | .blue            | 蓝色                                 |
+  | .purple          | 紫色                                 |
+  | .pink            | 粉色                                 |
+  | .red             | 红色                                 |
+  | .orange          | 橙色                                 |
+  | .yellow          | 黄色                                 |
+  | .grey            | 浅灰色                               |
 
 ### normalize.css
 
