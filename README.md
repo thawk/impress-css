@@ -111,7 +111,8 @@
   | .red             | 红色                                 |
   | .orange          | 橙色                                 |
   | .yellow          | 黄色                                 |
-  | .grey            | 浅灰色                               |
+  | .gray            | 灰色                                 |
+  | .light-gray      | 浅灰色                               |
 
 ### normalize.css
 

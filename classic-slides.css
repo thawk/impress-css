@@ -171,17 +171,21 @@ q {
 }
 
 
+.future.is-curr-step,
 .future .is-curr-step,
+.past.is-curr-step,
 .past .is-curr-step {
     opacity: 0;
     transition: opacity 1s;
 }
 
+.present.is-curr-step,
 .present .is-curr-step {
     opacity: 1;
     transition: opacity 1s;
 }
 
+#overview.is-curr-step,
 #overview .is-curr-step {
     opacity: 1;
 }
