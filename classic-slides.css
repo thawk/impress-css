@@ -172,8 +172,11 @@ q {
 
 
 .impress-enabled .future.is-curr-step,
+.impress-enabled .past.is-curr-step {
+    display: none;
+}
+
 .impress-enabled .future .is-curr-step,
-.impress-enabled .past.is-curr-step,
 .impress-enabled .past .is-curr-step {
     opacity: 0;
     transition: opacity 1s;
