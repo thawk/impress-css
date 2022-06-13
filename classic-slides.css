@@ -139,6 +139,7 @@ q {
 #impress .font-normalsize {
     font-size: 100%;
 }
+#impress .font-smaller,
 #impress .font-smaller1 {
     font-size: 90%;
 }
@@ -154,6 +155,7 @@ q {
 #impress .font-smaller5 {
     font-size: 50%;
 }
+#impress .font-larger,
 #impress .font-larger1 {
     font-size: 110%;
 }
@@ -186,11 +188,6 @@ q {
 .impress-enabled .present .is-curr-step {
     opacity: 1;
     transition: opacity 1s;
-}
-
-#overview.is-curr-step,
-#overview .is-curr-step {
-    opacity: 1;
 }
 
 .navy {color: #546778;}
@@ -561,6 +558,14 @@ a:focus {
 
 .impress-on-overview #overview #signature {
   opacity: 1;
+}
+
+.impress-on-overview .show-on-overview {
+  opacity: 1;
+}
+
+.impress-on-overview .hide-on-overview {
+  opacity: 0;
 }
 
 .visible {
