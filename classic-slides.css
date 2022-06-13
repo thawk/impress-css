@@ -263,6 +263,10 @@ a:focus {
     line-height: 1;
 }
 
+.step .lh-solid { line-height: 1; }
+.step .lh-title { line-height: 1.25; }
+.step .lh-copy { line-height: 1.5; }
+
 /*
     Make inactive steps a little bit transparent.
 */
