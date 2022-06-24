@@ -142,34 +142,44 @@ q {
 #impress .font-smaller,
 #impress .font-smaller1 {
     font-size: 90%;
+    line-height: 90%;
 }
 #impress .font-smaller2 {
     font-size: 80%;
+    line-height: 80%;
 }
 #impress .font-smaller3 {
     font-size: 70%;
+    line-height: 70%;
 }
 #impress .font-smaller4 {
     font-size: 60%;
+    line-height: 60%;
 }
 #impress .font-smaller5 {
     font-size: 50%;
+    line-height: 50%;
 }
 #impress .font-larger,
 #impress .font-larger1 {
     font-size: 110%;
+    line-height: 110%;
 }
 #impress .font-larger2 {
     font-size: 120%;
+    line-height: 120%;
 }
 #impress .font-larger3 {
     font-size: 130%;
+    line-height: 130%;
 }
 #impress .font-larger4 {
     font-size: 150%;
+    line-height: 150%;
 }
 #impress .font-larger5 {
     font-size: 200%;
+    line-height: 200%;
 }
 
 
@@ -203,7 +213,7 @@ q {
 .light-gray {color: #eeeeee;}
 
 /* Inline code, no Highlight.js */
-code {
+code, kbd, samp {
     font-family: "Cutive mono","Courier New", monospace;
 }
 
@@ -324,12 +334,12 @@ a:focus {
     /* margin-right: 3em; */
 }
 
-.slide pre {
+pre {
     font-size: 0.6em;
     line-height: 0.7em;
 }
 
-.slide input {
+input {
     font-size: 1em;
 }
 
