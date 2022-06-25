@@ -68,6 +68,7 @@
   | .is-curr-substep  | 仅在当前substep激活时可见            |
   | .show-on-overview | 在overview页面显示                   |
   | .hide-on-overview | 在overview页面隐藏                   |
+  | .hide-on-nav      | 在导航条不显示                       |
   | .remove           | 配合.is-curr-substep，删除而非隐藏   |
   | .fly-in           | 从上方飞入的效果                     |
   | .fly-out          | 从下方飞出的效果                     |
