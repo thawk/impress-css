@@ -62,6 +62,7 @@
   | .slide            | 有确定的宽度和高度，缺省没有边框     |
   | .box              | 加边框                               |
   | .title            | 标题页                               |
+  | .hidestep         | 代替step，可以禁用一个step           |
   | .subslide         | 仅在当前步骤可见，如堆叠的页面       |
   | .substep          | 该元素按键后才显示                   |
   | .is-curr-step     | 只在当前step可见                     |

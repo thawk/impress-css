@@ -235,6 +235,10 @@ a:focus {
     Now let's style the presentation steps.
 */
 
+.hidestep, .hidestep.slide {
+    display: none;
+}
+
 .step {
     position: relative;
     width: 1800px;
