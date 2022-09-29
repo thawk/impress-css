@@ -142,10 +142,12 @@ strong {
     }
   }
 
+  .striped table tbody tr:nth-of-type(odd),
   table.striped tbody tr:nth-of-type(odd) {
     background-color: rgba($border-color, 0.05);
   }
 
+  .hover table tbody tr:hover,
   table.hover tbody tr:hover {
     background-color: rgba($border-color, 0.075);
   }

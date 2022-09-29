@@ -76,9 +76,11 @@ strong {
 #impress thead th, #impress thead td {
   border-bottom-color: #f2f2f2;
 }
+#impress .striped table tbody tr:nth-of-type(odd),
 #impress table.striped tbody tr:nth-of-type(odd) {
   background-color: rgba(242, 242, 242, 0.05);
 }
+#impress .hover table tbody tr:hover,
 #impress table.hover tbody tr:hover {
   background-color: rgba(242, 242, 242, 0.075);
 }
