@@ -157,6 +157,20 @@ q {
   text-shadow: 0 6px 6px rgba($border-color, .3);
 }
 
+.slide {
+  del, s {
+    text-decoration-color: $title-color;
+  }
+
+  li del, li s {
+    text-decoration-color: $accent-color;
+  }
+
+  li li del, li li s {
+    text-decoration-color: $title-color;
+  }
+}
+
 .noaccent         { color: $text-color; }
 .accent, .accent1 { color: $accent-color; }
 .accent2          { color: $title-color; }

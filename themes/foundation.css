@@ -89,6 +89,16 @@ q {
   text-shadow: 0 6px 6px rgba(153, 153, 136, 0.3);
 }
 
+.slide del, .slide s {
+  text-decoration-color: #900;
+}
+.slide li del, .slide li s {
+  text-decoration-color: #099;
+}
+.slide li li del, .slide li li s {
+  text-decoration-color: #900;
+}
+
 .noaccent {
   color: black;
 }
