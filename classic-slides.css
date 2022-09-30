@@ -37,7 +37,6 @@ blockquote {
   margin: 1em 3em 1em 2em;
 }
 
-/*  */
 b, strong { font-weight: bold }
 
 /* i, em { font-style: italic } */
@@ -612,7 +611,14 @@ input {
     text-align: center;
 }
 #impress svg[id^="mermaid"][width][height][viewBox] {
-    width: 90%;
-    height: auto;
+    max-width: 90%;
+    max-height: 100%;
 }
 
+#impress svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
+.f2-5 { font-size: 1.8rem; }
