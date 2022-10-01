@@ -20,9 +20,6 @@
 body {
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    color: rgb(70, 70, 70);
-
     background-size: contain;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -107,34 +104,6 @@ q {
     margin-top: 100px;
 }
 
-/* strike { */
-/*     opacity: 0.7; */
-/* } */
-/*  */
-/* small { */
-/*     font-size: 0.4em; */
-/* } */
-/*  */
-/* .left-align { */
-/*   text-align: left; */
-/* } */
-/*  */
-/* .center { */
-/*   text-align: center; */
-/* } */
-/*  */
-/* .right-align { */
-/*   text-align: right; */
-/* } */
-/*  */
-/* .strike { */
-/*     text-decoration: line-through; */
-/* } */
-/*  */
-/* .inline-block { */
-/*     position: inline-block; */
-/* } */
-
 #impress .font-normalsize {
     font-size: 100%;
 }
@@ -188,18 +157,6 @@ q {
     transition: opacity 1s;
 }
 
-.navy {color: #546778;}
-.green {color: #93d260;}
-.teal {color: #60d2b6;}
-.blue {color: #4e91e4;}
-.purple {color: #ac94e8;}
-.pink {color: #e77eb8;}
-.red {color: #ee675d;}
-.orange {color: #f78055;}
-.yellow {color: #fbc850;}
-.gray {color: #dde5ee;}
-.light-gray {color: #eeeeee;}
-
 /* Inline code, no Highlight.js */
 code, kbd, samp {
     font-family: "Cutive mono","Courier New", monospace;
@@ -251,11 +208,6 @@ a:focus {
 
 .more-text table {
     font-size: 80%;
-}
-
-#impress.debug .step {
-    /* for layout debuggind */
-    background-color: #F0808020;
 }
 
 .step code {

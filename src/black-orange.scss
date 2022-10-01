@@ -5,10 +5,10 @@
 // .Hydeout-/-Identity-Design-Exploration-5-hex { color: #0D0D0D; }
 
 @use 'common' with (
-    $dark-theme: true,
-    $text-color: #FFFFFF,
+    $is-dark-bg: true,
+    $main-color: #FFFFFF,
     $bg-color: #0D0D0D,
-    $title-color: #D9BE6C, 
+    $heading-color: #D9BE6C, 
     $accent-color: #BF6341,
 );
 

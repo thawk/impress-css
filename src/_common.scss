@@ -1,29 +1,56 @@
 @use "sass:color";
 
+// Background of the presentation
 $bg-color: #cccccc !default;
-$text-color: #464646 !default;
-$dark-theme: (color.lightness($bg-color) < 50) !default;
-$title-color: #4e91e4 !default;
+$is-dark-bg: (color.lightness($bg-color) < 50) !default;
+$debug-color: #F0808020 !default;
+
+$box-bg-color:   color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
+$table-bg-color: color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
+$code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
+$box-code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
+$shadow-color:   color.adjust($bg-color, $lightness: if($is-dark-bg,  20%, -20%)) !default;
+
+// Primary/body text
+$main-color: #464646 !default;
+
+// Headings
+$heading-color: #4e91e4 !default;
+$heading-text-shadow: -2px 2px 4px rgba($shadow-color, 0.9) !default;
+
 $accent-color : #ee675d !default;
-$blockquote-color: rgba($text-color, 0.7) !default;
+$blockquote-color: rgba($main-color, 0.7) !default;
 $blockquote-border-color: #1abc9c !default;
-$list-color: $text-color !default;
-$list-alt-color: $title-color !default;
+$list-color: $main-color !default;
+$list-alt-color: $heading-color !default;
 
-$box-bg-color:   color.adjust($bg-color, $lightness: if($dark-theme, -10%,  10%)) !default;
-$table-bg-color: color.adjust($bg-color, $lightness: if($dark-theme, -20%,  20%)) !default;
-$code-bg-color:  color.adjust($bg-color, $lightness: if($dark-theme, -10%,  10%)) !default;
-$box-code-bg-color:  color.adjust($bg-color, $lightness: if($dark-theme, -20%,  20%)) !default;
-$shadow-color:   color.adjust($bg-color, $lightness: if($dark-theme,  20%, -20%)) !default;
+$border-color: $heading-color !default;
+$a-bg-color: color.mix($heading-color, $bg-color, 0.5) !default;
+$link-color: $main-color !default;
 
-$border-color: $title-color !default;
-$a-bg-color: color.mix($title-color, $bg-color, 0.5) !default;
-$link-color: $text-color !default;
+$primary-color:    #4e91e4 !default;
+$success-color:    #4acf7f !default;
+$warning-color:    #fbc850 !default;
+$error-color:      #ee675d !default;
+$dark-color:       #546778 !default;
+$light-color:      #dde5ee !default;
+
+$navy-color:       #546778 !default;
+$green-color:      #93d260 !default;
+$teal-color:       #60d2b6 !default;
+$blue-color:       #4e91e4 !default;
+$purple-color:     #ac94e8 !default;
+$pink-color:       #e77eb8 !default;
+$red-color:        #ee675d !default;
+$orange-color:     #f78055 !default;
+$yellow-color:     #fbc850 !default;
+$gray-color:       #dde5ee !default;
+$light-gray-color: #eeeeee !default;
 
 // // Customed list bullet color
 // ul > li::before {
 //   content: "\2022";
-//   color: $text-color;
+//   color: $main-color;
 //   font-weight: bold;
 //   display: inline-block;
 //   width: 1em;
@@ -32,7 +59,7 @@ $link-color: $text-color !default;
 //
 // li li::before {
 //   content: "\2022";
-//   color: $title-color;
+//   color: $heading-color;
 // }
 //
 // li {
@@ -78,13 +105,13 @@ li {
 #impress .step {
   .substep.substep-visible {
     &.strike-on-substep, .strike-on-substep {
-      text-decoration-color: $title-color;
+      text-decoration-color: $heading-color;
     }
   }
 
   li li.substep.substep-visible {
     &.strike-on-substep, .strike-on-substep {
-      text-decoration-color: $title-color;
+      text-decoration-color: $heading-color;
     }
   }
 
@@ -97,7 +124,7 @@ li {
 
 body {
   background: $bg-color;
-  color: $text-color;
+  color: $main-color;
 }
 
 blockquote {
@@ -106,8 +133,8 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $title-color;
-  text-shadow: -2px 2px 4px rgba($shadow-color, 0.9);
+  color: $heading-color;
+  text-shadow: $heading-text-shadow;
 
   strong, b {
     color: $accent-color;
@@ -159,7 +186,7 @@ q {
 
 .slide {
   del, s {
-    text-decoration-color: $title-color;
+    text-decoration-color: $heading-color;
   }
 
   li del, li s {
@@ -167,13 +194,13 @@ q {
   }
 
   li li del, li li s {
-    text-decoration-color: $title-color;
+    text-decoration-color: $heading-color;
   }
 }
 
-.noaccent         { color: $text-color; }
+.noaccent         { color: $main-color; }
 .accent, .accent1 { color: $accent-color; }
-.accent2          { color: $title-color; }
+.accent2          { color: $heading-color; }
 .accent3          { color: #ac94e8; }
 .accent4          { color: #60d2b6; }
 
@@ -181,12 +208,24 @@ q {
  * https://docs.siimple.xyz/getting-started/theming.html
  */
 
-.primary { color: #4e91e4; }
-.success { color: #4acf7f; }
-.warning { color: #fbc850; }
-.error   { color: #ee675d; }
-.dark    { color: #546778; }
-.light   { color: #dde5ee; }
+.primary    { color: $primary-color; }
+.success    { color: $success-color; }
+.warning    { color: $warning-color; }
+.error      { color: $error-color; }
+.dark       { color: $dark-color; }
+.light      { color: $light-color; }
+
+.navy       { color: $navy-color; }
+.green      { color: $green-color; }
+.teal       { color: $teal-color; }
+.blue       { color: $blue-color; }
+.purple     { color: $purple-color; }
+.pink       { color: $pink-color; }
+.red        { color: $red-color; }
+.orange     { color: $orange-color; }
+.yellow     { color: $yellow-color; }
+.gray       { color: $gray-color; }
+.light-gray { color: $light-gray-color; }
 
 a {
   // background: rgba($a-bg-color,0.2);
@@ -225,7 +264,7 @@ a {
 pre > code {
   display: block;
   text-shadow: 0 0 0 rgba($shadow-color, 0);
-  color: $text-color;
+  color: $main-color;
   background-color: $code-bg-color;
   padding: 0.5em;
   border: 2px solid rgba($border-color, .3);
@@ -248,6 +287,12 @@ pre > code {
 
 /* SVG styles */
 path {
-  stroke: $text-color;
+  stroke: $main-color;
+}
+
+/* Debuging background */
+#impress.debug .step {
+    /* for layout debuggind */
+    background-color: $debug-color;
 }
 

@@ -5,10 +5,10 @@
 // color-5: #8E2800
 
 @use 'common' with (
-    $dark-theme: false,
-    $text-color: #468966,
+    $is-dark-bg: false,
+    $main-color: #468966,
     $bg-color: #ffee89 ,
-    $title-color: #b64926, 
+    $heading-color: #b64926, 
     $accent-color: #8e2800,
 );
 

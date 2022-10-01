@@ -146,6 +146,50 @@ q {
   color: #dde5ee;
 }
 
+.navy {
+  color: #546778;
+}
+
+.green {
+  color: #93d260;
+}
+
+.teal {
+  color: #60d2b6;
+}
+
+.blue {
+  color: #4e91e4;
+}
+
+.purple {
+  color: #ac94e8;
+}
+
+.pink {
+  color: #e77eb8;
+}
+
+.red {
+  color: #ee675d;
+}
+
+.orange {
+  color: #f78055;
+}
+
+.yellow {
+  color: #fbc850;
+}
+
+.gray {
+  color: #dde5ee;
+}
+
+.light-gray {
+  color: #eeeeee;
+}
+
 a {
   color: #569CD6;
   text-shadow: -2px 2px 4px rgba(81, 81, 81, 0.9);
@@ -200,6 +244,12 @@ pre > code {
 /* SVG styles */
 path {
   stroke: #DCDCDC;
+}
+
+/* Debuging background */
+#impress.debug .step {
+  /* for layout debuggind */
+  background-color: #F0808020;
 }
 
 /*# sourceMappingURL=vs2015.css.map */
