@@ -80,6 +80,10 @@ strong {
 #impress table.striped tbody tr:nth-of-type(odd) {
   background-color: rgba(182, 73, 38, 0.05);
 }
+#impress .vstriped tbody td:nth-of-type(odd),
+#impress .vstriped thead th:nth-of-type(odd) {
+  background-color: rgba(182, 73, 38, 0.05);
+}
 #impress .hover table tbody tr:hover,
 #impress table.hover tbody tr:hover {
   background-color: rgba(182, 73, 38, 0.075);
@@ -197,7 +201,7 @@ a {
   border-left-color: rgba(182, 73, 38, 0.2);
 }
 a:hover, a:focus {
-  background: #ffed89;
+  background: #db9c58;
   text-shadow: -2px 2px 3px rgba(255, 223, 35, 0.5);
 }
 
@@ -249,7 +253,7 @@ path {
 /* Debuging background */
 #impress.debug .step {
   /* for layout debuggind */
-  background-color: #F0808020;
+  background-color: rgba(240, 128, 128, 0.1254901961);
 }
 
 /*# sourceMappingURL=firenze.css.map */

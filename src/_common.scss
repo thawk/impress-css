@@ -25,7 +25,7 @@ $list-color: $main-color !default;
 $list-alt-color: $heading-color !default;
 
 $border-color: $heading-color !default;
-$a-bg-color: color.mix($heading-color, $bg-color, 0.5) !default;
+$a-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
 $link-color: $main-color !default;
 
 $primary-color:    #4e91e4 !default;
@@ -171,6 +171,11 @@ strong {
 
   .striped table tbody tr:nth-of-type(odd),
   table.striped tbody tr:nth-of-type(odd) {
+    background-color: rgba($border-color, 0.05);
+  }
+
+  .vstriped tbody td:nth-of-type(odd),
+  .vstriped thead th:nth-of-type(odd){
     background-color: rgba($border-color, 0.05);
   }
 
