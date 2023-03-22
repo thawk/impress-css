@@ -96,6 +96,7 @@
   | .more-text        | 容纳更多内容。用于#impress或.step    |
   | .visible          | visibility: visible;                 |
   | .hidden           | visibility: hidden; 隐藏元素，只占位 |
+  | .override-color   | 把svg中的线条颜色强制为前景色        |
   | .accent           | 重点颜色                             |
   | .accent1          | 同.accent                            |
   | .accent2          | 重点颜色2                            |

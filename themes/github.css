@@ -246,14 +246,14 @@ pre > code {
 }
 
 /* SVG styles */
-path {
+.override-color path {
   stroke: #24292e;
 }
 
 /* Debuging background */
 #impress.debug .step {
   /* for layout debuggind */
-  background-color: rgba(240, 128, 128, 0.1254901961);
+  background-color: #F0808020;
 }
 
 /*# sourceMappingURL=github.css.map */
