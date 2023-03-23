@@ -559,6 +559,14 @@ input {
 #impress svg {
     max-width: 100%;
     max-height: 100%;
+    padding: 1rem;
+}
+
+/* if a svg not have any of bg-* class, add a semi-transparent background to it */
+#impress svg:not([class^="bg-"], [class*=" bg-"])
+{
+    /* Add a background, so the line and text is visible in both light and dark theme */
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
