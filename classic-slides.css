@@ -266,6 +266,14 @@ a:focus {
     /* text-align: center; */
 }
 
+/* Cancel margin for fit-text elements */
+.slide .fit-text,
+.slide .fit-text,
+.slide .fit-text {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .slide p {
     /* text-align: center; */
     /* margin: 0.7em; */
@@ -551,6 +559,7 @@ input {
 #impress div.mermaid {
     text-align: center;
 }
+
 #impress svg[id^="mermaid"][width][height][viewBox] {
     max-width: 90%;
     max-height: 100%;
