@@ -1,0 +1,30 @@
+// Primary/body text
+$main-font: 'Lato', sans-serif !default;
+$main-font-size: 40px !default;
+
+// Vertical spacing between blocks of text
+$block-margin: 20px !default;
+
+// Headings
+$heading-margin: 0 0 $block-margin 0 !default;
+$heading-font: 'League Gothic', Impact, sans-serif !default;
+$heading-line-height: 1.2 !default;
+$heading-letter-spacing: normal !default;
+$heading-text-transform: uppercase !default;
+$heading-text-shadow: none !default;
+$heading-font-weight: normal !default;
+$heading-1-text-shadow: $heading-text-shadow !default;
+
+$heading-1-Size: 3.77em !default;
+$heading-2-Size: 2.11em !default;
+$heading-3-Size: 1.55em !default;
+$heading-4-Size: 1.00em !default;
+
+$code-font: monospace !default;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin body-background() {
+  background: $bg-color;
+}
+
