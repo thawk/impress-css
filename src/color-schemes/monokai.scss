@@ -1,5 +1,5 @@
 // from monokai.css
-@use 'common' with (
+@use '../color_define' with (
     $bg-color: #272822,
     $main-color: #ddd,
     $heading-color: #a6e22e,

@@ -1,0 +1,341 @@
+:root {
+  --c-step-width: 1800px;
+  --c-slide-width: 1850px;
+  --c-slide-height: 1000px;
+}
+
+body.impress-enabled {
+    min-height: 740px;
+
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    /* tachyons.css will set box-sizing of table to border-box, overwrite that */
+    #impress-help {
+      box-sizing: content-box;
+    }
+}
+
+#impress {
+  font-size: 3.75em;
+
+  .step {
+    .substep.substep-visible {
+      &.strike-on-substep, .strike-on-substep {
+        text-decoration-color: var(--c-heading-color);
+      }
+    }
+
+    li li.substep.substep-visible {
+      &.strike-on-substep, .strike-on-substep {
+        text-decoration-color: var(--c-heading-color);
+      }
+    }
+
+    li.substep.substep-visible {
+      &.strike-on-substep, .strike-on-substep {
+        text-decoration-color: var(--c-accent-color);
+      }
+    }
+  }
+
+  .box {
+    background-color: var(--c-box-bg-color);
+    border: 2px solid;
+    border-radius: 30px;
+    border-color: rgba(var(--c-border-color), .3);
+    box-shadow: 0 4px 8px rgba(var(--c-shadow-color), .1);
+
+    pre > code {
+      background-color: var(--c-box-code-bg-color);
+    }
+  }
+
+  /*
+  These 'slide' step styles were heavily inspired by HTML5 Slides:
+  http://html5slides.googlecode.com/svn/trunk/styles.css
+   */
+  .slide {
+    text-shadow: 0 3px 3px rgba(var(--c-shadow-color), .2);
+    display: block;
+
+    width: var(--c-slide-width);
+    height: var(--c-slide-height);
+    padding: 2rem 3rem;
+
+    &.flex {
+      display: flex;
+    }
+
+    /* Fix for slides with data-z != 0 */
+    &.zfix,
+    &.zfix * {
+      padding-top: 0px;
+      margin-top: 0px;
+    }
+
+    pre {
+      background: none;
+      padding: 0;
+      border: none;
+      font-size: 0.6em;
+      line-height: 0.7em;
+    }
+
+    q {
+      display: block;
+      margin-top: 100px;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+      /* text-align: center; */
+    }
+
+    /* Cancel margin for fit-text elements */
+    .fit-text {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  /* Debuging background */
+  &.debug .step {
+      /* for layout debuggind */
+      background-color: var(--c-debug-color);
+  }
+
+  .future.is-curr-step,
+  .past.is-curr-step {
+    display: none;
+  }
+
+  .future .is-curr-step,
+  .past .is-curr-step {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .present.is-curr-step,
+  .present .is-curr-step {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .hidestep, .hidestep.slide {
+    display: none;
+  }
+
+  .step {
+    position: relative;
+    width: var(--c-step-width);
+    padding: 3rem;
+    margin: 3rem;
+
+    box-sizing: border-box;
+
+    /* font-size: 3.75em; */
+    line-height: 1.4;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+  }
+
+  /*
+   * Make inactive steps a little bit transparent.
+   */
+  .step {
+    opacity: 0.9;
+    transition: opacity 1s;
+    /* transition: opacity 3s; */
+  }
+
+  .impress-enabled .step.active {
+    opacity: 1;
+  }
+
+  .step.title {
+    display: block;
+
+    width: var(--c-slide-width);
+    height: var(--c-slide-height);
+    padding: 2rem 3rem;
+  }
+
+  /* Slides that are visible only during their turn. Typically on top of another slide. */
+  .step.subslide {
+    opacity: 0;
+    transition: opacity 1s;
+
+    padding-top: 300px;
+  }
+
+  .step.subslide.active {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .step.subslide p {
+    text-align: left;
+  }
+
+  .title h1,
+  .title h2,
+  .title h3,
+  .title p {
+      width: 100%;
+      text-align: center;
+  }
+  .title h1 { margin-top: 200px; }
+  .title h2 { margin-top: 200px; }
+  .title h1 + h2 { margin-top: 400px; }
+  .title h3 { margin-top: 200px; }
+  .title h2 + h3 { margin-top: 400px; }
+  .title h1 + h2 + h3 { margin-top: 600px; }
+
+  /* Styles for animating the contents of a slide, such as a img, p, li or span element. ********/
+
+  /*
+  fly-in class starts from a position outside the slide, then flies into it's correct position.
+   */
+  .future .fly-in {
+    transform: translateY(-2100px);
+    opacity: 0.0; /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
+  }
+  .present .fly-in {
+    transform: translateY(0px);
+    opacity: 1.0;
+    transition: 2s;
+  }
+  .past .fly-out {
+    transform: translateY(2100px);
+    opacity: 0.0;
+    transition: 2s;
+  }
+
+  /*
+  Fade-in/out is a straightforward fade. Give it enough seconds that all browsers render it clearly.
+   */
+  .future.fade-in,
+  .future .fade-in {
+    opacity: 0.0;
+  }
+  .present.fade-in,
+  .present .fade-in {
+    opacity: 1.0;
+    transition: 7s;
+  }
+  .past.fade-out,
+  .past .fade-out {
+    opacity: 0.0;
+    transition: 3s;
+  }
+
+  /*
+  Gray-in/out like fade, but it's not 100% transparent.
+   */
+  .future.gray-in,
+  .future .gray-in {
+    opacity: 0.3;
+  }
+  .present.gray-in,
+  .present .gray-in {
+    opacity: 1.0;
+    transition: 7s;
+  }
+  .past.gray-out,
+  .past .gray-out {
+    opacity: 0.3;
+    transition: 3s;
+  }
+
+  /*
+  Zoom-in.
+   */
+  .future  .zoom-in {
+    transform: scale(10);
+    opacity: 0.0;
+  }
+  .present .zoom-in {
+    transform: scale(1);
+    opacity: 1.0;
+    transition: 3s;
+  }
+  .past  .zoom-out {
+    transform: scale(10);
+    opacity: 0.0;
+  }
+
+  /* substep */
+  .step {
+    .substep.substep-visible .strike-on-substep,
+    .substep.substep-visible.strike-on-substep {
+      text-decoration: line-through;
+    }
+
+    .substep.strike-on-substep {
+      opacity: 1;
+    }
+
+    .substep .is-curr-substep {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .substep.is-curr-substep,
+    .substep .is-curr-substep {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .substep.substep-active.is-curr-substep,
+    .substep.substep-active .is-curr-substep {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .substep.is-curr-substep.remove,
+    .substep .is-curr-substep.remove {
+      display: none;
+    }
+
+    .substep.substep-active.is-curr-substep.remove,
+    .substep.substep-active .is-curr-substep.remove {
+      display: initial;
+    }
+  }
+
+  #overview {
+    pointer-events: none
+
+    #signature {
+      color: #546778;
+      opacity: 0;
+      font-size: 40%;
+    }
+
+    #signature a {
+      font-family: "PT Serif";
+      font-size: 120%;
+      text-decoration: none;
+      border: none;
+      background: none;
+      pointer-events: auto;
+    }
+  }
+
+  .impress-on-overview {
+    #overview #signature {
+      opacity: 1;
+    }
+
+    .show-on-overview {
+      opacity: 1;
+    }
+
+    .hide-on-overview {
+      opacity: 0;
+    }
+  }
+}
+

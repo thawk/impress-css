@@ -1,0 +1,12 @@
+:root {
+  // for reveal.js
+  --r-background-color: $bg-color;
+  --r-main-color: $main-color;
+  --r-heading-color: $heading-color;
+  --r-link-color: $link-color;
+  --r-link-color-dark: color.darken($link-color , 15% );
+  --r-link-color-hover: $link-color-hover;
+  --r-selection-background-color: $selection-bg-color;
+  --r-selection-color: $selection-color;
+}
+

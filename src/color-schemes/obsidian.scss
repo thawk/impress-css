@@ -1,5 +1,5 @@
 // from obsidian.css
-@use 'common' with (
+@use '../color_define' with (
     $bg-color: #282b2e,
     $main-color: #e0e2e4,
     $heading-color: white,

@@ -1,56 +1,9 @@
-@use "sass:color";
-
-// Background of the presentation
-$bg-color: #cccccc !default;
-$is-dark-bg: (color.lightness($bg-color) < 50) !default;
-$debug-color: #F0808020 !default;
-
-$box-bg-color:   color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
-$table-bg-color: color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
-$code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
-$box-code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
-$shadow-color:   color.adjust($bg-color, $lightness: if($is-dark-bg,  20%, -20%)) !default;
-
-// Primary/body text
-$main-color: #464646 !default;
-
-// Headings
-$heading-color: #4e91e4 !default;
-$heading-text-shadow: -2px 2px 4px rgba($shadow-color, 0.9) !default;
-
-$accent-color : #ee675d !default;
-$blockquote-color: rgba($main-color, 0.7) !default;
-$blockquote-border-color: #1abc9c !default;
-$list-color: $main-color !default;
-$list-alt-color: $heading-color !default;
-
-$border-color: $heading-color !default;
-$a-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
-$link-color: $main-color !default;
-
-$primary-color:    #4e91e4 !default;
-$success-color:    #4acf7f !default;
-$warning-color:    #fbc850 !default;
-$error-color:      #ee675d !default;
-$dark-color:       #546778 !default;
-$light-color:      #dde5ee !default;
-
-$navy-color:       #546778 !default;
-$green-color:      #93d260 !default;
-$teal-color:       #60d2b6 !default;
-$blue-color:       #4e91e4 !default;
-$purple-color:     #ac94e8 !default;
-$pink-color:       #e77eb8 !default;
-$red-color:        #ee675d !default;
-$orange-color:     #f78055 !default;
-$yellow-color:     #fbc850 !default;
-$gray-color:       #dde5ee !default;
-$light-gray-color: #eeeeee !default;
+// common styles, common to impress.js and reveal.js
 
 // // Customed list bullet color
 // ul > li::before {
 //   content: "\2022";
-//   color: $main-color;
+//   color: var(--c-main-color);
 //   font-weight: bold;
 //   display: inline-block;
 //   width: 1em;
@@ -59,12 +12,17 @@ $light-gray-color: #eeeeee !default;
 //
 // li li::before {
 //   content: "\2022";
-//   color: $heading-color;
+//   color: var(--c-heading-color);
 // }
 //
 // li {
 //     list-style: none;
 // }
+
+body {
+  background: var(--c-bg-color);
+  color: var(--c-main-color);
+}
 
 ul {
   list-style-type: disc;
@@ -91,213 +49,355 @@ ol {
 }
 
 li {
-  color: $list-color;
+  color: var(--c-list-color);
 
   li {
-    color: $list-alt-color;
+    color: var(--c-list-alt-color);
     margin-left: 0.5em;
     li {
-      color: $list-color;
+      color: var(--c-list-color);
     }
   }
 }
 
-#impress .step {
-  .substep.substep-visible {
-    &.strike-on-substep, .strike-on-substep {
-      text-decoration-color: $heading-color;
-    }
-  }
-
-  li li.substep.substep-visible {
-    &.strike-on-substep, .strike-on-substep {
-      text-decoration-color: $heading-color;
-    }
-  }
-
-  li.substep.substep-visible {
-    &.strike-on-substep, .strike-on-substep {
-      text-decoration-color: $accent-color;
-    }
-  }
-}
-
-body {
-  background: $bg-color;
-  color: $main-color;
+input {
+    font-size: 1em;
 }
 
 blockquote {
-  color: $blockquote-color;
-  border-left-color: $blockquote-border-color;
+  color: var(--c-blockquote-color);
+  border-left-color: var(--c-blockquote-border-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $heading-color;
-  text-shadow: $heading-text-shadow;
+  color: var(--c-heading-color);
+  text-shadow: -2px 2px 4px rgba(var(--shadow-color), 0.9);
 
   strong, b {
-    color: $accent-color;
+    color: var(--c-accent-color);
     // font-weight: bolder;
   }
 }
 
-strong {
-  color: $accent-color;
+b, strong {
+  font-weight: bold
 }
 
-#impress {
-  table {
-    border-color: $border-color;
-
-    tbody + tbody {
-      border-top-color: $border-color;
-    }
-
-    table {
-      background-color: $table-bg-color;
-    }
-  }
-
-  th, td {
-    border-top-color: $border-color;
-  }
-
-  thead {
-    th, td {
-      border-bottom-color: $border-color;
-    }
-  }
-
-  .striped table tbody tr:nth-of-type(odd),
-  table.striped tbody tr:nth-of-type(odd) {
-    background-color: rgba($border-color, 0.05);
-  }
-
-  .vstriped tbody td:nth-of-type(odd),
-  .vstriped thead th:nth-of-type(odd){
-    background-color: rgba($border-color, 0.05);
-  }
-
-  .hover table tbody tr:hover,
-  table.hover tbody tr:hover {
-    background-color: rgba($border-color, 0.075);
-  }
+strong {
+  color: var(--c-accent-color);
 }
 
 q {
-  text-shadow: 0 6px 6px rgba($border-color, .3);
+  font-style: italic;
+  text-shadow: 0 6px 6px rgba(var(--c-border-color), .3);
+  /* font-family: 'PT Serif'; */
+  /* font-weight: 400;     */
 }
 
-.slide {
-  del, s {
-    text-decoration-color: $heading-color;
-  }
-
-  li del, li s {
-    text-decoration-color: $accent-color;
-  }
-
-  li li del, li li s {
-    text-decoration-color: $heading-color;
-  }
+/* 块/段落引用 */
+blockquote {
+  position: relative;
+  font-weight: 400;
+  border-left: 1px solid;
+  padding-left: 1em;
+  margin: 1em 3em 1em 2em;
 }
-
-.noaccent         { color: $main-color; }
-.accent, .accent1 { color: $accent-color; }
-.accent2          { color: $heading-color; }
-.accent3          { color: #ac94e8; }
-.accent4          { color: #60d2b6; }
-
-/* color codes from siimple css.
- * https://docs.siimple.xyz/getting-started/theming.html
- */
-
-.primary    { color: $primary-color; }
-.success    { color: $success-color; }
-.warning    { color: $warning-color; }
-.error      { color: $error-color; }
-.dark       { color: $dark-color; }
-.light      { color: $light-color; }
-
-.navy       { color: $navy-color; }
-.green      { color: $green-color; }
-.teal       { color: $teal-color; }
-.blue       { color: $blue-color; }
-.purple     { color: $purple-color; }
-.pink       { color: $pink-color; }
-.red        { color: $red-color; }
-.orange     { color: $orange-color; }
-.yellow     { color: $yellow-color; }
-.gray       { color: $gray-color; }
-.light-gray { color: $light-gray-color; }
 
 a {
-  // background: rgba($a-bg-color,0.2);
-  color: $link-color;
-  text-shadow: -2px 2px 4px rgba($shadow-color,0.9);
-  border-bottom-color: rgba($border-color,0.2);
-  border-left-color:   rgba($border-color,0.2);
+  // background: rgba(var(--c-a-bg-color),0.2);
+  color: var(--c-link-color);
+  text-shadow: -2px 2px 4px rgba(var(--c-shadow-color),0.9);
+  text-decoration: none;
+  padding: 0 0.1em;
+
+  border-radius: 0.2em;
+  border-bottom: 3px solid;
+  border-left:   3px solid;
+  border-bottom-color: rgba(var(--c-border-color),0.2);
+  border-left-color:   rgba(var(--c-border-color),0.2);
+
+  transition:         0.5s;
 
   &:hover, &:focus {
-    background: rgba($a-bg-color,1);
-    text-shadow: -2px 2px 3px rgba($shadow-color,0.5);
+    background: rgba(var(--c-a-bg-color),1);
+    text-shadow: -2px 2px 3px rgba(var(--c-shadow-color),0.5);
   }
 }
 
-.box {
-  background-color: $box-bg-color;
-  border-color: rgba($border-color, .3);
-  box-shadow: 0 4px 8px rgba($shadow-color, .1);
-}
-
-.slide {
-  text-shadow: 0 3px 3px rgba($shadow-color, .2);
-
-  &.flex {
-    display: flex;
-  }
-
-  pre {
-    background: none;
-    padding: 0;
-    border: none;
-  }
+/* Inline code, no Highlight.js */
+code, kbd, samp {
+    font-family: "Cutive mono","Courier New", monospace;
 }
 
 // Highlight.js used for coloring pre > code blocks.
 pre > code {
   display: block;
-  text-shadow: 0 0 0 rgba($shadow-color, 0);
-  color: $main-color;
-  background-color: $code-bg-color;
+  text-shadow: 0 0 0 rgba(var(--c-shadow-color), 0);
+  color: var(--c-main-color);
+  background-color: var(--c-code-bg-color);
   padding: 0.5em;
-  border: 2px solid rgba($border-color, .3);
+  border: 2px solid rgba(var(--c-border-color), .3);
 }
 
-.box pre > code {
-  background-color: $box-code-bg-color;
-}
+.noaccent         { color: var(--c-main-color); }
+.accent, .accent1 { color: var(--c-accent-color); }
+.accent2          { color: var(--c-accent2-color); }
+.accent3          { color: var(--c-accent3-color); }
+.accent4          { color: var(--c-accent4-color); }
 
-#overview #signature {
-  color: #546778;
-}
+/* color codes from siimple css.
+ * https://docs.siimple.xyz/getting-started/theming.html
+ */
 
-/* style for main classes in mermaid classDiagram */
-#impress .mermaid {
-  .main_class {
-    fill: #ffdfdf;
+.primary    { color: var(--c-primary-color); }
+.success    { color: var(--c-success-color); }
+.warning    { color: var(--c-warning-color); }
+.error      { color: var(--c-error-color); }
+.dark       { color: var(--c-dark-color); }
+.light      { color: var(--c-light-color); }
+
+.navy       { color: var(--c-navy-color); }
+.green      { color: var(--c-green-color); }
+.teal       { color: var(--c-teal-color); }
+.blue       { color: var(--c-blue-color); }
+.purple     { color: var(--c-purple-color); }
+.pink       { color: var(--c-pink-color); }
+.red        { color: var(--c-red-color); }
+.orange     { color: var(--c-orange-color); }
+.yellow     { color: var(--c-yellow-color); }
+.gray       { color: var(--c-gray-color); }
+.light-gray { color: var(--c-light-gray-color); }
+
+/* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
+.f2-5 { font-size: 1.8rem; }
+
+#impress,
+.reveal {
+  table {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    border: 1px solid;
+    border-color: var(--c-border-color);
+    border-collapse: collapse;
+    /* border-spacing: 0; */
+    margin-bottom: 1rem;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+
+    tbody + tbody {
+      border-top: 2px solid;
+      border-top-color: var(--c-border-color);
+    }
+
+    table {
+      background-color: var(--c-table-bg-color);
+    }
   }
-}
 
-/* SVG styles */
-.override-color path {
-  stroke: $main-color;
-}
+  table.borderless
+  table.borderless th,
+  table.borderless td,
+  table.borderless thead th,
+  table.borderless thead td {
+    border: none;
+  }
 
-/* Debuging background */
-#impress.debug .step {
-    /* for layout debuggind */
-    background-color: $debug-color;
+  th {
+    text-align: inherit;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid;
+    border-top-color: var(--c-border-color);
+  }
+
+  thead {
+    display: table-header-group;
+
+    th {
+      vertical-align: bottom;
+    }
+    
+    th, td {
+      border-bottom: 2px solid;
+      border-bottom-color: var(--c-border-color);
+    }
+  }
+
+  .striped table tbody tr:nth-of-type(odd),
+  table.striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(var(--c-border-color), 0.05);
+  }
+
+  .vstriped tbody td:nth-of-type(odd),
+  .vstriped thead th:nth-of-type(odd){
+    background-color: rgba(var(--c-border-color), 0.05);
+  }
+
+  .hover table tbody tr:hover,
+  table.hover tbody tr:hover {
+    background-color: rgba(var(--c-border-color), 0.075);
+  }
+
+  del, s {
+    text-decoration-color: var(--c-heading-color);
+  }
+
+  li del, li s {
+    text-decoration-color: var(--c-accent-color);
+  }
+
+  li li del, li li s {
+    text-decoration-color: var(--c-heading-color);
+  }
+
+  code {
+    line-height: 1;
+  }
+
+  .font-normalsize {
+      font-size: 100%;
+  }
+  .font-smaller,
+  .font-smaller1 {
+      font-size: 90%;
+  }
+  .font-smaller2 {
+      font-size: 80%;
+  }
+  .font-smaller3 {
+      font-size: 70%;
+  }
+  .font-smaller4 {
+      font-size: 60%;
+  }
+  .font-smaller5 {
+      font-size: 50%;
+  }
+  .font-larger,
+  .font-larger1 {
+      font-size: 110%;
+  }
+  .font-larger2 {
+      font-size: 120%;
+  }
+  .font-larger3 {
+      font-size: 130%;
+  }
+  .font-larger4 {
+      font-size: 150%;
+  }
+  .font-larger5 {
+      font-size: 200%;
+  }
+
+  /* more text, smaller font size */
+  .more-text {
+      font-size: 80%;
+  }
+
+  .more-text .step {
+      font-size: 65%;
+  }
+
+  .more-text table {
+      font-size: 80%;
+  }
+
+  .lh-solid {
+    line-height: 1;
+  }
+  .lh-title {
+    line-height: 1.25;
+  }
+  .lh-copy {
+    line-height: 1.5;
+  }
+
+  .float-right {
+    float: right;
+    margin-left:  1rem;
+    margin-right:   0rem;
+    margin-top:    1rem;
+    margin-bottom: 1rem;
+  }
+  .float-left {
+    float: left;
+    margin-right: 1rem;
+    margin-left:    0rem;
+    margin-top:    1rem;
+    margin-bottom: 1rem;
+  }
+  .top {
+    position: absolute;
+    top: 1rem;
+    margin-bottom:  1rem;
+    margin-top:      0rem;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 1rem;
+    margin-bottom:   0rem;
+    margin-top:     1rem;
+  }
+  .right {
+    position: absolute;
+    right: 0rem;
+    margin-left:  1rem;
+    margin-right:   0rem;
+    margin-top:    1rem;
+    margin-bottom: 1rem;
+  }
+  .left {
+    position: absolute;
+    left: 0rem;
+    margin-right: 1rem;
+    margin-left:    0rem;
+    margin-top:    1rem;
+    margin-bottom: 2rem;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  /* mermaid related */
+  /* style for main classes in mermaid classDiagram */
+  .mermaid {
+    .main_class {
+      fill: #ffdfdf;
+      text-align: center;
+    }
+  }
+
+  /* SVG styles */
+  .override-color path {
+    stroke: var(--c-main-color);
+  }
+
+  svg[id^="mermaid"][width][height][viewBox] {
+    max-width: 90%;
+    max-height: 100%;
+  }
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1rem;
+  }
+
+  /* if a svg not have any of bg-* class, add a semi-transparent background to it */
+  svg:not([class^="bg-"], [class*=" bg-"])
+  {
+    /* Add a background, so the line and text is visible in both light and dark theme */
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 

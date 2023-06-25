@@ -1,5 +1,5 @@
 // from tomorrow-night.css
-@use 'common' with (
+@use '../color_define' with (
     $bg-color: #1d1f21,
     $main-color: #969896,
     $heading-color: #81a2be,

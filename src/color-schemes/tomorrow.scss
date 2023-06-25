@@ -1,5 +1,5 @@
 // from tomorrow.css
-@use 'common' with (
+@use '../color_define' with (
     $bg-color: white,
     $main-color: #8e908c,
     $heading-color: #4271ae,

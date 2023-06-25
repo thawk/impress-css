@@ -1,5 +1,5 @@
 // from gruvbox-light.css
-@use 'common' with (
+@use '../color_define' with (
     $bg-color: #fbf1c7,
     $main-color: #3c3836,
     $heading-color: #076678,
