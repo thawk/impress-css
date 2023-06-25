@@ -1,5 +1,5 @@
 // from gruvbox-dark.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #282828,
     $main-color: #ebdbb2,
     $heading-color: #83a598,

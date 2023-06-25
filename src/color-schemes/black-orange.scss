@@ -4,7 +4,7 @@
 // .Hydeout-/-Identity-Design-Exploration-4-hex { color: #595959; }
 // .Hydeout-/-Identity-Design-Exploration-5-hex { color: #0D0D0D; }
 
-@use '../color_define' with (
+@use 'color_scheme' with (
     $is-dark-bg: true,
     $main-color: #FFFFFF,
     $bg-color: #0D0D0D,

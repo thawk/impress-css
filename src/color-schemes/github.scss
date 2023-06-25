@@ -1,5 +1,5 @@
 // from github.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #ffffff,
     $main-color: #24292e,
     $heading-color: #6f42c1,

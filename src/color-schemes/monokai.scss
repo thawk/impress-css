@@ -1,5 +1,5 @@
 // from monokai.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #272822,
     $main-color: #ddd,
     $heading-color: #a6e22e,

@@ -1,5 +1,5 @@
 // from foundation.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #eee,
     $main-color: black,
     $heading-color: #900,

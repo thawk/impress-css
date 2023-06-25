@@ -1,5 +1,5 @@
 // from atom-one-dark.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #282c34,
     $main-color: #abb2bf,
     $heading-color: #61aeee,

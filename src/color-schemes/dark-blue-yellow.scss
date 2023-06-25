@@ -5,7 +5,7 @@
 // .游戏设计-4-hex { color: #F2CB05; }
 // .游戏设计-5-hex { color: #F29F05; }
 
-@use '../color_define' with (
+@use 'color_scheme' with (
     $is-dark-bg: true,
     // $bg-color: #121D59,
     $bg-color: #090F2F,

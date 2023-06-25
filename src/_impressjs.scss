@@ -44,8 +44,8 @@ body.impress-enabled {
     background-color: var(--c-box-bg-color);
     border: 2px solid;
     border-radius: 30px;
-    border-color: rgba(var(--c-border-color), .3);
-    box-shadow: 0 4px 8px rgba(var(--c-shadow-color), .1);
+    border-color: var(--c-border-color-3);
+    box-shadow: 0 4px 8px var(--c-shadow-color-1);
 
     pre > code {
       background-color: var(--c-box-code-bg-color);
@@ -57,7 +57,7 @@ body.impress-enabled {
   http://html5slides.googlecode.com/svn/trunk/styles.css
    */
   .slide {
-    text-shadow: 0 3px 3px rgba(var(--c-shadow-color), .2);
+    text-shadow: 0 3px 3px var(--c-shadow-color-2);
     display: block;
 
     width: var(--c-slide-width);

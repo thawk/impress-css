@@ -1,5 +1,5 @@
 // from idea.css
-@use '../color_define' with (
+@use 'color_scheme' with (
     $bg-color: #fff,
     $main-color: #000,
     $heading-color: #000,

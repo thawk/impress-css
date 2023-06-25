@@ -4,7 +4,7 @@
 // color-4: #B64926
 // color-5: #8E2800
 
-@use '../color_define' with (
+@use 'color_scheme' with (
     $is-dark-bg: false,
     $main-color: #468966,
     $bg-color: #ffee89 ,
