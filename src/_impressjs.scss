@@ -5,21 +5,22 @@
 }
 
 body.impress-enabled {
-    min-height: 740px;
+  min-height: 740px;
 
-    background-size: contain;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 
-    /* tachyons.css will set box-sizing of table to border-box, overwrite that */
-    #impress-help {
-      box-sizing: content-box;
-    }
+  /* tachyons.css will set box-sizing of table to border-box, overwrite that */
+  #impress-help {
+    box-sizing: content-box;
+  }
+
+  #impress {
+  }
 }
 
 #impress {
-  font-size: 3.75em;
-
   .step {
     .substep.substep-visible {
       &.strike-on-substep, .strike-on-substep {
@@ -132,7 +133,7 @@ body.impress-enabled {
     position: relative;
     width: var(--c-step-width);
     padding: 3rem;
-    margin: 3rem;
+    margin: 0rem;
 
     box-sizing: border-box;
 
@@ -150,7 +151,7 @@ body.impress-enabled {
     /* transition: opacity 3s; */
   }
 
-  .impress-enabled .step.active {
+  .step.active {
     opacity: 1;
   }
 
@@ -186,12 +187,6 @@ body.impress-enabled {
       width: 100%;
       text-align: center;
   }
-  .title h1 { margin-top: 200px; }
-  .title h2 { margin-top: 200px; }
-  .title h1 + h2 { margin-top: 400px; }
-  .title h3 { margin-top: 200px; }
-  .title h2 + h3 { margin-top: 400px; }
-  .title h1 + h2 + h3 { margin-top: 600px; }
 
   /* Styles for animating the contents of a slide, such as a img, p, li or span element. ********/
 
@@ -306,7 +301,7 @@ body.impress-enabled {
   }
 
   #overview {
-    pointer-events: none
+    pointer-events: none;
 
     #signature {
       color: #546778;
@@ -323,19 +318,19 @@ body.impress-enabled {
       pointer-events: auto;
     }
   }
-
-  .impress-on-overview {
-    #overview #signature {
-      opacity: 1;
-    }
-
-    .show-on-overview {
-      opacity: 1;
-    }
-
-    .hide-on-overview {
-      opacity: 0;
-    }
-  }
 }
 
+
+.impress-on-overview #impress {
+  #overview #signature {
+    opacity: 1;
+  }
+
+  .show-on-overview {
+    opacity: 1;
+  }
+
+  .hide-on-overview {
+    opacity: 0;
+  }
+}

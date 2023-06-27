@@ -1,10 +1,10 @@
 @use 'layout' with (
   // Primary/body text
-  $main-font: ['Lato', 'sans-serif'],
-  $main-font-size: 40px,
+  // $main-font: ['Lato', 'sans-serif'],
+  $main-font-size: 3.75em,
 
   // Vertical spacing between blocks of text
-  $block-margin: 20px,
+  $block-margin: 1em,
 
   // Headings
   $heading-font: ['League Gothic', Impact, sans-serif],
@@ -26,4 +26,13 @@
 // to return a background image or gradient
 @mixin body-background() {
   background: $bg-color;
+}
+
+#impress .slide {
+  .title h1 { margin-top: 200px; }
+  .title h2 { margin-top: 200px; }
+  .title h1 + h2 { margin-top: 400px; }
+  .title h3 { margin-top: 200px; }
+  .title h2 + h3 { margin-top: 400px; }
+  .title h1 + h2 + h3 { margin-top: 600px; }
 }

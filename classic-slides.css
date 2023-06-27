@@ -4,108 +4,6 @@ body {
   color: var(--c-main-color);
 }
 
-ul {
-  list-style-type: disc;
-}
-ul ul {
-  list-style-type: circle;
-}
-ul ul ul {
-  list-style-type: square;
-}
-
-ol {
-  list-style-type: decimal;
-}
-ol ol {
-  list-style-type: lower-alpha;
-}
-ol ol ol {
-  list-style-type: lower-roman;
-}
-
-li {
-  color: var(--c-list-color);
-}
-li li {
-  color: var(--c-list-alt-color);
-  margin-left: 0.5em;
-}
-li li li {
-  color: var(--c-list-color);
-}
-
-input {
-  font-size: 1em;
-}
-
-blockquote {
-  color: var(--c-blockquote-color);
-  border-left-color: var(--c-blockquote-border-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--c-heading-color);
-  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-}
-h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h5 b, h6 strong, h6 b {
-  color: var(--c-accent-color);
-}
-
-b, strong {
-  font-weight: bold;
-}
-
-strong {
-  color: var(--c-accent-color);
-}
-
-q {
-  font-style: italic;
-  text-shadow: 0 6px 6px var(--c-border-color-3);
-  /* font-family: 'PT Serif'; */
-  /* font-weight: 400;     */
-}
-
-/* 块/段落引用 */
-blockquote {
-  position: relative;
-  font-weight: 400;
-  border-left: 1px solid;
-  padding-left: 1em;
-  margin: 1em 3em 1em 2em;
-}
-
-a {
-  color: var(--c-link-color);
-  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-  text-decoration: none;
-  padding: 0 0.1em;
-  border-radius: 0.2em;
-  border-bottom: 3px solid;
-  border-left: 3px solid;
-  border-bottom-color: var(--c-border-color-2);
-  border-left-color: var(--c-border-color-2);
-  transition: 0.5s;
-}
-a:hover, a:focus {
-  background: var(--c-a-bg-color);
-  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
-}
-
-/* Inline code, no Highlight.js */
-code, kbd, samp {
-  font-family: "Cutive mono", "Courier New", monospace;
-}
-
-pre > code {
-  display: block;
-  color: var(--c-main-color);
-  background-color: var(--c-code-bg-color);
-  padding: 0.5em;
-  border: 2px solid var(--c-border-color-3);
-}
-
 .noaccent {
   color: var(--c-main-color);
 }
@@ -204,11 +102,171 @@ pre > code {
 
 #impress,
 .reveal {
+  font-family: var(--c-main-font);
+  font-size: var(--c-main-font-size);
+  /* 块/段落引用 */
+  /* Inline code, no Highlight.js */
   /* more text, smaller font size */
   /* mermaid related */
   /* style for main classes in mermaid classDiagram */
   /* SVG styles */
   /* if a svg not have any of bg-* class, add a semi-transparent background to it */
+}
+#impress ul,
+.reveal ul {
+  list-style-type: disc;
+}
+#impress ul ul,
+.reveal ul ul {
+  list-style-type: circle;
+}
+#impress ul ul ul,
+.reveal ul ul ul {
+  list-style-type: square;
+}
+#impress ol,
+.reveal ol {
+  list-style-type: decimal;
+}
+#impress ol ol,
+.reveal ol ol {
+  list-style-type: lower-alpha;
+}
+#impress ol ol ol,
+.reveal ol ol ol {
+  list-style-type: lower-roman;
+}
+#impress li,
+.reveal li {
+  color: var(--c-list-color);
+}
+#impress li li,
+.reveal li li {
+  color: var(--c-list-alt-color);
+  margin-left: 0.5em;
+}
+#impress li li li,
+.reveal li li li {
+  color: var(--c-list-color);
+}
+#impress input,
+.reveal input {
+  font-size: 1em;
+}
+#impress h1, #impress h2, #impress h3, #impress h4, #impress h5, #impress h6,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: var(--c-heading-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  margin: var(--c-heading-margin);
+  font-family: var(--c-heading-font);
+  font-weight: var(--c-heading-font-weight);
+  line-height: var(--c-heading-line-height);
+  letter-spacing: var(--c-heading-letter-spacing);
+  text-transform: var(--c-heading-text-transform);
+  text-shadow: var(--c-heading-text-shadow);
+}
+#impress h1 strong, #impress h1 b, #impress h2 strong, #impress h2 b, #impress h3 strong, #impress h3 b, #impress h4 strong, #impress h4 b, #impress h5 strong, #impress h5 b, #impress h6 strong, #impress h6 b,
+.reveal h1 strong,
+.reveal h1 b,
+.reveal h2 strong,
+.reveal h2 b,
+.reveal h3 strong,
+.reveal h3 b,
+.reveal h4 strong,
+.reveal h4 b,
+.reveal h5 strong,
+.reveal h5 b,
+.reveal h6 strong,
+.reveal h6 b {
+  color: var(--c-accent-color);
+}
+#impress h1,
+.reveal h1 {
+  font-size: var(--c-heading-1-size);
+}
+#impress h2,
+.reveal h2 {
+  font-size: var(--c-heading-2-size);
+}
+#impress h3,
+.reveal h3 {
+  font-size: var(--c-heading-3-size);
+}
+#impress h4,
+.reveal h4 {
+  font-size: var(--c-heading-4-size);
+}
+#impress h1,
+.reveal h1 {
+  text-shadow: var(--c-heading1-text-shadow);
+}
+#impress b, #impress strong,
+.reveal b,
+.reveal strong {
+  font-weight: bold;
+}
+#impress strong,
+.reveal strong {
+  color: var(--c-accent-color);
+}
+#impress q,
+.reveal q {
+  font-style: italic;
+  text-shadow: 0 6px 6px var(--c-border-color-3);
+  /* font-family: 'PT Serif'; */
+  /* font-weight: 400;     */
+}
+#impress blockquote,
+.reveal blockquote {
+  color: var(--c-blockquote-color);
+  border-left-color: var(--c-blockquote-border-color);
+  position: relative;
+  font-weight: 400;
+  border-left: 1px solid;
+  padding-left: 1em;
+  margin: var(--c-block-margin) 3em var(--c-block-margin) 2em;
+}
+#impress a,
+.reveal a {
+  color: var(--c-link-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  text-decoration: none;
+  padding: 0 0.1em;
+  border-radius: 0.2em;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-bottom-color: var(--c-border-color-2);
+  border-left-color: var(--c-border-color-2);
+  transition: 0.5s;
+}
+#impress a:hover, #impress a:focus,
+.reveal a:hover,
+.reveal a:focus {
+  background: var(--c-a-bg-color);
+  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
+}
+#impress code, #impress kbd, #impress samp,
+.reveal code,
+.reveal kbd,
+.reveal samp {
+  font-family: var(--c-code-font);
+}
+#impress pre,
+.reveal pre {
+  margin: var(--c-block-margin) auto;
+}
+#impress pre > code,
+.reveal pre > code {
+  display: block;
+  color: var(--c-main-color);
+  background-color: var(--c-code-bg-color);
+  padding: 0.5em;
+  border: 2px solid var(--c-border-color-3);
 }
 #impress table,
 .reveal table {
@@ -286,6 +344,10 @@ pre > code {
 .reveal table.hover tbody tr:hover {
   background-color: var(--c-border-color-075);
 }
+#impress p,
+.reveal p {
+  margin: var(--c-block-margin) 0;
+}
 #impress del, #impress s,
 .reveal del,
 .reveal s {
@@ -304,6 +366,10 @@ pre > code {
 #impress code,
 .reveal code {
   line-height: 1;
+}
+#impress img,
+.reveal img {
+  margin: var(--c-block-margin) 0;
 }
 #impress .font-normalsize,
 .reveal .font-normalsize {
@@ -475,9 +541,7 @@ body.impress-enabled {
 body.impress-enabled #impress-help {
   box-sizing: content-box;
 }
-
 #impress {
-  font-size: 3.75em;
   /*
   These 'slide' step styles were heavily inspired by HTML5 Slides:
   http://html5slides.googlecode.com/svn/trunk/styles.css
@@ -582,7 +646,7 @@ body.impress-enabled #impress-help {
   position: relative;
   width: var(--c-step-width);
   padding: 3rem;
-  margin: 3rem;
+  margin: 0rem;
   box-sizing: border-box;
   /* font-size: 3.75em; */
   line-height: 1.4;
@@ -593,7 +657,7 @@ body.impress-enabled #impress-help {
   transition: opacity 1s;
   /* transition: opacity 3s; */
 }
-#impress .impress-enabled .step.active {
+#impress .step.active {
   opacity: 1;
 }
 #impress .step.title {
@@ -620,24 +684,6 @@ body.impress-enabled #impress-help {
 #impress .title p {
   width: 100%;
   text-align: center;
-}
-#impress .title h1 {
-  margin-top: 200px;
-}
-#impress .title h2 {
-  margin-top: 200px;
-}
-#impress .title h1 + h2 {
-  margin-top: 400px;
-}
-#impress .title h3 {
-  margin-top: 200px;
-}
-#impress .title h2 + h3 {
-  margin-top: 400px;
-}
-#impress .title h1 + h2 + h3 {
-  margin-top: 600px;
 }
 #impress .future .fly-in {
   transform: translateY(-2100px);
@@ -725,10 +771,12 @@ body.impress-enabled #impress-help {
   display: initial;
 }
 #impress #overview {
-  pointer-events: none #signature;
-  pointer-events-color: #546778;
-  pointer-events-opacity: 0;
-  pointer-events-font-size: 40%;
+  pointer-events: none;
+}
+#impress #overview #signature {
+  color: #546778;
+  opacity: 0;
+  font-size: 40%;
 }
 #impress #overview #signature a {
   font-family: "PT Serif";
@@ -738,13 +786,14 @@ body.impress-enabled #impress-help {
   background: none;
   pointer-events: auto;
 }
-#impress .impress-on-overview #overview #signature {
+
+.impress-on-overview #impress #overview #signature {
   opacity: 1;
 }
-#impress .impress-on-overview .show-on-overview {
+.impress-on-overview #impress .show-on-overview {
   opacity: 1;
 }
-#impress .impress-on-overview .hide-on-overview {
+.impress-on-overview #impress .hide-on-overview {
   opacity: 0;
 }
 
@@ -757,6 +806,25 @@ body.impress-enabled #impress-help {
   --r-link-color-hover: $link-color-hover;
   --r-selection-background-color: $selection-bg-color;
   --r-selection-color: $selection-color;
+}
+
+:root {
+  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-main-font-size: 60px;
+  --c-block-margin: 20px;
+  --c-heading-margin: 0 0 20px 0;
+  --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-heading-line-height: 1.2;
+  --c-heading-letter-spacing: normal;
+  --c-heading-text-transform: uppercase;
+  --c-heading-text-shadow: none;
+  --c-heading-font-weight: bold;
+  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  --c-heading-1-size: 70px;
+  --c-heading-2-size: 70px;
+  --c-heading-3-size: 70px;
+  --c-heading-4-size: 70px;
+  --c-code-font: Cutive mono, Courier New, monospace;
 }
 
 /*# sourceMappingURL=classic-slides.css.map */

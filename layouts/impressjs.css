@@ -1,0 +1,39 @@
+:root {
+  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-main-font-size: 3.75em;
+  --c-block-margin: 1em;
+  --c-heading-margin: 0 0 1em 0;
+  --c-heading-font: [League Gothic, Impact, sans-serif];
+  --c-heading-line-height: 1.2;
+  --c-heading-letter-spacing: normal;
+  --c-heading-text-transform: uppercase;
+  --c-heading-text-shadow: none;
+  --c-heading-font-weight: normal;
+  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  --c-heading-1-size: 3.77em;
+  --c-heading-2-size: 2.11em;
+  --c-heading-3-size: 1.55em;
+  --c-heading-4-size: 1em;
+  --c-code-font: [Cutive mono, Courier New, monospace];
+}
+
+#impress .slide .title h1 {
+  margin-top: 200px;
+}
+#impress .slide .title h2 {
+  margin-top: 200px;
+}
+#impress .slide .title h1 + h2 {
+  margin-top: 400px;
+}
+#impress .slide .title h3 {
+  margin-top: 200px;
+}
+#impress .slide .title h2 + h3 {
+  margin-top: 400px;
+}
+#impress .slide .title h1 + h2 + h3 {
+  margin-top: 600px;
+}
+
+/*# sourceMappingURL=impressjs.css.map */
