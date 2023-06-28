@@ -53,12 +53,37 @@ body.impress-enabled {
     }
   }
 
+  .step {
+    position: relative;
+    width: var(--c-step-width);
+    padding: 3rem;
+    margin: 0rem;
+
+    box-sizing: border-box;
+
+    /* font-size: 3.75em; */
+    line-height: 1.4;
+    text-shadow: 0 3px 3px var(--c-shadow-color-2);
+  }
+
+  /*
+   * Make inactive steps a little bit transparent.
+   */
+  .step {
+    opacity: 0.8;
+    transition: opacity 1s;
+    /* transition: opacity 3s; */
+  }
+
+  .step.active {
+    opacity: 1;
+  }
+
   /*
   These 'slide' step styles were heavily inspired by HTML5 Slides:
   http://html5slides.googlecode.com/svn/trunk/styles.css
    */
   .slide {
-    text-shadow: 0 3px 3px var(--c-shadow-color-2);
     display: block;
 
     width: var(--c-slide-width);
@@ -129,37 +154,11 @@ body.impress-enabled {
     display: none;
   }
 
-  .step {
-    position: relative;
-    width: var(--c-step-width);
-    padding: 3rem;
-    margin: 0rem;
-
-    box-sizing: border-box;
-
-    /* font-size: 3.75em; */
-    line-height: 1.4;
-    text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
-  }
-
-  /*
-   * Make inactive steps a little bit transparent.
-   */
-  .step {
-    opacity: 0.9;
-    transition: opacity 1s;
-    /* transition: opacity 3s; */
-  }
-
-  .step.active {
-    opacity: 1;
-  }
-
   .step.title {
     display: block;
 
-    width: var(--c-slide-width);
-    height: var(--c-slide-height);
+    // width: var(--c-slide-width);
+    // height: var(--c-slide-height);
     padding: 2rem 3rem;
   }
 

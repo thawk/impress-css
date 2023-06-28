@@ -543,13 +543,13 @@ body.impress-enabled #impress-help {
 }
 #impress {
   /*
+   * Make inactive steps a little bit transparent.
+   */
+  /*
   These 'slide' step styles were heavily inspired by HTML5 Slides:
   http://html5slides.googlecode.com/svn/trunk/styles.css
    */
   /* Debuging background */
-  /*
-   * Make inactive steps a little bit transparent.
-   */
   /* Slides that are visible only during their turn. Typically on top of another slide. */
   /* Styles for animating the contents of a slide, such as a img, p, li or span element. ********/
   /*
@@ -585,8 +585,25 @@ body.impress-enabled #impress-help {
 #impress .box pre > code {
   background-color: var(--c-box-code-bg-color);
 }
-#impress .slide {
+#impress .step {
+  position: relative;
+  width: var(--c-step-width);
+  padding: 3rem;
+  margin: 0rem;
+  box-sizing: border-box;
+  /* font-size: 3.75em; */
+  line-height: 1.4;
   text-shadow: 0 3px 3px var(--c-shadow-color-2);
+}
+#impress .step {
+  opacity: 0.8;
+  transition: opacity 1s;
+  /* transition: opacity 3s; */
+}
+#impress .step.active {
+  opacity: 1;
+}
+#impress .slide {
   display: block;
   width: var(--c-slide-width);
   height: var(--c-slide-height);
@@ -642,28 +659,8 @@ body.impress-enabled #impress-help {
 #impress .hidestep, #impress .hidestep.slide {
   display: none;
 }
-#impress .step {
-  position: relative;
-  width: var(--c-step-width);
-  padding: 3rem;
-  margin: 0rem;
-  box-sizing: border-box;
-  /* font-size: 3.75em; */
-  line-height: 1.4;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-}
-#impress .step {
-  opacity: 0.9;
-  transition: opacity 1s;
-  /* transition: opacity 3s; */
-}
-#impress .step.active {
-  opacity: 1;
-}
 #impress .step.title {
   display: block;
-  width: var(--c-slide-width);
-  height: var(--c-slide-height);
   padding: 2rem 3rem;
 }
 #impress .step.subslide {
