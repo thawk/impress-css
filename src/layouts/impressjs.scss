@@ -1,7 +1,7 @@
 @use 'layout' with (
   // Primary/body text
   // $main-font: ['Lato', 'sans-serif'],
-  $main-font-size: 3.75em,
+  // $main-font-size: 3.75em,
 
   // Vertical spacing between blocks of text
   $block-margin: 1em,
@@ -14,10 +14,10 @@
   $heading-text-shadow: none,
   $heading-font-weight: normal,
 
-  $heading-1-size: 3.77em,
-  $heading-2-size: 2.11em,
-  $heading-3-size: 1.55em,
-  $heading-4-size: 1.00em,
+  $heading-1-size: var(--main-font-size),
+  $heading-2-size: var(--main-font-size),
+  $heading-3-size: var(--main-font-size),
+  $heading-4-size: var(--main-font-size),
 
   $code-font: ["Cutive mono","Courier New", monospace]
 );

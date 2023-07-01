@@ -1,6 +1,6 @@
 // Primary/body text
 $main-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !default;
-$main-font-size: 60px !default;
+$main-font-size: calc(0.055 * var(--slide-height, 1080px)) !default;
 
 // Vertical spacing between blocks of text
 $block-margin: 20px !default;
@@ -16,10 +16,10 @@ $heading-text-shadow: none !default;
 $heading-font-weight: bold !default;
 $heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9) !default;
 
-$heading-1-size: 70px !default;
-$heading-2-size: 70px !default;
-$heading-3-size: 70px !default;
-$heading-4-size: 70px !default;
+$heading-1-size: var(--main-font-size) !default;
+$heading-2-size: var(--main-font-size) !default;
+$heading-3-size: var(--main-font-size) !default;
+$heading-4-size: var(--main-font-size) !default;
 
 $code-font: "Cutive mono","Courier New", monospace !default;
 
