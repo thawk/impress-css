@@ -10,3 +10,46 @@
   --r-selection-color: $selection-color;
 }
 
+.reveal {
+  .r-frame {
+    border: 4px solid var(--c-main-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a .r-frame {
+    transition: all .15s linear;
+  }
+
+  a:hover .r-frame {
+    border-color: var(--c-link-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+  }
+
+
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+
+  .controls {
+    color: var(--c-link-color);
+  }
+
+
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+
+  .progress {
+    background: rgba(0,0,0,0.2);
+    color: var(--c-link-color);
+  }
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .reveal .backgrounds {
+    background-color: var(--c-bg-color);
+  }
+}

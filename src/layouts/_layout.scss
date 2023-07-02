@@ -24,12 +24,6 @@ $heading-4-size: 1em !default;
 
 $code-font: "Cutive mono","Courier New", monospace !default;
 
-// Generates the presentation background, can be overridden
-// to return a background image or gradient
-@mixin body-background() {
-  background: var(--c-bg-color);
-}
-
 :root {
   --c-main-font: #{$main-font};
   --c-slide-font-scale: #{$slide-font-scale};

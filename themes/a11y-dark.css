@@ -12,6 +12,8 @@
   --c-shadow-color-5: rgba(94, 94, 94, 0.5);
   --c-shadow-color-9: rgba(94, 94, 94, 0.9);
   --c-main-color: #f8f8f2;
+  --c-selection-color: #ffffff;
+  --c-selection-bg-color: #ac94e8;
   --c-heading-color: #00e0e0;
   --c-accent-color: #dcc6e0 ;
   --c-blockquote-color: rgba(248, 248, 242, 0.7);
@@ -23,8 +25,9 @@
   --c-border-color-3: rgba(212, 208, 171, 0.3);
   --c-border-color-05: rgba(212, 208, 171, 0.05);
   --c-border-color-075: rgba(212, 208, 171, 0.075);
-  --c-a-bg-color: #168686;
+  --c-link-bg-color: #168686;
   --c-link-color: #f5ab35;
+  --c-link-color-hover: #fad396;
   --c-primary-color: #4e91e4;
   --c-success-color: #4acf7f;
   --c-warning-color: #fbc850;

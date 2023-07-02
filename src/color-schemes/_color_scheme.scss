@@ -30,7 +30,7 @@ $list-color: $main-color !default;
 $list-alt-color: $heading-color !default;
 
 $border-color: $heading-color !default;
-$a-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
+$link-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
 $link-color: $main-color !default;
 $link-color-hover: color.adjust($link-color, $lightness: if($is-dark-bg,  20%, -20%)) !default;
 
@@ -73,6 +73,9 @@ $light-gray-color: #eeeeee !default;
   // Primary/body text
   --c-main-color: #{$main-color};
 
+  --c-selection-color: #{$selection-color};
+  --c-selection-bg-color: #{$selection-bg-color};
+
   // Headings
   --c-heading-color: #{$heading-color};
 
@@ -88,8 +91,9 @@ $light-gray-color: #eeeeee !default;
   --c-border-color-05: #{rgba($border-color, 0.05)};
   --c-border-color-075: #{rgba($border-color, 0.075)};
 
-  --c-a-bg-color: #{$a-bg-color};
+  --c-link-bg-color: #{$link-bg-color};
   --c-link-color: #{$link-color};
+  --c-link-color-hover: #{$link-color-hover};
 
   --c-primary-color: #{$primary-color};
   --c-success-color: #{$success-color};

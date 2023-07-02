@@ -18,11 +18,6 @@
   --c-code-font: Cutive mono, Courier New, monospace;
 }
 
-body {
-  background: var(--c-bg-color);
-  color: var(--c-main-color);
-}
-
 .noaccent {
   color: var(--c-main-color);
 }
@@ -120,17 +115,41 @@ body {
 }
 
 #impress,
+.reveal-viewport {
+  background-color: var(--c-bg-color);
+}
+
+#impress,
 .reveal {
   --c-slide-font-size: calc(var(--c-slide-font-scale, 0.05) * var(--slide-height, 1080px));
   font-family: var(--c-main-font);
   font-size: var(--c-slide-font-size);
+  font-weight: normal;
+  color: var(--c-main-color);
   /* 块/段落引用 */
   /* Inline code, no Highlight.js */
   /* more text, smaller font size */
   /* mermaid related */
   /* style for main classes in mermaid classDiagram */
   /* SVG styles */
+  /* Ensure certain elements are never larger than the slide itself */
   /* if a svg not have any of bg-* class, add a semi-transparent background to it */
+}
+#impress ol, #impress dl, #impress ul,
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+#impress ul ul, #impress ul ol, #impress ol ol, #impress ol ul,
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 2em;
 }
 #impress ul,
 .reveal ul {
@@ -169,6 +188,14 @@ body {
 .reveal li li li {
   color: var(--c-list-color);
 }
+#impress dt,
+.reveal dt {
+  font-weight: bold;
+}
+#impress dd,
+.reveal dd {
+  margin-left: 2em;
+}
 #impress input,
 .reveal input {
   font-size: 1em;
@@ -189,6 +216,7 @@ body {
   letter-spacing: var(--c-heading-letter-spacing);
   text-transform: var(--c-heading-text-transform);
   text-shadow: var(--c-heading-text-shadow);
+  word-wrap: break-word;
 }
 #impress h1 strong, #impress h1 b, #impress h2 strong, #impress h2 b, #impress h3 strong, #impress h3 b, #impress h4 strong, #impress h4 b, #impress h5 strong, #impress h5 b, #impress h6 strong, #impress h6 b,
 .reveal h1 strong,
@@ -234,6 +262,20 @@ body {
 .reveal strong {
   color: var(--c-accent-color);
 }
+#impress em,
+.reveal em {
+  font-style: italic;
+}
+#impress sup,
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+#impress sub,
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
 #impress q,
 .reveal q {
   font-style: italic;
@@ -245,7 +287,9 @@ body {
 .reveal blockquote {
   color: var(--c-blockquote-color);
   border-left-color: var(--c-blockquote-border-color);
+  display: block;
   position: relative;
+  font-style: italic;
   font-weight: 400;
   border-left: 1px solid;
   padding-left: 1em;
@@ -267,7 +311,8 @@ body {
 #impress a:hover, #impress a:focus,
 .reveal a:hover,
 .reveal a:focus {
-  background: var(--c-a-bg-color);
+  color: var(--c-link-color-hover);
+  background: var(--c-link-bg-color);
   text-shadow: -2px 2px 3px var(--c-shadow-color-5);
 }
 #impress code, #impress kbd, #impress samp,
@@ -278,7 +323,11 @@ body {
 }
 #impress pre,
 .reveal pre {
+  position: relative;
   margin: var(--c-block-margin) auto;
+  text-align: left;
+  line-height: 1.2;
+  word-wrap: break-word;
 }
 #impress pre > code,
 .reveal pre > code {
@@ -287,6 +336,8 @@ body {
   background-color: var(--c-code-bg-color);
   padding: 0.5em;
   border: 2px solid var(--c-border-color-3);
+  overflow: auto;
+  word-wrap: normal;
 }
 #impress table,
 .reveal table {
@@ -369,6 +420,7 @@ body {
 #impress p,
 .reveal p {
   margin: var(--c-block-margin) 0;
+  line-height: 1.3;
 }
 #impress del, #impress s,
 .reveal del,
@@ -530,15 +582,23 @@ body {
 .reveal .override-color path {
   stroke: var(--c-main-color);
 }
-#impress svg[id^=mermaid][width][height][viewBox],
-.reveal svg[id^=mermaid][width][height][viewBox] {
-  max-width: 90%;
-  max-height: 100%;
+#impress ::selection, #impress ::-moz-selection,
+.reveal ::selection,
+.reveal ::-moz-selection {
+  color: var(--c-selection-color);
+  background: var(--c-selection-bg-color);
+  text-shadow: none;
 }
+#impress img,
+#impress video,
+#impress iframe,
 #impress svg,
+.reveal img,
+.reveal video,
+.reveal iframe,
 .reveal svg {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95%;
+  max-height: 95%;
   padding: 1rem;
 }
 #impress svg:not([class^=bg-], [class*=" bg-"]),
@@ -825,6 +885,42 @@ body.impress-enabled #impress-help {
   --r-link-color-hover: $link-color-hover;
   --r-selection-background-color: $selection-bg-color;
   --r-selection-color: $selection-color;
+}
+
+.reveal {
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+}
+.reveal .r-frame {
+  border: 4px solid var(--c-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+.reveal a:hover .r-frame {
+  border-color: var(--c-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+.reveal .controls {
+  color: var(--c-link-color);
+}
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--c-link-color);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .reveal .backgrounds {
+    background-color: var(--c-bg-color);
+  }
 }
 
 /*# sourceMappingURL=classic-slides.css.map */

@@ -22,17 +22,3 @@
   $code-font: ["Cutive mono","Courier New", monospace]
 );
 
-// Generates the presentation background, can be overridden
-// to return a background image or gradient
-@mixin body-background() {
-  background: $bg-color;
-}
-
-#impress .slide {
-  .title h1 { margin-top: 200px; }
-  .title h2 { margin-top: 200px; }
-  .title h1 + h2 { margin-top: 400px; }
-  .title h3 { margin-top: 200px; }
-  .title h2 + h3 { margin-top: 400px; }
-  .title h1 + h2 + h3 { margin-top: 600px; }
-}

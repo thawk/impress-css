@@ -17,23 +17,4 @@
   --c-code-font: [Cutive mono, Courier New, monospace];
 }
 
-#impress .slide .title h1 {
-  margin-top: 200px;
-}
-#impress .slide .title h2 {
-  margin-top: 200px;
-}
-#impress .slide .title h1 + h2 {
-  margin-top: 400px;
-}
-#impress .slide .title h3 {
-  margin-top: 200px;
-}
-#impress .slide .title h2 + h3 {
-  margin-top: 400px;
-}
-#impress .slide .title h1 + h2 + h3 {
-  margin-top: 600px;
-}
-
 /*# sourceMappingURL=impressjs.css.map */

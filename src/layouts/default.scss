@@ -22,8 +22,3 @@
   $code-font: ["Cutive mono","Courier New", monospace]
 );
 
-// Generates the presentation background, can be overridden
-// to return a background image or gradient
-@mixin body-background() {
-  background: $bg-color;
-}
