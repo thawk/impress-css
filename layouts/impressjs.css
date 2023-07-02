@@ -1,0 +1,20 @@
+:root {
+  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-slide-font-scale: 0.055;
+  --c-block-margin: 1em;
+  --c-heading-margin: 0 0 1em 0;
+  --c-heading-font: [League Gothic, Impact, sans-serif];
+  --c-heading-line-height: 1.2;
+  --c-heading-letter-spacing: normal;
+  --c-heading-text-transform: uppercase;
+  --c-heading-text-shadow: none;
+  --c-heading-font-weight: normal;
+  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  --c-heading-1-size: 2em;
+  --c-heading-2-size: 1.5em;
+  --c-heading-3-size: 1.17em;
+  --c-heading-4-size: 1em;
+  --c-code-font: [Cutive mono, Courier New, monospace];
+}
+
+/*# sourceMappingURL=impressjs.css.map */

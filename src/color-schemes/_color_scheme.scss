@@ -1,0 +1,121 @@
+@use "sass:color";
+
+// Background of the presentation
+$bg-color: #cccccc !default;
+$is-dark-bg: (color.lightness($bg-color) < 50) !default;
+$debug-color: #F0808020 !default;
+
+$box-bg-color:   color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
+$table-bg-color: color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
+$code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
+$box-code-bg-color:  color.adjust($bg-color, $lightness: if($is-dark-bg, -20%,  20%)) !default;
+$shadow-color:   color.adjust($bg-color, $lightness: if($is-dark-bg,  20%, -20%)) !default;
+
+// Primary/body text
+$main-color: #464646 !default;
+$selection-color: #ffffff !default;
+$selection-bg-color: #ac94e8 !default;
+
+// Headings
+$heading-color: #4e91e4 !default;
+
+$accent-color : #ee675d !default;
+$accent2-color : $heading-color !default;
+$accent3-color : #ac94e8 !default;
+$accent4-color : #60d2b6 !default;
+
+$blockquote-color: rgba($main-color, 0.7) !default;
+$blockquote-border-color: #1abc9c !default;
+$list-color: $main-color !default;
+$list-alt-color: $heading-color !default;
+
+$border-color: $heading-color !default;
+$link-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
+$link-color: $main-color !default;
+$link-color-hover: color.adjust($link-color, $lightness: if($is-dark-bg,  20%, -20%)) !default;
+
+$primary-color:    #4e91e4 !default;
+$success-color:    #4acf7f !default;
+$warning-color:    #fbc850 !default;
+$error-color:      #ee675d !default;
+$dark-color:       #546778 !default;
+$light-color:      #dde5ee !default;
+
+$navy-color:       #546778 !default;
+$green-color:      #93d260 !default;
+$teal-color:       #60d2b6 !default;
+$blue-color:       #4e91e4 !default;
+$purple-color:     #ac94e8 !default;
+$pink-color:       #e77eb8 !default;
+$red-color:        #ee675d !default;
+$orange-color:     #f78055 !default;
+$yellow-color:     #fbc850 !default;
+$gray-color:       #dde5ee !default;
+$light-gray-color: #eeeeee !default;
+
+:root {
+  // Background of the presentation
+  --c-bg-color: #{$bg-color};
+  --c-is-dark-bg: #{$is-dark-bg};
+  --c-debug-color: #{$debug-color};
+
+  --c-box-bg-color: #{$box-bg-color};
+  --c-table-bg-color: #{$table-bg-color};
+  --c-code-bg-color: #{$code-bg-color};
+  --c-box-code-bg-color: #{$box-code-bg-color};
+
+  --c-shadow-color: #{$shadow-color};
+  --c-shadow-color-1: #{rgba($shadow-color, 0.1)};
+  --c-shadow-color-2: #{rgba($shadow-color, 0.2)};
+  --c-shadow-color-5: #{rgba($shadow-color, 0.5)};
+  --c-shadow-color-9: #{rgba($shadow-color, 0.9)};
+
+  // Primary/body text
+  --c-main-color: #{$main-color};
+
+  --c-selection-color: #{$selection-color};
+  --c-selection-bg-color: #{$selection-bg-color};
+
+  // Headings
+  --c-heading-color: #{$heading-color};
+
+  --c-accent-color : #{$accent-color} ;
+  --c-blockquote-color: #{$blockquote-color};
+  --c-blockquote-border-color: #{$blockquote-border-color};
+  --c-list-color: #{$list-color};
+  --c-list-alt-color: #{$list-alt-color};
+
+  --c-border-color: #{$border-color};
+  --c-border-color-2: #{rgba($border-color, 0.2)};
+  --c-border-color-3: #{rgba($border-color, 0.3)};
+  --c-border-color-05: #{rgba($border-color, 0.05)};
+  --c-border-color-075: #{rgba($border-color, 0.075)};
+
+  --c-link-bg-color: #{$link-bg-color};
+  --c-link-color: #{$link-color};
+  --c-link-color-hover: #{$link-color-hover};
+
+  --c-primary-color: #{$primary-color};
+  --c-success-color: #{$success-color};
+  --c-warning-color: #{$warning-color};
+  --c-error-color: #{$error-color};
+  --c-dark-color: #{$dark-color};
+  --c-light-color: #{$light-color};
+
+  --c-accent2-color: #{$accent2-color};
+  --c-accent3-color: #{$accent3-color};
+  --c-accent4-color: #{$accent4-color};
+
+  // named colors
+  --c-navy-color: #{$navy-color};
+  --c-green-color: #{$green-color};
+  --c-teal-color: #{$teal-color};
+  --c-blue-color: #{$blue-color};
+  --c-purple-color: #{$purple-color};
+  --c-pink-color: #{$pink-color};
+  --c-red-color: #{$red-color};
+  --c-orange-color: #{$orange-color};
+  --c-yellow-color: #{$yellow-color};
+  --c-gray-color: #{$gray-color};
+  --c-light-gray-color: #{$light-gray-color};
+}

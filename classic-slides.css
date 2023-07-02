@@ -1,582 +1,926 @@
-/*
-  A common approach is to use googleapis.com to generate css for the webfonts you want to use.
-  The downside of this approach is that you have to be online. So below I have simply saved
-  the output of the googleapis url into a file. Then you of course also have to make sure
-  the webfonts are locally installed to make offline usage work. For Ubuntu (or Debian) I
-  successfully used the script from here to do that:
-  http://www.webupd8.org/2011/01/automatically-install-all-google-web.html
-*/
-
-/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic|Cutive+Mono); */
-/* @import url(fonts.css); */
-
-
-/*
-  The body background is the bacgkround of "everything". Many
-  impress.js tools call it the "surface". It could also be a
-  picture or pattern, but we leave it as light gray.
-*/
-
-body {
-    min-height: 740px;
-
-    background-size: contain;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+@charset "UTF-8";
+:root {
+  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-slide-font-scale: 0.055;
+  --c-block-margin: 20px;
+  --c-heading-margin: 0 0 20px 0;
+  --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-heading-line-height: 1.2;
+  --c-heading-letter-spacing: normal;
+  --c-heading-text-transform: uppercase;
+  --c-heading-text-shadow: none;
+  --c-heading-font-weight: bold;
+  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  --c-heading-1-size: 2em;
+  --c-heading-2-size: 1.5em;
+  --c-heading-3-size: 1.17em;
+  --c-heading-4-size: 1em;
+  --c-code-font: Cutive mono, Courier New, monospace;
 }
 
-/* 块/段落引用 */
-blockquote {
+.noaccent {
+  color: var(--c-main-color);
+}
+
+.accent, .accent1 {
+  color: var(--c-accent-color);
+}
+
+.accent2 {
+  color: var(--c-accent2-color);
+}
+
+.accent3 {
+  color: var(--c-accent3-color);
+}
+
+.accent4 {
+  color: var(--c-accent4-color);
+}
+
+/* color codes from siimple css.
+ * https://docs.siimple.xyz/getting-started/theming.html
+ */
+.primary {
+  color: var(--c-primary-color);
+}
+
+.success {
+  color: var(--c-success-color);
+}
+
+.warning {
+  color: var(--c-warning-color);
+}
+
+.error {
+  color: var(--c-error-color);
+}
+
+.dark {
+  color: var(--c-dark-color);
+}
+
+.light {
+  color: var(--c-light-color);
+}
+
+.navy {
+  color: var(--c-navy-color);
+}
+
+.green {
+  color: var(--c-green-color);
+}
+
+.teal {
+  color: var(--c-teal-color);
+}
+
+.blue {
+  color: var(--c-blue-color);
+}
+
+.purple {
+  color: var(--c-purple-color);
+}
+
+.pink {
+  color: var(--c-pink-color);
+}
+
+.red {
+  color: var(--c-red-color);
+}
+
+.orange {
+  color: var(--c-orange-color);
+}
+
+.yellow {
+  color: var(--c-yellow-color);
+}
+
+.gray {
+  color: var(--c-gray-color);
+}
+
+.light-gray {
+  color: var(--c-light-gray-color);
+}
+
+/* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
+.f2-5 {
+  font-size: 1.8rem;
+}
+
+#impress,
+.reveal-viewport {
+  background-color: var(--c-bg-color);
+}
+
+#impress,
+.reveal {
+  --c-slide-font-size: calc(var(--c-slide-font-scale, 0.05) * var(--slide-height, 1080px));
+  font-family: var(--c-main-font);
+  font-size: var(--c-slide-font-size);
+  font-weight: normal;
+  color: var(--c-main-color);
+  /* 块/段落引用 */
+  /* Inline code, no Highlight.js */
+  /* more text, smaller font size */
+  /* mermaid related */
+  /* style for main classes in mermaid classDiagram */
+  /* SVG styles */
+  /* Ensure certain elements are never larger than the slide itself */
+  /* if a svg not have any of bg-* class, add a semi-transparent background to it */
+}
+#impress ol, #impress dl, #impress ul,
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+#impress ul ul, #impress ul ol, #impress ol ol, #impress ol ul,
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 2em;
+}
+#impress ul,
+.reveal ul {
+  list-style-type: disc;
+}
+#impress ul ul,
+.reveal ul ul {
+  list-style-type: circle;
+}
+#impress ul ul ul,
+.reveal ul ul ul {
+  list-style-type: square;
+}
+#impress ol,
+.reveal ol {
+  list-style-type: decimal;
+}
+#impress ol ol,
+.reveal ol ol {
+  list-style-type: lower-alpha;
+}
+#impress ol ol ol,
+.reveal ol ol ol {
+  list-style-type: lower-roman;
+}
+#impress li,
+.reveal li {
+  color: var(--c-list-color);
+}
+#impress li li,
+.reveal li li {
+  color: var(--c-list-alt-color);
+  margin-left: 0.5em;
+}
+#impress li li li,
+.reveal li li li {
+  color: var(--c-list-color);
+}
+#impress dt,
+.reveal dt {
+  font-weight: bold;
+}
+#impress dd,
+.reveal dd {
+  margin-left: 2em;
+}
+#impress input,
+.reveal input {
+  font-size: 1em;
+}
+#impress h1, #impress h2, #impress h3, #impress h4, #impress h5, #impress h6,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: var(--c-heading-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  margin: var(--c-heading-margin);
+  font-family: var(--c-heading-font);
+  font-weight: var(--c-heading-font-weight);
+  line-height: var(--c-heading-line-height);
+  letter-spacing: var(--c-heading-letter-spacing);
+  text-transform: var(--c-heading-text-transform);
+  text-shadow: var(--c-heading-text-shadow);
+  word-wrap: break-word;
+}
+#impress h1 strong, #impress h1 b, #impress h2 strong, #impress h2 b, #impress h3 strong, #impress h3 b, #impress h4 strong, #impress h4 b, #impress h5 strong, #impress h5 b, #impress h6 strong, #impress h6 b,
+.reveal h1 strong,
+.reveal h1 b,
+.reveal h2 strong,
+.reveal h2 b,
+.reveal h3 strong,
+.reveal h3 b,
+.reveal h4 strong,
+.reveal h4 b,
+.reveal h5 strong,
+.reveal h5 b,
+.reveal h6 strong,
+.reveal h6 b {
+  color: var(--c-accent-color);
+}
+#impress h1,
+.reveal h1 {
+  font-size: var(--c-heading-1-size);
+}
+#impress h2,
+.reveal h2 {
+  font-size: var(--c-heading-2-size);
+}
+#impress h3,
+.reveal h3 {
+  font-size: var(--c-heading-3-size);
+}
+#impress h4,
+.reveal h4 {
+  font-size: var(--c-heading-4-size);
+}
+#impress h1,
+.reveal h1 {
+  text-shadow: var(--c-heading1-text-shadow);
+}
+#impress b, #impress strong,
+.reveal b,
+.reveal strong {
+  font-weight: bold;
+}
+#impress strong,
+.reveal strong {
+  color: var(--c-accent-color);
+}
+#impress em,
+.reveal em {
+  font-style: italic;
+}
+#impress sup,
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+#impress sub,
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+#impress q,
+.reveal q {
+  font-style: italic;
+  text-shadow: 0 6px 6px var(--c-border-color-3);
+  /* font-family: 'PT Serif'; */
+  /* font-weight: 400;     */
+}
+#impress blockquote,
+.reveal blockquote {
+  color: var(--c-blockquote-color);
+  border-left-color: var(--c-blockquote-border-color);
+  display: block;
   position: relative;
+  font-style: italic;
   font-weight: 400;
   border-left: 1px solid;
   padding-left: 1em;
-  margin: 1em 3em 1em 2em;
+  margin: var(--c-block-margin) 3em var(--c-block-margin) 2em;
 }
-
-b, strong { font-weight: bold }
-
-/* i, em { font-style: italic } */
-/*  */
-/* em { */
-/*     text-shadow: 0 6px 6px rgba(0, 0, 0, .3); */
-/* } */
-/*  */
-/* strong { */
-/*     text-shadow: -3px 3px 6px rgba(100,100,100,0.5); */
-/* } */
-
-#impress {
-  font-size: 3.75em;
+#impress a,
+.reveal a {
+  color: var(--c-link-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  text-decoration: none;
+  padding: 0 0.1em;
+  border-radius: 0.2em;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-bottom-color: var(--c-border-color-2);
+  border-left-color: var(--c-border-color-2);
+  transition: 0.5s;
 }
-
-#impress table {
-  border-collapse: collapse;
+#impress a:hover, #impress a:focus,
+.reveal a:hover,
+.reveal a:focus {
+  color: var(--c-link-color-hover);
+  background: var(--c-link-bg-color);
+  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
+}
+#impress code, #impress kbd, #impress samp,
+.reveal code,
+.reveal kbd,
+.reveal samp {
+  font-family: var(--c-code-font);
+}
+#impress pre,
+.reveal pre {
+  position: relative;
+  margin: var(--c-block-margin) auto;
+  text-align: left;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+#impress pre > code,
+.reveal pre > code {
+  display: block;
+  color: var(--c-main-color);
+  background-color: var(--c-code-bg-color);
+  padding: 0.5em;
+  border: 2px solid var(--c-border-color-3);
+  overflow: auto;
+  word-wrap: normal;
+}
+#impress table,
+.reveal table {
   /* width: 100%; */
   /* max-width: 100%; */
+  border: 1px solid;
+  border-color: var(--c-border-color);
+  border-collapse: collapse;
+  /* border-spacing: 0; */
   margin-bottom: 1rem;
   background-color: transparent;
-  /* border-spacing: 0; */
-  /* color: #212529; */
-  border: 1px solid;
   margin-left: auto;
   margin-right: auto;
 }
-#impress th {
-  text-align: inherit;
+#impress table tbody + tbody,
+.reveal table tbody + tbody {
+  border-top: 2px solid;
+  border-top-color: var(--c-border-color);
 }
-#impress thead {
-  display: table-header-group;
+#impress table table,
+.reveal table table {
+  background-color: var(--c-table-bg-color);
 }
-#impress th,
-#impress td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid;
-}
-#impress thead th,
-#impress thead td {
-  border-bottom: 2px solid;
-}
-#impress thead th {
-  vertical-align: bottom;
-}
-
 #impress table.borderless,
 #impress table.borderless th,
 #impress table.borderless td,
 #impress table.borderless thead th,
-#impress table.borderless thead td {
+#impress table.borderless thead td,
+.reveal table.borderless,
+.reveal table.borderless th,
+.reveal table.borderless td,
+.reveal table.borderless thead th,
+.reveal table.borderless thead td {
   border: none;
 }
-#impress table tbody + tbody {
-  border-top: 2px solid;
+#impress th,
+.reveal th {
+  text-align: inherit;
 }
-
-q {
-    /* font-family: 'PT Serif'; */
-    font-style: italic;
-    /* font-weight: 400;     */
+#impress th, #impress td,
+.reveal th,
+.reveal td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid;
+  border-top-color: var(--c-border-color);
 }
-
-.slide q {
-    display: block;
-    margin-top: 100px;
+#impress thead,
+.reveal thead {
+  display: table-header-group;
 }
-
-#impress .font-normalsize {
-    font-size: 100%;
+#impress thead th,
+.reveal thead th {
+  vertical-align: bottom;
+}
+#impress thead th, #impress thead td,
+.reveal thead th,
+.reveal thead td {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--c-border-color);
+}
+#impress .striped table tbody tr:nth-of-type(odd),
+#impress table.striped tbody tr:nth-of-type(odd),
+.reveal .striped table tbody tr:nth-of-type(odd),
+.reveal table.striped tbody tr:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+#impress .vstriped tbody td:nth-of-type(odd),
+#impress .vstriped thead th:nth-of-type(odd),
+.reveal .vstriped tbody td:nth-of-type(odd),
+.reveal .vstriped thead th:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+#impress .hover table tbody tr:hover,
+#impress table.hover tbody tr:hover,
+.reveal .hover table tbody tr:hover,
+.reveal table.hover tbody tr:hover {
+  background-color: var(--c-border-color-075);
+}
+#impress p,
+.reveal p {
+  margin: var(--c-block-margin) 0;
+  line-height: 1.3;
+}
+#impress del, #impress s,
+.reveal del,
+.reveal s {
+  text-decoration-color: var(--c-heading-color);
+}
+#impress li del, #impress li s,
+.reveal li del,
+.reveal li s {
+  text-decoration-color: var(--c-accent-color);
+}
+#impress li li del, #impress li li s,
+.reveal li li del,
+.reveal li li s {
+  text-decoration-color: var(--c-heading-color);
+}
+#impress code,
+.reveal code {
+  line-height: 1;
+}
+#impress img,
+.reveal img {
+  margin: var(--c-block-margin) 0;
+}
+#impress .font-normalsize,
+.reveal .font-normalsize {
+  font-size: 100%;
 }
 #impress .font-smaller,
-#impress .font-smaller1 {
-    font-size: 90%;
+#impress .font-smaller1,
+.reveal .font-smaller,
+.reveal .font-smaller1 {
+  font-size: 90%;
 }
-#impress .font-smaller2 {
-    font-size: 80%;
+#impress .font-smaller2,
+.reveal .font-smaller2 {
+  font-size: 80%;
 }
-#impress .font-smaller3 {
-    font-size: 70%;
+#impress .font-smaller3,
+.reveal .font-smaller3 {
+  font-size: 70%;
 }
-#impress .font-smaller4 {
-    font-size: 60%;
+#impress .font-smaller4,
+.reveal .font-smaller4 {
+  font-size: 60%;
 }
-#impress .font-smaller5 {
-    font-size: 50%;
+#impress .font-smaller5,
+.reveal .font-smaller5 {
+  font-size: 50%;
 }
 #impress .font-larger,
-#impress .font-larger1 {
-    font-size: 110%;
+#impress .font-larger1,
+.reveal .font-larger,
+.reveal .font-larger1 {
+  font-size: 110%;
 }
-#impress .font-larger2 {
-    font-size: 120%;
+#impress .font-larger2,
+.reveal .font-larger2 {
+  font-size: 120%;
 }
-#impress .font-larger3 {
-    font-size: 130%;
+#impress .font-larger3,
+.reveal .font-larger3 {
+  font-size: 130%;
 }
-#impress .font-larger4 {
-    font-size: 150%;
+#impress .font-larger4,
+.reveal .font-larger4 {
+  font-size: 150%;
 }
-#impress .font-larger5 {
-    font-size: 200%;
+#impress .font-larger5,
+.reveal .font-larger5 {
+  font-size: 200%;
 }
-
-.impress-enabled .future.is-curr-step,
-.impress-enabled .past.is-curr-step {
-    display: none;
+#impress .more-text,
+.reveal .more-text {
+  font-size: 80%;
 }
-
-.impress-enabled .future .is-curr-step,
-.impress-enabled .past .is-curr-step {
-    opacity: 0;
-    transition: opacity 1s;
+#impress .more-text .step,
+.reveal .more-text .step {
+  font-size: 65%;
 }
-
-.impress-enabled .present.is-curr-step,
-.impress-enabled .present .is-curr-step {
-    opacity: 1;
-    transition: opacity 1s;
+#impress .more-text table,
+.reveal .more-text table {
+  font-size: 80%;
 }
-
-/* Inline code, no Highlight.js */
-code, kbd, samp {
-    font-family: "Cutive mono","Courier New", monospace;
+#impress .lh-solid,
+.reveal .lh-solid {
+  line-height: 1;
 }
-
-a {
-    color: inherit;
-    text-decoration: none;
-    padding: 0 0.1em;
-    border-radius: 0.2em;
-    border-bottom: 3px solid;
-    border-left:   3px solid;
-
-    transition:         0.5s;
+#impress .lh-title,
+.reveal .lh-title {
+  line-height: 1.25;
 }
-a:hover,
-a:focus {
+#impress .lh-copy,
+.reveal .lh-copy {
+  line-height: 1.5;
 }
-
-/*
-    Now let's style the presentation steps.
-*/
-
-.hidestep, .hidestep.slide {
-    display: none;
+#impress .float-right,
+.reveal .float-right {
+  float: right;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-.step {
-    position: relative;
-    width: 1800px;
-    padding: 3rem;
-    margin: 3rem;
-
-    box-sizing: border-box;
-
-    /* font-size: 3.75em; */
-    line-height: 1.4;
-    text-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+#impress .float-left,
+.reveal .float-left {
+  float: left;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-/* more text, smaller font size */
-.more-text {
-    font-size: 80%;
+#impress .top,
+.reveal .top {
+  position: absolute;
+  top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
 }
-
-.more-text .step {
-    font-size: 65%;
+#impress .bottom,
+.reveal .bottom {
+  position: absolute;
+  bottom: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
 }
-
-.more-text table {
-    font-size: 80%;
+#impress .right,
+.reveal .right {
+  position: absolute;
+  right: 0rem;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-.step code {
-    line-height: 1;
+#impress .left,
+.reveal .left {
+  position: absolute;
+  left: 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
-
-.step .lh-solid { line-height: 1; }
-.step .lh-title { line-height: 1.25; }
-.step .lh-copy { line-height: 1.5; }
-
-/*
-    Make inactive steps a little bit transparent.
-*/
-.impress-enabled .step {
-    margin: 0;
-    opacity: 0.9;
-    transition: opacity 1s;
+#impress .visible,
+.reveal .visible {
+  visibility: visible;
 }
-
-.impress-enabled .step.active { opacity: 1 }
-
-.box {
-    border: 2px solid;
-    border-radius: 30px;
+#impress .hidden,
+.reveal .hidden {
+  visibility: hidden;
 }
-
-/*
-    These 'slide' step styles were heavily inspired by HTML5 Slides:
-    http://html5slides.googlecode.com/svn/trunk/styles.css
-*/
-.slide {
-    display: block;
-
-    width: 1850px;
-    height: 1000px;
-    padding: 2rem 3rem;
-
-    /* font-size: 3.75em; */
-    /* letter-spacing: -2px; */
-
-    /* background-image: url(../images/background.png); */
+#impress .mermaid .main_class,
+.reveal .mermaid .main_class {
+  fill: #ffdfdf;
+  text-align: center;
 }
-
-/* Fix for slides with data-z != 0 */
-.slide.zfix,
-.slide.zfix * {
-    padding-top: 0px;
-    margin-top: 0px;
+#impress .override-color path,
+.reveal .override-color path {
+  stroke: var(--c-main-color);
 }
-
-.slide h1,
-.slide h2,
-.slide h3 {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    /* text-align: center; */
+#impress ::selection, #impress ::-moz-selection,
+.reveal ::selection,
+.reveal ::-moz-selection {
+  color: var(--c-selection-color);
+  background: var(--c-selection-bg-color);
+  text-shadow: none;
+}
+#impress img,
+#impress video,
+#impress iframe,
+#impress svg,
+.reveal img,
+.reveal video,
+.reveal iframe,
+.reveal svg {
+  max-width: 95%;
+  max-height: 95%;
+  padding: 1rem;
+}
+#impress svg:not([class^=bg-], [class*=" bg-"]),
+.reveal svg:not([class^=bg-], [class*=" bg-"]) {
+  /* Add a background, so the line and text is visible in both light and dark theme */
+  background: rgba(255, 255, 255, 0.5);
 }
 
-/* Cancel margin for fit-text elements */
-.slide .fit-text,
-.slide .fit-text,
-.slide .fit-text {
-    margin-bottom: 20px;
-    margin-top: 20px;
+:root {
+  --c-default-step-width: 1800px;
+  --c-default-slide-width: 1850px;
+  --c-default-slide-height: 1000px;
 }
 
-.slide p {
-    /* text-align: center; */
-    /* margin: 0.7em; */
+body.impress-enabled {
+  min-height: 740px;
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  /* tachyons.css will set box-sizing of table to border-box, overwrite that */
 }
-
-.slide li {
-    /* margin-top: 0.2em; */
-    /* margin-bottom: 0.2em; */
-    /* margin-left: 3em; */
-    /* margin-right: 3em; */
+body.impress-enabled #impress-help {
+  box-sizing: content-box;
 }
-
-pre {
-    font-size: 0.6em;
-    line-height: 0.7em;
+#impress {
+  /*
+   * Make inactive steps a little bit transparent.
+   */
+  /*
+  These 'slide' step styles were heavily inspired by HTML5 Slides:
+  http://html5slides.googlecode.com/svn/trunk/styles.css
+   */
+  /* Debuging background */
+  /* Slides that are visible only during their turn. Typically on top of another slide. */
+  /* Styles for animating the contents of a slide, such as a img, p, li or span element. ********/
+  /*
+  fly-in class starts from a position outside the slide, then flies into it's correct position.
+   */
+  /*
+  Fade-in/out is a straightforward fade. Give it enough seconds that all browsers render it clearly.
+   */
+  /*
+  Gray-in/out like fade, but it's not 100% transparent.
+   */
+  /*
+  Zoom-in.
+   */
+  /* substep */
 }
-
-input {
-    font-size: 1em;
+#impress .step .substep.substep-visible.strike-on-substep, #impress .step .substep.substep-visible .strike-on-substep {
+  text-decoration-color: var(--c-heading-color);
 }
-
-.slide .float-right {
-    float: right;
-    margin-left:  1rem;
-    margin-right:   0rem;
-    margin-top:    1rem;
-    margin-bottom: 1rem;
+#impress .step li li.substep.substep-visible.strike-on-substep, #impress .step li li.substep.substep-visible .strike-on-substep {
+  text-decoration-color: var(--c-heading-color);
 }
-.slide .float-left {
-    float: left;
-    margin-right: 1rem;
-    margin-left:    0rem;
-    margin-top:    1rem;
-    margin-bottom: 1rem;
+#impress .step li.substep.substep-visible.strike-on-substep, #impress .step li.substep.substep-visible .strike-on-substep {
+  text-decoration-color: var(--c-accent-color);
 }
-.slide .top {
-    position: absolute;
-    top: 1rem;
-    margin-bottom:  1rem;
-    margin-top:      0rem;
+#impress .box {
+  background-color: var(--c-box-bg-color);
+  border: 2px solid;
+  border-radius: 30px;
+  border-color: var(--c-border-color-3);
+  box-shadow: 0 4px 8px var(--c-shadow-color-1);
 }
-.slide .bottom {
-    position: absolute;
-    bottom: 1rem;
-    margin-bottom:   0rem;
-    margin-top:     1rem;
+#impress .box pre > code {
+  background-color: var(--c-box-code-bg-color);
 }
-.slide .right {
-    position: absolute;
-    right: 0rem;
-    margin-left:  1rem;
-    margin-right:   0rem;
-    margin-top:    1rem;
-    margin-bottom: 1rem;
+#impress .step {
+  position: relative;
+  width: calc(0.9375 * var(--slide-width, var(--c-default-step-width)));
+  padding: 3rem;
+  margin: 0rem;
+  box-sizing: border-box;
+  /* font-size: 3.75em; */
+  line-height: 1.4;
+  text-shadow: 0 3px 3px var(--c-shadow-color-2);
 }
-.slide .left {
-    position: absolute;
-    left: 0rem;
-    margin-right: 1rem;
-    margin-left:    0rem;
-    margin-top:    1rem;
-    margin-bottom: 2rem;
+#impress .step {
+  opacity: 0.8;
+  transition: opacity 1s;
+  /* transition: opacity 3s; */
 }
-
-/*
-    Specific styles for: .title slides
-*/
-
-.step.title {
-    display: block;
-
-    width: 1850px;
-    height: 1000px;
-    padding: 2rem 3rem;
+#impress .step.active {
+  opacity: 1;
 }
-
-.title h1,
-.title h2,
-.title h3,
-.title p {
-    width: 100%;
-    text-align: center;
+#impress .slide {
+  display: block;
+  width: calc(0.9635 * var(--slide-width, var(--c-default-slide-width)));
+  height: calc(0.9259 * var(--slide-height, var(--c-default-slide-height)));
+  padding: 2rem 3rem;
+  /* Fix for slides with data-z != 0 */
+  /* Cancel margin for fit-text elements */
 }
-.title h1 { margin-top: 200px; }
-.title h2 { margin-top: 200px; }
-.title h1 + h2 { margin-top: 400px; }
-.title h3 { margin-top: 200px; }
-.title h2 + h3 { margin-top: 400px; }
-.title h1 + h2 + h3 { margin-top: 600px; }
-
-
-
-/* Styles for animating the contents of a slide, such as a img, p, li or span element. ********/
-
-/*
- fly-in class starts from a position outside the slide, then flies into it's correct position.
-*/
-.future .fly-in {
-    transform: translateY(-2100px);
-    opacity: 0.0; /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
+#impress .slide.flex {
+  display: flex;
 }
-.present .fly-in {
-    transform: translateY(0px);
-    opacity: 1.0;
-    transition: 2s;
+#impress .slide.zfix, #impress .slide.zfix * {
+  padding-top: 0px;
+  margin-top: 0px;
 }
-.past .fly-out {
-    transform: translateY(2100px);
-    opacity: 0.0;
-    transition: 2s;
+#impress .slide pre {
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 0.6em;
+  line-height: 0.7em;
 }
-
-/*
-   Fade-in/out is a straightforward fade. Give it enough seconds that all browsers render it clearly.
-*/
-.future.fade-in,
-.future .fade-in {
-    opacity: 0.0;
+#impress .slide q {
+  display: block;
+  margin-top: 100px;
 }
-.present.fade-in,
-.present .fade-in {
-    opacity: 1.0;
-    transition: 7s;
+#impress .slide .fit-text {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
-.past.fade-out,
-.past .fade-out {
-    opacity: 0.0;
-    transition: 3s;
+#impress.debug .step {
+  /* for layout debuggind */
+  background-color: var(--c-debug-color);
 }
-
-/*
-   Gray-in/out like fade, but it's not 100% transparent.
-*/
-.future.gray-in,
-.future .gray-in {
-    opacity: 0.3;
+#impress .future.is-curr-step,
+#impress .past.is-curr-step {
+  display: none;
 }
-.present.gray-in,
-.present .gray-in {
-    opacity: 1.0;
-    transition: 7s;
+#impress .future .is-curr-step,
+#impress .past .is-curr-step {
+  opacity: 0;
+  transition: opacity 1s;
 }
-.past.gray-out,
-.past .gray-out {
-    opacity: 0.3;
-    transition: 3s;
+#impress .present.is-curr-step,
+#impress .present .is-curr-step {
+  opacity: 1;
+  transition: opacity 1s;
 }
-
-/*
-    Zoom-in.
-*/
-.future  .zoom-in {
-    transform: scale(10);
-    opacity: 0.0;
+#impress .hidestep, #impress .hidestep.slide {
+  display: none;
 }
-.present .zoom-in {
-    transform: scale(1);
-    opacity: 1.0;
-    transition: 3s;
+#impress .step.title {
+  padding: 2rem 3rem;
 }
-.past  .zoom-out {
-    transform: scale(10);
-    opacity: 0.0;
+#impress .step.subslide {
+  opacity: 0;
+  transition: opacity 1s;
+  padding-top: 300px;
 }
-
-/*
-    Styles for specific slides.
-*/
-
-
-/* Default */
-.step {
-    opacity: 1;
-    transition:         opacity 3s;
+#impress .step.subslide.active {
+  opacity: 1;
+  transition: opacity 1s;
 }
-
-/* Slides that are visible only during their turn. Typically on top of another slide. */
-.step.subslide {
-    opacity: 0;
-    transition:         opacity 1s;
-
-    padding-top: 300px;
+#impress .step.subslide p {
+  text-align: left;
 }
-
-.step.subslide.active {
-    opacity: 1;
-    transition:         opacity 1s;
+#impress .step.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.step.subslide p {
-    text-align: left;
+#impress .step.title h1,
+#impress .step.title h2,
+#impress .step.title h3,
+#impress .step.title p {
+  width: 100%;
+  text-align: center;
 }
-
-#overview {
-    pointer-events: none
+#impress .future .fly-in {
+  transform: translateY(-2100px);
+  opacity: 0;
+  /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
 }
-
-/* tachyons.css will set box-sizing of table to border-box, overwrite that */
-.impress-enabled #impress-help {
-    box-sizing: content-box;
+#impress .present .fly-in {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 2s;
 }
-
+#impress .past .fly-out {
+  transform: translateY(2100px);
+  opacity: 0;
+  transition: 2s;
+}
+#impress .future.fade-in,
+#impress .future .fade-in {
+  opacity: 0;
+}
+#impress .present.fade-in,
+#impress .present .fade-in {
+  opacity: 1;
+  transition: 7s;
+}
+#impress .past.fade-out,
+#impress .past .fade-out {
+  opacity: 0;
+  transition: 3s;
+}
+#impress .future.gray-in,
+#impress .future .gray-in {
+  opacity: 0.3;
+}
+#impress .present.gray-in,
+#impress .present .gray-in {
+  opacity: 1;
+  transition: 7s;
+}
+#impress .past.gray-out,
+#impress .past .gray-out {
+  opacity: 0.3;
+  transition: 3s;
+}
+#impress .future .zoom-in {
+  transform: scale(10);
+  opacity: 0;
+}
+#impress .present .zoom-in {
+  transform: scale(1);
+  opacity: 1;
+  transition: 3s;
+}
+#impress .past .zoom-out {
+  transform: scale(10);
+  opacity: 0;
+}
 #impress .step .substep.substep-visible .strike-on-substep,
 #impress .step .substep.substep-visible.strike-on-substep {
   text-decoration: line-through;
 }
-
 #impress .step .substep.strike-on-substep {
   opacity: 1;
 }
-
 #impress .step .substep .is-curr-substep {
   opacity: 0;
   transition: opacity 1s;
 }
-
 #impress .step .substep.is-curr-substep,
 #impress .step .substep .is-curr-substep {
   opacity: 0;
   transition: opacity 1s;
 }
-
 #impress .step .substep.substep-active.is-curr-substep,
 #impress .step .substep.substep-active .is-curr-substep {
   opacity: 1;
   transition: opacity 1s;
 }
-
 #impress .step .substep.is-curr-substep.remove,
 #impress .step .substep .is-curr-substep.remove {
   display: none;
 }
-
 #impress .step .substep.substep-active.is-curr-substep.remove,
 #impress .step .substep.substep-active .is-curr-substep.remove {
   display: initial;
 }
-
-/* We need substeps to go away so they don't show up on the adjacent slide */
-/* #impress .step.past .substep.substep-visible { */
-/*     opacity: 0; */
-/*     transition: 2s; */
-/* } */
-
-.impress-on-overview #overview #signature {
-  opacity: 1;
+#impress #overview {
+  pointer-events: none;
+}
+#impress #overview #signature {
+  color: #546778;
+  opacity: 0;
+  font-size: 40%;
+}
+#impress #overview #signature a {
+  font-family: "PT Serif";
+  font-size: 120%;
+  text-decoration: none;
+  border: none;
+  background: none;
+  pointer-events: auto;
 }
 
-.impress-on-overview .show-on-overview {
+.impress-on-overview #impress #overview #signature {
   opacity: 1;
 }
-
-.impress-on-overview .hide-on-overview {
+.impress-on-overview #impress .show-on-overview {
+  opacity: 1;
+}
+.impress-on-overview #impress .hide-on-overview {
   opacity: 0;
 }
 
-.visible {
-  visibility: visible;
+:root {
+  --r-background-color: $bg-color;
+  --r-main-color: $main-color;
+  --r-heading-color: $heading-color;
+  --r-link-color: $link-color;
+  --r-link-color-dark: color.darken($link-color , 15% );
+  --r-link-color-hover: $link-color-hover;
+  --r-selection-background-color: $selection-bg-color;
+  --r-selection-color: $selection-color;
 }
 
-.hidden {
-  visibility: hidden;
+.reveal {
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+}
+.reveal .r-frame {
+  border: 4px solid var(--c-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+.reveal a:hover .r-frame {
+  border-color: var(--c-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+.reveal .controls {
+  color: var(--c-link-color);
+}
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--c-link-color);
 }
 
-#overview #signature {
-  opacity: 0;
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .reveal .backgrounds {
+    background-color: var(--c-bg-color);
+  }
 }
 
-#overview #signature {
-    font-size: 40%;
-}
-
-#overview #signature a {
-    font-family: "PT Serif";
-    font-size: 120%;
-    text-decoration: none;
-    border: none;
-    background: none;
-    pointer-events: auto;
-}
-
-/* mermaid related */
-#impress div.mermaid {
-    text-align: center;
-}
-
-#impress svg[id^="mermaid"][width][height][viewBox] {
-    max-width: 90%;
-    max-height: 100%;
-}
-
-#impress svg {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 1rem;
-}
-
-/* if a svg not have any of bg-* class, add a semi-transparent background to it */
-#impress svg:not([class^="bg-"], [class*=" bg-"])
-{
-    /* Add a background, so the line and text is visible in both light and dark theme */
-    background: rgba(255, 255, 255, 0.5);
-}
-
-/* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
-.f2-5 { font-size: 1.8rem; }
+/*# sourceMappingURL=classic-slides.css.map */

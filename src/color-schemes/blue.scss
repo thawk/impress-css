@@ -4,7 +4,7 @@
 // $color-4: #F2F2F2, 
 // $color-5: #50C4F2,
 
-@use 'common' with (
+@use 'color_scheme' with (
     $is-dark-bg: false,
     $bg-color: #50c4f2,
     $main-color: #1261a6,

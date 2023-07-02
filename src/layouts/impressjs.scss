@@ -1,0 +1,24 @@
+@use 'layout' with (
+  // Primary/body text
+  // $main-font: ['Lato', 'sans-serif'],
+  // $main-font-size: 3.75em,
+
+  // Vertical spacing between blocks of text
+  $block-margin: 1em,
+
+  // Headings
+  $heading-font: ['League Gothic', Impact, sans-serif],
+  $heading-line-height: 1.2,
+  $heading-letter-spacing: normal,
+  $heading-text-transform: uppercase,
+  $heading-text-shadow: none,
+  $heading-font-weight: normal,
+
+  $heading-1-size: 2em,
+  $heading-2-size: 1.5em,
+  $heading-3-size: 1.17em,
+  $heading-4-size: 1em,
+
+  $code-font: ["Cutive mono","Courier New", monospace]
+);
+
