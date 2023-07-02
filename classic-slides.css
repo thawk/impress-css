@@ -114,7 +114,7 @@
   font-size: 1.8rem;
 }
 
-#impress,
+body.impress-enabled,
 .reveal-viewport {
   background-color: var(--c-bg-color);
 }

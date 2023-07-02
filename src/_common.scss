@@ -51,7 +51,7 @@
 /* tachyons.css only has 2/2.25rem 3/1.5rem, so add the middle one */
 .f2-5 { font-size: 1.8rem; }
 
-#impress,
+body.impress-enabled,
 .reveal-viewport {
   background-color: var(--c-bg-color);
 }
