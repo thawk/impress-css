@@ -143,14 +143,6 @@ body.impress-enabled,
   text-align: left;
   margin: 0 0 0 1em;
 }
-#impress ul ul, #impress ul ol, #impress ol ol, #impress ol ul,
-.reveal ul ul,
-.reveal ul ol,
-.reveal ol ol,
-.reveal ol ul {
-  display: block;
-  margin-left: 2em;
-}
 #impress ul,
 .reveal ul {
   list-style-type: disc;
