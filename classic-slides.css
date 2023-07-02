@@ -1,4 +1,23 @@
 @charset "UTF-8";
+:root {
+  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-slide-font-scale: 0.055;
+  --c-block-margin: 20px;
+  --c-heading-margin: 0 0 20px 0;
+  --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
+  --c-heading-line-height: 1.2;
+  --c-heading-letter-spacing: normal;
+  --c-heading-text-transform: uppercase;
+  --c-heading-text-shadow: none;
+  --c-heading-font-weight: bold;
+  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  --c-heading-1-size: 2em;
+  --c-heading-2-size: 1.5em;
+  --c-heading-3-size: 1.17em;
+  --c-heading-4-size: 1em;
+  --c-code-font: Cutive mono, Courier New, monospace;
+}
+
 body {
   background: var(--c-bg-color);
   color: var(--c-main-color);
@@ -102,8 +121,9 @@ body {
 
 #impress,
 .reveal {
+  --c-slide-font-size: calc(var(--c-slide-font-scale, 0.05) * var(--slide-height, 1080px));
   font-family: var(--c-main-font);
-  font-size: var(--c-main-font-size);
+  font-size: var(--c-slide-font-size);
   /* 块/段落引用 */
   /* Inline code, no Highlight.js */
   /* more text, smaller font size */
@@ -290,11 +310,13 @@ body {
 .reveal table table {
   background-color: var(--c-table-bg-color);
 }
-#impress table.borderless table.borderless th,
+#impress table.borderless,
+#impress table.borderless th,
 #impress table.borderless td,
 #impress table.borderless thead th,
 #impress table.borderless thead td,
-.reveal table.borderless table.borderless th,
+.reveal table.borderless,
+.reveal table.borderless th,
 .reveal table.borderless td,
 .reveal table.borderless thead th,
 .reveal table.borderless thead td {
@@ -587,7 +609,7 @@ body.impress-enabled #impress-help {
 }
 #impress .step {
   position: relative;
-  width: var(--c-step-width);
+  width: calc(0.9375 * var(--slide-width, var(--c-default-step-width)));
   padding: 3rem;
   margin: 0rem;
   box-sizing: border-box;
@@ -605,8 +627,8 @@ body.impress-enabled #impress-help {
 }
 #impress .slide {
   display: block;
-  width: calc(0.964 * var(--slide-width, var(--c-default-slide-width)));
-  height: calc(0.926 * var(--slide-height, var(--c-default-slide-height)));
+  width: calc(0.9635 * var(--slide-width, var(--c-default-slide-width)));
+  height: calc(0.9259 * var(--slide-height, var(--c-default-slide-height)));
   padding: 2rem 3rem;
   /* Fix for slides with data-z != 0 */
   /* Cancel margin for fit-text elements */
@@ -655,7 +677,6 @@ body.impress-enabled #impress-help {
   display: none;
 }
 #impress .step.title {
-  display: block;
   padding: 2rem 3rem;
 }
 #impress .step.subslide {
@@ -670,10 +691,16 @@ body.impress-enabled #impress-help {
 #impress .step.subslide p {
   text-align: left;
 }
-#impress .title h1,
-#impress .title h2,
-#impress .title h3,
-#impress .title p {
+#impress .step.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#impress .step.title h1,
+#impress .step.title h2,
+#impress .step.title h3,
+#impress .step.title p {
   width: 100%;
   text-align: center;
 }
@@ -798,25 +825,6 @@ body.impress-enabled #impress-help {
   --r-link-color-hover: $link-color-hover;
   --r-selection-background-color: $selection-bg-color;
   --r-selection-color: $selection-color;
-}
-
-:root {
-  --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
-  --c-main-font-size: calc(0.055 * var(--slide-height, 1080px));
-  --c-block-margin: 20px;
-  --c-heading-margin: 0 0 20px 0;
-  --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
-  --c-heading-line-height: 1.2;
-  --c-heading-letter-spacing: normal;
-  --c-heading-text-transform: uppercase;
-  --c-heading-text-shadow: none;
-  --c-heading-font-weight: bold;
-  --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-  --c-heading-1-size: var(--main-font-size);
-  --c-heading-2-size: var(--main-font-size);
-  --c-heading-3-size: var(--main-font-size);
-  --c-heading-4-size: var(--main-font-size);
-  --c-code-font: Cutive mono, Courier New, monospace;
 }
 
 /*# sourceMappingURL=classic-slides.css.map */

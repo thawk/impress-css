@@ -58,8 +58,10 @@ body {
 
 #impress,
 .reveal {
+  --c-slide-font-size: calc(var(--c-slide-font-scale, 0.05) * var(--slide-height, 1080px));
+
   font-family: var(--c-main-font);
-  font-size: var(--c-main-font-size);
+  font-size: var(--c-slide-font-size);
 
   ul {
     list-style-type: disc;
@@ -217,7 +219,7 @@ body {
     }
   }
 
-  table.borderless
+  table.borderless,
   table.borderless th,
   table.borderless td,
   table.borderless thead th,

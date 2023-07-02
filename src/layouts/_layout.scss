@@ -1,6 +1,7 @@
 // Primary/body text
 $main-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !default;
-$main-font-size: calc(0.055 * var(--slide-height, 1080px)) !default;
+// relative to slide height
+$slide-font-scale: 0.055 !default;
 
 // Vertical spacing between blocks of text
 $block-margin: 20px !default;
@@ -16,10 +17,10 @@ $heading-text-shadow: none !default;
 $heading-font-weight: bold !default;
 $heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9) !default;
 
-$heading-1-size: var(--main-font-size) !default;
-$heading-2-size: var(--main-font-size) !default;
-$heading-3-size: var(--main-font-size) !default;
-$heading-4-size: var(--main-font-size) !default;
+$heading-1-size: 2em !default;
+$heading-2-size: 1.5em !default;
+$heading-3-size: 1.17em !default;
+$heading-4-size: 1em !default;
 
 $code-font: "Cutive mono","Courier New", monospace !default;
 
@@ -31,7 +32,7 @@ $code-font: "Cutive mono","Courier New", monospace !default;
 
 :root {
   --c-main-font: #{$main-font};
-  --c-main-font-size: #{$main-font-size};
+  --c-slide-font-scale: #{$slide-font-scale};
 
   // Vertical spacing between blocks of text
   --c-block-margin: #{$block-margin};

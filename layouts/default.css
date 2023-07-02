@@ -1,6 +1,6 @@
 :root {
   --c-main-font: [Lato, sans-serif];
-  --c-main-font-size: calc(0.055 * var(--slide-height, 1080px));
+  --c-slide-font-scale: 0.055;
   --c-block-margin: 20px;
   --c-heading-margin: 0 0 20px 0;
   --c-heading-font: [League Gothic, Impact, sans-serif];
@@ -10,7 +10,7 @@
   --c-heading-text-shadow: none;
   --c-heading-font-weight: normal;
   --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-  --c-heading-1-size: 3.77em;
+  --c-heading-1-size: 2.77em;
   --c-heading-2-size: 2.11em;
   --c-heading-3-size: 1.55em;
   --c-heading-4-size: 1em;

@@ -55,7 +55,7 @@ body.impress-enabled {
 
   .step {
     position: relative;
-    width: var(--c-step-width);
+    width: calc(0.9375 * var(--slide-width, var(--c-default-step-width)));
     padding: 3rem;
     margin: 0rem;
 
@@ -86,8 +86,8 @@ body.impress-enabled {
   .slide {
     display: block;
 
-    width: calc(0.964 * var(--slide-width, var(--c-default-slide-width)));
-    height: calc(0.926 * var(--slide-height, var(--c-default-slide-height)));
+    width: calc(0.9635 * var(--slide-width, var(--c-default-slide-width)));
+    height: calc(0.9259 * var(--slide-height, var(--c-default-slide-height)));
     padding: 2rem 3rem;
 
     &.flex {
@@ -149,7 +149,7 @@ body.impress-enabled {
   }
 
   .step.title {
-    display: block;
+    // display: block;
 
     // width: var(--c-default-slide-width);
     // height: var(--c-default-slide-height);
@@ -173,10 +173,17 @@ body.impress-enabled {
     text-align: left;
   }
 
-  .title h1,
-  .title h2,
-  .title h3,
-  .title p {
+  .step.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step.title h1,
+  .step.title h2,
+  .step.title h3,
+  .step.title p {
       width: 100%;
       text-align: center;
   }
