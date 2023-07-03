@@ -3,6 +3,8 @@ $main-font: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus San
 // relative to slide height
 $slide-font-scale: 0.055 !default;
 
+$main-line-height: 1.3 !default;
+
 // Vertical spacing between blocks of text
 $block-margin: 20px !default;
 
@@ -28,6 +30,7 @@ $code-font-size: 0.6em !default;
 :root {
   --c-main-font: #{$main-font};
   --c-slide-font-scale: #{$slide-font-scale};
+  --c-main-line-height: #{$main-line-height};
 
   // Vertical spacing between blocks of text
   --c-block-margin: #{$block-margin};

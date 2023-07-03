@@ -1,6 +1,7 @@
 :root {
   --c-main-font: [Lato, sans-serif];
   --c-slide-font-scale: 0.055;
+  --c-main-line-height: 1.3;
   --c-block-margin: 20px;
   --c-heading-margin: 0 0 20px 0;
   --c-heading-font: [League Gothic, Impact, sans-serif];

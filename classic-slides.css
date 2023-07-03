@@ -2,6 +2,7 @@
 :root {
   --c-main-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
   --c-slide-font-scale: 0.055;
+  --c-main-line-height: 1.3;
   --c-block-margin: 20px;
   --c-heading-margin: 0 0 20px 0;
   --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
@@ -127,8 +128,10 @@ body.impress-enabled,
   font-size: var(--c-slide-font-size);
   font-weight: normal;
   color: var(--c-main-color);
+  line-height: var(--c-main-line-height);
   /* 块/段落引用 */
   /* Inline code, no Highlight.js */
+  /* highlight.js uses table to show line number */
   /* more text, smaller font size */
   /* mermaid related */
   /* style for main classes in mermaid classDiagram */
@@ -141,7 +144,6 @@ body.impress-enabled,
 .reveal dl,
 .reveal ul {
   text-align: left;
-  margin: 0 0 0 1em;
 }
 #impress ul,
 .reveal ul {
@@ -366,6 +368,10 @@ body.impress-enabled,
 .reveal table.borderless thead td {
   border: none;
 }
+#impress .hljs table,
+.reveal .hljs table {
+  border: none;
+}
 #impress th,
 .reveal th {
   text-align: inherit;
@@ -414,6 +420,7 @@ body.impress-enabled,
 .reveal p {
   margin: var(--c-block-margin) 0;
   line-height: 1.3;
+  text-align: left;
 }
 #impress del, #impress s,
 .reveal del,
