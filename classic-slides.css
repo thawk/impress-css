@@ -16,6 +16,7 @@
   --c-heading-3-size: 1.17em;
   --c-heading-4-size: 1em;
   --c-code-font: Cutive mono, Courier New, monospace;
+  --c-code-font-size: 0.6em;
 }
 
 .noaccent {
@@ -139,7 +140,6 @@ body.impress-enabled,
 .reveal ol,
 .reveal dl,
 .reveal ul {
-  display: inline-block;
   text-align: left;
   margin: 0 0 0 1em;
 }
@@ -330,6 +330,7 @@ body.impress-enabled,
   border: 2px solid var(--c-border-color-3);
   overflow: auto;
   word-wrap: normal;
+  font-size: var(--c-code-font-size);
 }
 #impress table,
 .reveal table {

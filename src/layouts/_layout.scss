@@ -23,6 +23,7 @@ $heading-3-size: 1.17em !default;
 $heading-4-size: 1em !default;
 
 $code-font: "Cutive mono","Courier New", monospace !default;
+$code-font-size: 0.6em !default;
 
 :root {
   --c-main-font: #{$main-font};
@@ -47,4 +48,5 @@ $code-font: "Cutive mono","Courier New", monospace !default;
   --c-heading-4-size: #{$heading-4-size};
 
   --c-code-font: #{$code-font};
+  --c-code-font-size: #{$code-font-size};
 }
