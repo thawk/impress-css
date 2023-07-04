@@ -1,0 +1,81 @@
+@mixin effects($trigger, $effected, $current) {
+  .#{$trigger} {
+    &.is-curr-substep,
+    .is-curr-substep {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    &.accent-in, .accent-in,
+    &.strike-in, .strike-in {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &.unblur-in, .unblur-in {
+      visibility: visible;
+      filter: blur(5px);
+    }
+
+    &.blur-in, .blur-in {
+      visibility: visible;
+      filter: none;
+    }
+
+    &.is-curr-substep.remove-out,
+    .is-curr-substep.remove-out {
+      display: none;
+    }
+
+    &.#{$effected} {
+      &.accent-in, .accent-in {
+        color: var(--c-accent-color);
+      }
+
+      &.unblur-in, .unblur-in {
+        filter: none;
+      }
+
+      &.blur-in, .blur-in {
+        filter: blur(5px);
+      }
+
+      &.strike-in, .strike-in {
+        text-decoration-color: var(--c-accent2-color);
+        text-decoration: line-through;
+      }
+    }
+
+    &.#{$current} {
+      &.is-curr-substep,
+      .is-curr-substep {
+        opacity: 1;
+        transition: opacity 1s;
+
+        &.remove-out {
+          display: initial;
+        }
+      }
+    }
+  }
+
+  li li.#{$trigger}.#{$effected} {
+    &.accent-in, .accent-in {
+      color: var(--c-accent2-color);
+    }
+
+    &.strike-in, .strike-in {
+      text-decoration-color: var(--c-accent2-color);
+    }
+  }
+
+  li.#{$trigger}.#{$effected} {
+    &.accent-in, .accent-in {
+      color: var(--c-accent-color);
+    }
+
+    &.strike-in, .strike-in {
+      text-decoration-color: var(--c-accent-color);
+    }
+  }
+}

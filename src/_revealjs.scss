@@ -1,3 +1,5 @@
+@import "effects";
+
 :root {
   // for reveal.js
   --r-background-color: $bg-color;
@@ -11,6 +13,10 @@
 }
 
 .reveal {
+  section {
+    @include effects(fragment, visible, current-fragment);
+  }
+
   .r-frame {
     border: 4px solid var(--c-main-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);

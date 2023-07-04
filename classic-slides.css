@@ -139,6 +139,736 @@ body.impress-enabled,
   /* Ensure certain elements are never larger than the slide itself */
   /* if a svg not have any of bg-* class, add a semi-transparent background to it */
 }
+#impress .tl,
+.reveal .tl {
+  text-align: left;
+}
+#impress .tr,
+.reveal .tr {
+  text-align: right;
+}
+#impress .tc,
+.reveal .tc {
+  text-align: center;
+}
+#impress .tj,
+.reveal .tj {
+  text-align: justify;
+}
+#impress .f-6, #impress .f-headline,
+.reveal .f-6,
+.reveal .f-headline {
+  font-size: 6rem;
+}
+#impress .f-5, #impress .f-subheadline,
+.reveal .f-5,
+.reveal .f-subheadline {
+  font-size: 5rem;
+}
+#impress .f1,
+.reveal .f1 {
+  font-size: 3rem;
+}
+#impress .f2,
+.reveal .f2 {
+  font-size: 2.25rem;
+}
+#impress .f3,
+.reveal .f3 {
+  font-size: 1.5rem;
+}
+#impress .f4,
+.reveal .f4 {
+  font-size: 1.25rem;
+}
+#impress .f5,
+.reveal .f5 {
+  font-size: 1rem;
+}
+#impress .f6,
+.reveal .f6 {
+  font-size: 0.875rem;
+}
+#impress .f7,
+.reveal .f7 {
+  font-size: 0.75rem;
+}
+#impress .lh-solid,
+.reveal .lh-solid {
+  line-height: 1;
+}
+#impress .lh-title,
+.reveal .lh-title {
+  line-height: 1.25;
+}
+#impress .lh-copy,
+.reveal .lh-copy {
+  line-height: 1.5;
+}
+#impress .normal,
+.reveal .normal {
+  font-weight: normal;
+}
+#impress .b,
+.reveal .b {
+  font-weight: bold;
+}
+#impress .fw1,
+.reveal .fw1 {
+  font-weight: 100;
+}
+#impress .fw2,
+.reveal .fw2 {
+  font-weight: 200;
+}
+#impress .fw3,
+.reveal .fw3 {
+  font-weight: 300;
+}
+#impress .fw4,
+.reveal .fw4 {
+  font-weight: 400;
+}
+#impress .fw5,
+.reveal .fw5 {
+  font-weight: 500;
+}
+#impress .fw6,
+.reveal .fw6 {
+  font-weight: 600;
+}
+#impress .fw7,
+.reveal .fw7 {
+  font-weight: 700;
+}
+#impress .fw8,
+.reveal .fw8 {
+  font-weight: 800;
+}
+#impress .fw9,
+.reveal .fw9 {
+  font-weight: 900;
+}
+#impress .pa0,
+.reveal .pa0 {
+  padding: 0;
+}
+#impress .pa1,
+.reveal .pa1 {
+  padding: 0.25rem;
+}
+#impress .pa2,
+.reveal .pa2 {
+  padding: 0.5rem;
+}
+#impress .pa3,
+.reveal .pa3 {
+  padding: 1rem;
+}
+#impress .pa4,
+.reveal .pa4 {
+  padding: 2rem;
+}
+#impress .pa5,
+.reveal .pa5 {
+  padding: 4rem;
+}
+#impress .pa6,
+.reveal .pa6 {
+  padding: 8rem;
+}
+#impress .pa7,
+.reveal .pa7 {
+  padding: 16rem;
+}
+#impress .pl0,
+.reveal .pl0 {
+  padding-left: 0;
+}
+#impress .pl1,
+.reveal .pl1 {
+  padding-left: 0.25rem;
+}
+#impress .pl2,
+.reveal .pl2 {
+  padding-left: 0.5rem;
+}
+#impress .pl3,
+.reveal .pl3 {
+  padding-left: 1rem;
+}
+#impress .pl4,
+.reveal .pl4 {
+  padding-left: 2rem;
+}
+#impress .pl5,
+.reveal .pl5 {
+  padding-left: 4rem;
+}
+#impress .pl6,
+.reveal .pl6 {
+  padding-left: 8rem;
+}
+#impress .pl7,
+.reveal .pl7 {
+  padding-left: 16rem;
+}
+#impress .pr0,
+.reveal .pr0 {
+  padding-right: 0;
+}
+#impress .pr1,
+.reveal .pr1 {
+  padding-right: 0.25rem;
+}
+#impress .pr2,
+.reveal .pr2 {
+  padding-right: 0.5rem;
+}
+#impress .pr3,
+.reveal .pr3 {
+  padding-right: 1rem;
+}
+#impress .pr4,
+.reveal .pr4 {
+  padding-right: 2rem;
+}
+#impress .pr5,
+.reveal .pr5 {
+  padding-right: 4rem;
+}
+#impress .pr6,
+.reveal .pr6 {
+  padding-right: 8rem;
+}
+#impress .pr7,
+.reveal .pr7 {
+  padding-right: 16rem;
+}
+#impress .pb0,
+.reveal .pb0 {
+  padding-bottom: 0;
+}
+#impress .pb1,
+.reveal .pb1 {
+  padding-bottom: 0.25rem;
+}
+#impress .pb2,
+.reveal .pb2 {
+  padding-bottom: 0.5rem;
+}
+#impress .pb3,
+.reveal .pb3 {
+  padding-bottom: 1rem;
+}
+#impress .pb4,
+.reveal .pb4 {
+  padding-bottom: 2rem;
+}
+#impress .pb5,
+.reveal .pb5 {
+  padding-bottom: 4rem;
+}
+#impress .pb6,
+.reveal .pb6 {
+  padding-bottom: 8rem;
+}
+#impress .pb7,
+.reveal .pb7 {
+  padding-bottom: 16rem;
+}
+#impress .pt0,
+.reveal .pt0 {
+  padding-top: 0;
+}
+#impress .pt1,
+.reveal .pt1 {
+  padding-top: 0.25rem;
+}
+#impress .pt2,
+.reveal .pt2 {
+  padding-top: 0.5rem;
+}
+#impress .pt3,
+.reveal .pt3 {
+  padding-top: 1rem;
+}
+#impress .pt4,
+.reveal .pt4 {
+  padding-top: 2rem;
+}
+#impress .pt5,
+.reveal .pt5 {
+  padding-top: 4rem;
+}
+#impress .pt6,
+.reveal .pt6 {
+  padding-top: 8rem;
+}
+#impress .pt7,
+.reveal .pt7 {
+  padding-top: 16rem;
+}
+#impress .pv0,
+.reveal .pv0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#impress .pv1,
+.reveal .pv1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+#impress .pv2,
+.reveal .pv2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#impress .pv3,
+.reveal .pv3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#impress .pv4,
+.reveal .pv4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#impress .pv5,
+.reveal .pv5 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+#impress .pv6,
+.reveal .pv6 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+#impress .pv7,
+.reveal .pv7 {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+#impress .ph0,
+.reveal .ph0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#impress .ph1,
+.reveal .ph1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+#impress .ph2,
+.reveal .ph2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+#impress .ph3,
+.reveal .ph3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#impress .ph4,
+.reveal .ph4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#impress .ph5,
+.reveal .ph5 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+#impress .ph6,
+.reveal .ph6 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+#impress .ph7,
+.reveal .ph7 {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+#impress .ma0,
+.reveal .ma0 {
+  margin: 0;
+}
+#impress .ma1,
+.reveal .ma1 {
+  margin: 0.25rem;
+}
+#impress .ma2,
+.reveal .ma2 {
+  margin: 0.5rem;
+}
+#impress .ma3,
+.reveal .ma3 {
+  margin: 1rem;
+}
+#impress .ma4,
+.reveal .ma4 {
+  margin: 2rem;
+}
+#impress .ma5,
+.reveal .ma5 {
+  margin: 4rem;
+}
+#impress .ma6,
+.reveal .ma6 {
+  margin: 8rem;
+}
+#impress .ma7,
+.reveal .ma7 {
+  margin: 16rem;
+}
+#impress .ml0,
+.reveal .ml0 {
+  margin-left: 0;
+}
+#impress .ml1,
+.reveal .ml1 {
+  margin-left: 0.25rem;
+}
+#impress .ml2,
+.reveal .ml2 {
+  margin-left: 0.5rem;
+}
+#impress .ml3,
+.reveal .ml3 {
+  margin-left: 1rem;
+}
+#impress .ml4,
+.reveal .ml4 {
+  margin-left: 2rem;
+}
+#impress .ml5,
+.reveal .ml5 {
+  margin-left: 4rem;
+}
+#impress .ml6,
+.reveal .ml6 {
+  margin-left: 8rem;
+}
+#impress .ml7,
+.reveal .ml7 {
+  margin-left: 16rem;
+}
+#impress .mr0,
+.reveal .mr0 {
+  margin-right: 0;
+}
+#impress .mr1,
+.reveal .mr1 {
+  margin-right: 0.25rem;
+}
+#impress .mr2,
+.reveal .mr2 {
+  margin-right: 0.5rem;
+}
+#impress .mr3,
+.reveal .mr3 {
+  margin-right: 1rem;
+}
+#impress .mr4,
+.reveal .mr4 {
+  margin-right: 2rem;
+}
+#impress .mr5,
+.reveal .mr5 {
+  margin-right: 4rem;
+}
+#impress .mr6,
+.reveal .mr6 {
+  margin-right: 8rem;
+}
+#impress .mr7,
+.reveal .mr7 {
+  margin-right: 16rem;
+}
+#impress .mb0,
+.reveal .mb0 {
+  margin-bottom: 0;
+}
+#impress .mb1,
+.reveal .mb1 {
+  margin-bottom: 0.25rem;
+}
+#impress .mb2,
+.reveal .mb2 {
+  margin-bottom: 0.5rem;
+}
+#impress .mb3,
+.reveal .mb3 {
+  margin-bottom: 1rem;
+}
+#impress .mb4,
+.reveal .mb4 {
+  margin-bottom: 2rem;
+}
+#impress .mb5,
+.reveal .mb5 {
+  margin-bottom: 4rem;
+}
+#impress .mb6,
+.reveal .mb6 {
+  margin-bottom: 8rem;
+}
+#impress .mb7,
+.reveal .mb7 {
+  margin-bottom: 16rem;
+}
+#impress .mt0,
+.reveal .mt0 {
+  margin-top: 0;
+}
+#impress .mt1,
+.reveal .mt1 {
+  margin-top: 0.25rem;
+}
+#impress .mt2,
+.reveal .mt2 {
+  margin-top: 0.5rem;
+}
+#impress .mt3,
+.reveal .mt3 {
+  margin-top: 1rem;
+}
+#impress .mt4,
+.reveal .mt4 {
+  margin-top: 2rem;
+}
+#impress .mt5,
+.reveal .mt5 {
+  margin-top: 4rem;
+}
+#impress .mt6,
+.reveal .mt6 {
+  margin-top: 8rem;
+}
+#impress .mt7,
+.reveal .mt7 {
+  margin-top: 16rem;
+}
+#impress .mv0,
+.reveal .mv0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#impress .mv1,
+.reveal .mv1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+#impress .mv2,
+.reveal .mv2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#impress .mv3,
+.reveal .mv3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#impress .mv4,
+.reveal .mv4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#impress .mv5,
+.reveal .mv5 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+#impress .mv6,
+.reveal .mv6 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+#impress .mv7,
+.reveal .mv7 {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+}
+#impress .mh0,
+.reveal .mh0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+#impress .mh1,
+.reveal .mh1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+#impress .mh2,
+.reveal .mh2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+#impress .mh3,
+.reveal .mh3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#impress .mh4,
+.reveal .mh4 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#impress .mh5,
+.reveal .mh5 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+#impress .mh6,
+.reveal .mh6 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+#impress .mh7,
+.reveal .mh7 {
+  margin-left: 16rem;
+  margin-right: 16rem;
+}
+#impress .na1,
+.reveal .na1 {
+  margin: -0.25rem;
+}
+#impress .na2,
+.reveal .na2 {
+  margin: -0.5rem;
+}
+#impress .na3,
+.reveal .na3 {
+  margin: -1rem;
+}
+#impress .na4,
+.reveal .na4 {
+  margin: -2rem;
+}
+#impress .na5,
+.reveal .na5 {
+  margin: -4rem;
+}
+#impress .na6,
+.reveal .na6 {
+  margin: -8rem;
+}
+#impress .na7,
+.reveal .na7 {
+  margin: -16rem;
+}
+#impress .nl1,
+.reveal .nl1 {
+  margin-left: -0.25rem;
+}
+#impress .nl2,
+.reveal .nl2 {
+  margin-left: -0.5rem;
+}
+#impress .nl3,
+.reveal .nl3 {
+  margin-left: -1rem;
+}
+#impress .nl4,
+.reveal .nl4 {
+  margin-left: -2rem;
+}
+#impress .nl5,
+.reveal .nl5 {
+  margin-left: -4rem;
+}
+#impress .nl6,
+.reveal .nl6 {
+  margin-left: -8rem;
+}
+#impress .nl7,
+.reveal .nl7 {
+  margin-left: -16rem;
+}
+#impress .nr1,
+.reveal .nr1 {
+  margin-right: -0.25rem;
+}
+#impress .nr2,
+.reveal .nr2 {
+  margin-right: -0.5rem;
+}
+#impress .nr3,
+.reveal .nr3 {
+  margin-right: -1rem;
+}
+#impress .nr4,
+.reveal .nr4 {
+  margin-right: -2rem;
+}
+#impress .nr5,
+.reveal .nr5 {
+  margin-right: -4rem;
+}
+#impress .nr6,
+.reveal .nr6 {
+  margin-right: -8rem;
+}
+#impress .nr7,
+.reveal .nr7 {
+  margin-right: -16rem;
+}
+#impress .nb1,
+.reveal .nb1 {
+  margin-bottom: -0.25rem;
+}
+#impress .nb2,
+.reveal .nb2 {
+  margin-bottom: -0.5rem;
+}
+#impress .nb3,
+.reveal .nb3 {
+  margin-bottom: -1rem;
+}
+#impress .nb4,
+.reveal .nb4 {
+  margin-bottom: -2rem;
+}
+#impress .nb5,
+.reveal .nb5 {
+  margin-bottom: -4rem;
+}
+#impress .nb6,
+.reveal .nb6 {
+  margin-bottom: -8rem;
+}
+#impress .nb7,
+.reveal .nb7 {
+  margin-bottom: -16rem;
+}
+#impress .nt1,
+.reveal .nt1 {
+  margin-top: -0.25rem;
+}
+#impress .nt2,
+.reveal .nt2 {
+  margin-top: -0.5rem;
+}
+#impress .nt3,
+.reveal .nt3 {
+  margin-top: -1rem;
+}
+#impress .nt4,
+.reveal .nt4 {
+  margin-top: -2rem;
+}
+#impress .nt5,
+.reveal .nt5 {
+  margin-top: -4rem;
+}
+#impress .nt6,
+.reveal .nt6 {
+  margin-top: -8rem;
+}
+#impress .nt7,
+.reveal .nt7 {
+  margin-top: -16rem;
+}
 #impress ol, #impress dl, #impress ul,
 .reveal ol,
 .reveal dl,
@@ -259,16 +989,6 @@ body.impress-enabled,
 #impress em,
 .reveal em {
   font-style: italic;
-}
-#impress sup,
-.reveal sup {
-  vertical-align: super;
-  font-size: smaller;
-}
-#impress sub,
-.reveal sub {
-  vertical-align: sub;
-  font-size: smaller;
 }
 #impress q,
 .reveal q {
@@ -425,7 +1145,7 @@ body.impress-enabled,
 #impress del, #impress s,
 .reveal del,
 .reveal s {
-  text-decoration-color: var(--c-heading-color);
+  text-decoration-color: var(--c-accent2-color);
 }
 #impress li del, #impress li s,
 .reveal li del,
@@ -435,7 +1155,7 @@ body.impress-enabled,
 #impress li li del, #impress li li s,
 .reveal li li del,
 .reveal li li s {
-  text-decoration-color: var(--c-heading-color);
+  text-decoration-color: var(--c-accent2-color);
 }
 #impress code,
 .reveal code {
@@ -504,18 +1224,6 @@ body.impress-enabled,
 #impress .more-text table,
 .reveal .more-text table {
   font-size: 80%;
-}
-#impress .lh-solid,
-.reveal .lh-solid {
-  line-height: 1;
-}
-#impress .lh-title,
-.reveal .lh-title {
-  line-height: 1.25;
-}
-#impress .lh-copy,
-.reveal .lh-copy {
-  line-height: 1.5;
 }
 #impress .float-right,
 .reveal .float-right {
@@ -646,15 +1354,60 @@ body.impress-enabled #impress-help {
   /*
   Zoom-in.
    */
-  /* substep */
 }
-#impress .step .substep.substep-visible.strike-on-substep, #impress .step .substep.substep-visible .strike-on-substep {
-  text-decoration-color: var(--c-heading-color);
+#impress .step .substep.is-curr-substep,
+#impress .step .substep .is-curr-substep {
+  opacity: 0;
+  transition: opacity 1s;
 }
-#impress .step li li.substep.substep-visible.strike-on-substep, #impress .step li li.substep.substep-visible .strike-on-substep {
-  text-decoration-color: var(--c-heading-color);
+#impress .step .substep.accent-in, #impress .step .substep .accent-in, #impress .step .substep.strike-in, #impress .step .substep .strike-in {
+  visibility: visible;
+  opacity: 1;
 }
-#impress .step li.substep.substep-visible.strike-on-substep, #impress .step li.substep.substep-visible .strike-on-substep {
+#impress .step .substep.unblur-in, #impress .step .substep .unblur-in {
+  visibility: visible;
+  filter: blur(5px);
+}
+#impress .step .substep.blur-in, #impress .step .substep .blur-in {
+  visibility: visible;
+  filter: none;
+}
+#impress .step .substep.is-curr-substep.remove-out,
+#impress .step .substep .is-curr-substep.remove-out {
+  display: none;
+}
+#impress .step .substep.substep-visible.accent-in, #impress .step .substep.substep-visible .accent-in {
+  color: var(--c-accent-color);
+}
+#impress .step .substep.substep-visible.unblur-in, #impress .step .substep.substep-visible .unblur-in {
+  filter: none;
+}
+#impress .step .substep.substep-visible.blur-in, #impress .step .substep.substep-visible .blur-in {
+  filter: blur(5px);
+}
+#impress .step .substep.substep-visible.strike-in, #impress .step .substep.substep-visible .strike-in {
+  text-decoration-color: var(--c-accent2-color);
+  text-decoration: line-through;
+}
+#impress .step .substep.substep-active.is-curr-substep,
+#impress .step .substep.substep-active .is-curr-substep {
+  opacity: 1;
+  transition: opacity 1s;
+}
+#impress .step .substep.substep-active.is-curr-substep.remove-out,
+#impress .step .substep.substep-active .is-curr-substep.remove-out {
+  display: initial;
+}
+#impress .step li li.substep.substep-visible.accent-in, #impress .step li li.substep.substep-visible .accent-in {
+  color: var(--c-accent2-color);
+}
+#impress .step li li.substep.substep-visible.strike-in, #impress .step li li.substep.substep-visible .strike-in {
+  text-decoration-color: var(--c-accent2-color);
+}
+#impress .step li.substep.substep-visible.accent-in, #impress .step li.substep.substep-visible .accent-in {
+  color: var(--c-accent-color);
+}
+#impress .step li.substep.substep-visible.strike-in, #impress .step li.substep.substep-visible .strike-in {
   text-decoration-color: var(--c-accent-color);
 }
 #impress .box {
@@ -820,35 +1573,6 @@ body.impress-enabled #impress-help {
   transform: scale(10);
   opacity: 0;
 }
-#impress .step .substep.substep-visible .strike-on-substep,
-#impress .step .substep.substep-visible.strike-on-substep {
-  text-decoration: line-through;
-}
-#impress .step .substep.strike-on-substep {
-  opacity: 1;
-}
-#impress .step .substep .is-curr-substep {
-  opacity: 0;
-  transition: opacity 1s;
-}
-#impress .step .substep.is-curr-substep,
-#impress .step .substep .is-curr-substep {
-  opacity: 0;
-  transition: opacity 1s;
-}
-#impress .step .substep.substep-active.is-curr-substep,
-#impress .step .substep.substep-active .is-curr-substep {
-  opacity: 1;
-  transition: opacity 1s;
-}
-#impress .step .substep.is-curr-substep.remove,
-#impress .step .substep .is-curr-substep.remove {
-  display: none;
-}
-#impress .step .substep.substep-active.is-curr-substep.remove,
-#impress .step .substep.substep-active .is-curr-substep.remove {
-  display: initial;
-}
 #impress #overview {
   pointer-events: none;
 }
@@ -894,6 +1618,61 @@ body.impress-enabled #impress-help {
   /*********************************************
    * PROGRESS BAR
    *********************************************/
+}
+.reveal section .fragment.is-curr-substep,
+.reveal section .fragment .is-curr-substep {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.reveal section .fragment.accent-in, .reveal section .fragment .accent-in, .reveal section .fragment.strike-in, .reveal section .fragment .strike-in {
+  visibility: visible;
+  opacity: 1;
+}
+.reveal section .fragment.unblur-in, .reveal section .fragment .unblur-in {
+  visibility: visible;
+  filter: blur(5px);
+}
+.reveal section .fragment.blur-in, .reveal section .fragment .blur-in {
+  visibility: visible;
+  filter: none;
+}
+.reveal section .fragment.is-curr-substep.remove-out,
+.reveal section .fragment .is-curr-substep.remove-out {
+  display: none;
+}
+.reveal section .fragment.visible.accent-in, .reveal section .fragment.visible .accent-in {
+  color: var(--c-accent-color);
+}
+.reveal section .fragment.visible.unblur-in, .reveal section .fragment.visible .unblur-in {
+  filter: none;
+}
+.reveal section .fragment.visible.blur-in, .reveal section .fragment.visible .blur-in {
+  filter: blur(5px);
+}
+.reveal section .fragment.visible.strike-in, .reveal section .fragment.visible .strike-in {
+  text-decoration-color: var(--c-accent2-color);
+  text-decoration: line-through;
+}
+.reveal section .fragment.current-fragment.is-curr-substep,
+.reveal section .fragment.current-fragment .is-curr-substep {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.reveal section .fragment.current-fragment.is-curr-substep.remove-out,
+.reveal section .fragment.current-fragment .is-curr-substep.remove-out {
+  display: initial;
+}
+.reveal section li li.fragment.visible.accent-in, .reveal section li li.fragment.visible .accent-in {
+  color: var(--c-accent2-color);
+}
+.reveal section li li.fragment.visible.strike-in, .reveal section li li.fragment.visible .strike-in {
+  text-decoration-color: var(--c-accent2-color);
+}
+.reveal section li.fragment.visible.accent-in, .reveal section li.fragment.visible .accent-in {
+  color: var(--c-accent-color);
+}
+.reveal section li.fragment.visible.strike-in, .reveal section li.fragment.visible .strike-in {
+  text-decoration-color: var(--c-accent-color);
 }
 .reveal .r-frame {
   border: 4px solid var(--c-main-color);

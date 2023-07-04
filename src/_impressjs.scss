@@ -1,3 +1,5 @@
+@import "effects";
+
 :root {
   --c-default-step-width: 1800px;
   --c-default-slide-width: 1850px;
@@ -22,23 +24,7 @@ body.impress-enabled {
 
 #impress {
   .step {
-    .substep.substep-visible {
-      &.strike-on-substep, .strike-on-substep {
-        text-decoration-color: var(--c-heading-color);
-      }
-    }
-
-    li li.substep.substep-visible {
-      &.strike-on-substep, .strike-on-substep {
-        text-decoration-color: var(--c-heading-color);
-      }
-    }
-
-    li.substep.substep-visible {
-      &.strike-on-substep, .strike-on-substep {
-        text-decoration-color: var(--c-accent-color);
-      }
-    }
+    @include effects(substep, substep-visible, substep-active);
   }
 
   .box {
@@ -259,45 +245,6 @@ body.impress-enabled {
   .past  .zoom-out {
     transform: scale(10);
     opacity: 0.0;
-  }
-
-  /* substep */
-  .step {
-    .substep.substep-visible .strike-on-substep,
-    .substep.substep-visible.strike-on-substep {
-      text-decoration: line-through;
-    }
-
-    .substep.strike-on-substep {
-      opacity: 1;
-    }
-
-    .substep .is-curr-substep {
-      opacity: 0;
-      transition: opacity 1s;
-    }
-
-    .substep.is-curr-substep,
-    .substep .is-curr-substep {
-      opacity: 0;
-      transition: opacity 1s;
-    }
-
-    .substep.substep-active.is-curr-substep,
-    .substep.substep-active .is-curr-substep {
-      opacity: 1;
-      transition: opacity 1s;
-    }
-
-    .substep.is-curr-substep.remove,
-    .substep .is-curr-substep.remove {
-      display: none;
-    }
-
-    .substep.substep-active.is-curr-substep.remove,
-    .substep.substep-active .is-curr-substep.remove {
-      display: initial;
-    }
   }
 
   #overview {

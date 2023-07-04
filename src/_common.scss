@@ -12,12 +12,14 @@
 //
 // li li::before {
 //   content: "\2022";
-//   color: var(--c-heading-color);
+//   color: var(--c-accent2-color);
 // }
 //
 // li {
 //     list-style: none;
 // }
+
+@import "tachyons_mixins";
 
 .noaccent         { color: var(--c-main-color); }
 .accent, .accent1 { color: var(--c-accent-color); }
@@ -65,6 +67,8 @@ body.impress-enabled,
   font-weight: normal;
   color: var(--c-main-color);
   line-height: var(--c-main-line-height);
+
+  @include tachyons_styles();
 
   ol, dl, ul {
     // display: inline-block;
@@ -165,16 +169,6 @@ body.impress-enabled,
 
   em {
     font-style: italic;
-  }
-
-  sup {
-    vertical-align: super;
-    font-size: smaller;
-  }
-
-  sub {
-    vertical-align: sub;
-    font-size: smaller;
   }
 
   q {
@@ -329,7 +323,7 @@ body.impress-enabled,
   }
 
   del, s {
-    text-decoration-color: var(--c-heading-color);
+    text-decoration-color: var(--c-accent2-color);
   }
 
   li del, li s {
@@ -337,7 +331,7 @@ body.impress-enabled,
   }
 
   li li del, li li s {
-    text-decoration-color: var(--c-heading-color);
+    text-decoration-color: var(--c-accent2-color);
   }
 
   code {
@@ -395,16 +389,6 @@ body.impress-enabled,
 
   .more-text table {
     font-size: 80%;
-  }
-
-  .lh-solid {
-    line-height: 1;
-  }
-  .lh-title {
-    line-height: 1.25;
-  }
-  .lh-copy {
-    line-height: 1.5;
   }
 
   .float-right {

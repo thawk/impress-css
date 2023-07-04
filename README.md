@@ -66,11 +66,9 @@
   | .subslide         | 仅在当前步骤可见，如堆叠的页面           |
   | .substep          | 该元素按键后才显示                       |
   | .is-curr-step     | 只在当前step可见                         |
-  | .is-curr-substep  | 仅在当前substep激活时可见                |
   | .show-on-overview | 在overview页面显示                       |
   | .hide-on-overview | 在overview页面隐藏                       |
   | .hide-on-nav      | 在导航条不显示                           |
-  | .remove           | 配合.is-curr-substep，删除而非隐藏       |
   | .fly-in           | 从上方飞入的效果                         |
   | .fly-out          | 从下方飞出的效果                         |
   | .fade-in          | 渐显                                     |
@@ -120,6 +118,17 @@
   | .yellow           | 黄色                                     |
   | .gray             | 灰色                                     |
   | .light-gray       | 浅灰色                                   |
+
+* impress.js的substep
+
+  | 类名             | 作用                               |
+  |------------------|------------------------------------|
+  | .remove-out      | 配合.is-curr-substep，删除而非隐藏 |
+  | .strike-in       | 加删除线                           |
+  | .accent-in       | 改用强调色                         |
+  | .is-curr-substep | 仅在当前substep激活时可见          |
+  | .blur-in         | 进入后模糊                         |
+  | .unblur-in       | 进入前模糊，进入后清晰             |
 
 * 结合`fitty`库：
 
