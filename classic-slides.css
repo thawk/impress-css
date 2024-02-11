@@ -1372,10 +1372,6 @@ body.impress-enabled #impress-help {
   visibility: visible;
   filter: none;
 }
-#impress .step .substep.is-curr-substep.remove-out,
-#impress .step .substep .is-curr-substep.remove-out {
-  display: none;
-}
 #impress .step .substep.substep-visible.accent-in, #impress .step .substep.substep-visible .accent-in {
   color: var(--c-accent-color);
 }
@@ -1394,10 +1390,6 @@ body.impress-enabled #impress-help {
   opacity: 1;
   transition: opacity 1s;
 }
-#impress .step .substep.substep-active.is-curr-substep.remove-out,
-#impress .step .substep.substep-active .is-curr-substep.remove-out {
-  display: initial;
-}
 #impress .step li li.substep.substep-visible.accent-in, #impress .step li li.substep.substep-visible .accent-in {
   color: var(--c-accent2-color);
 }
@@ -1409,6 +1401,18 @@ body.impress-enabled #impress-help {
 }
 #impress .step li.substep.substep-visible.strike-in, #impress .step li.substep.substep-visible .strike-in {
   text-decoration-color: var(--c-accent-color);
+}
+#impress .step .substep.is-curr-substep.remove-out,
+#impress .step .substep .is-curr-substep.remove-out {
+  display: none;
+}
+#impress .step .substep.substep-active.is-curr-substep.remove-out,
+#impress .step .substep.substep-active .is-curr-substep.remove-out {
+  display: unset;
+}
+#impress .step li.substep.substep-active.is-curr-substep.remove-out,
+#impress .step .substep.substep-active li.is-curr-substep.remove-out {
+  display: list-item;
 }
 #impress .box {
   background-color: var(--c-box-bg-color);
@@ -1636,10 +1640,6 @@ body.impress-enabled #impress-help {
   visibility: visible;
   filter: none;
 }
-.reveal section .fragment.is-curr-substep.remove-out,
-.reveal section .fragment .is-curr-substep.remove-out {
-  display: none;
-}
 .reveal section .fragment.visible.accent-in, .reveal section .fragment.visible .accent-in {
   color: var(--c-accent-color);
 }
@@ -1658,10 +1658,6 @@ body.impress-enabled #impress-help {
   opacity: 1;
   transition: opacity 1s;
 }
-.reveal section .fragment.current-fragment.is-curr-substep.remove-out,
-.reveal section .fragment.current-fragment .is-curr-substep.remove-out {
-  display: initial;
-}
 .reveal section li li.fragment.visible.accent-in, .reveal section li li.fragment.visible .accent-in {
   color: var(--c-accent2-color);
 }
@@ -1673,6 +1669,18 @@ body.impress-enabled #impress-help {
 }
 .reveal section li.fragment.visible.strike-in, .reveal section li.fragment.visible .strike-in {
   text-decoration-color: var(--c-accent-color);
+}
+.reveal section .fragment.is-curr-substep.remove-out,
+.reveal section .fragment .is-curr-substep.remove-out {
+  display: none;
+}
+.reveal section .fragment.current-fragment.is-curr-substep.remove-out,
+.reveal section .fragment.current-fragment .is-curr-substep.remove-out {
+  display: unset;
+}
+.reveal section li.fragment.current-fragment.is-curr-substep.remove-out,
+.reveal section .fragment.current-fragment li.is-curr-substep.remove-out {
+  display: list-item;
 }
 .reveal .r-frame {
   border: 4px solid var(--c-main-color);

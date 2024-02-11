@@ -22,11 +22,6 @@
       filter: none;
     }
 
-    &.is-curr-substep.remove-out,
-    .is-curr-substep.remove-out {
-      display: none;
-    }
-
     &.#{$effected} {
       &.accent-in, .accent-in {
         color: var(--c-accent-color);
@@ -51,10 +46,6 @@
       .is-curr-substep {
         opacity: 1;
         transition: opacity 1s;
-
-        &.remove-out {
-          display: initial;
-        }
       }
     }
   }
@@ -77,5 +68,20 @@
     &.strike-in, .strike-in {
       text-decoration-color: var(--c-accent-color);
     }
+  }
+
+  .#{$trigger}.is-curr-substep.remove-out,
+  .#{$trigger} .is-curr-substep.remove-out {
+    display: none;
+  }
+
+  .#{$trigger}.#{$current}.is-curr-substep.remove-out,
+  .#{$trigger}.#{$current} .is-curr-substep.remove-out {
+    display: unset;
+  }
+
+  li.#{$trigger}.#{$current}.is-curr-substep.remove-out,
+  .#{$trigger}.#{$current} li.is-curr-substep.remove-out {
+    display: list-item;
   }
 }
