@@ -109,11 +109,39 @@ body.impress-enabled,
   li {
     color: var(--c-list-color);
 
+    strong, b {
+      color: var(--c-accent-color);
+      font-weight: bold;
+    }
+
+    em {
+      color: var(--c-accent2-color);
+    }
+
     li {
       color: var(--c-list-alt-color);
       margin-left: 0.5em;
+
+      strong, b {
+        color: var(--c-accent3-color);
+        font-weight: bold;
+      }
+
+      em {
+        color: var(--c-accent4-color);
+      }
+
       li {
         color: var(--c-list-color);
+
+        strong, b {
+          color: var(--c-accent-color);
+          font-weight: bold;
+        }
+
+        em {
+          color: var(--c-accent2-color);
+        }
       }
     }
   }
@@ -146,7 +174,7 @@ body.impress-enabled,
 
     strong, b {
       color: var(--c-accent-color);
-      // font-weight: bolder;
+      font-weight: normal;
     }
   }
 
@@ -168,7 +196,7 @@ body.impress-enabled,
   }
 
   em {
-    font-style: italic;
+    color: var(--c-accent3-color);
   }
 
   q {

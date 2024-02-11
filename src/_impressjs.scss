@@ -1,4 +1,5 @@
 @import "effects";
+@import "markdown_mixins";
 
 :root {
   --c-default-step-width: 1800px;
@@ -25,6 +26,11 @@ body.impress-enabled {
 #impress {
   .step {
     @include effects(substep, substep-visible, substep-active);
+  }
+
+  .step.markdown,
+  .step .markdown {
+    @include markdown;
   }
 
   .box {
