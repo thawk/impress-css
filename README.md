@@ -55,26 +55,12 @@
 ### classic-slides.css
 
 * 主要的样式定义
-* 针对 impress.js<sup>*</sup> 定义了很多CSS类
+
+#### 通用类
 
   | 类名              | 作用                                     |
   |-------------------|------------------------------------------|
-  | .slide            | 有确定的宽度和高度，缺省没有边框         |
-  | .box              | 加边框                                   |
   | .title            | 标题页                                   |
-  | .hidestep         | 代替step，可以禁用一个step               |
-  | .subslide         | 仅在当前步骤可见，如堆叠的页面           |
-  | .substep          | 该元素按键后才显示                       |
-  | .is-curr-step     | 只在当前step可见                         |
-  | .show-on-overview | 在overview页面显示                       |
-  | .hide-on-overview | 在overview页面隐藏                       |
-  | .hide-on-nav      | 在导航条不显示                           |
-  | .fly-in           | 从上方飞入的效果                         |
-  | .fly-out          | 从下方飞出的效果                         |
-  | .fade-in          | 渐显                                     |
-  | .fade-out         | 渐隐                                     |
-  | .zoom-in          | 缩小                                     |
-  | .zoom-out         | 放大                                     |
   | .borderless       | 应用到table上，没有表格边框              |
   | .striped          | 应用到table上，奇偶行底色不同            |
   | .hover            | 应用到table上，鼠标放上去变化背景色      |
@@ -94,6 +80,7 @@
   | .more-text        | 容纳更多内容。用于#impress或.step        |
   | .visible          | visibility: visible;                     |
   | .hidden           | visibility: hidden; 隐藏元素，只占位     |
+  | .vcenter          | 用于单张幻灯片，让幻灯片内容垂直居中     |
   | .override-color   | 把svg中的线条颜色强制为前景色            |
   | .accent           | 重点颜色                                 |
   | .accent1          | 同.accent                                |
@@ -119,7 +106,7 @@
   | .gray             | 灰色                                     |
   | .light-gray       | 浅灰色                                   |
 
-* impress.js的substep
+#### impress.js的substep以及reveal.js的fragment的效果
 
   | 类名             | 作用                               |
   |------------------|------------------------------------|
@@ -130,11 +117,31 @@
   | .blur-in         | 进入后模糊                         |
   | .unblur-in       | 进入前模糊，进入后清晰             |
 
-* 结合`fitty`库：
+#### 结合`fitty`库
 
   | 类名              | 作用                                     |
   |-------------------|------------------------------------------|
   | .fit-text         | 通过字体放缩把元素的宽度调整为匹配父节点 |
+
+#### impress.js<sup>*</sup> 专有类
+
+  | 类名              | 作用                                     |
+  |-------------------|------------------------------------------|
+  | .slide            | 有确定的宽度和高度，缺省没有边框         |
+  | .box              | 加边框                                   |
+  | .hidestep         | 代替step，可以禁用一个step               |
+  | .is-curr-step     | 只在当前step可见                         |
+  | .subslide         | 仅在当前步骤可见，如堆叠的页面           |
+  | .substep          | 该元素按键后才显示                       |
+  | .show-on-overview | 在overview页面显示                       |
+  | .hide-on-overview | 在overview页面隐藏                       |
+  | .hide-on-nav      | 在导航条不显示                           |
+  | .fly-in           | 从上方飞入的效果                         |
+  | .fly-out          | 从下方飞出的效果                         |
+  | .fade-in          | 渐显                                     |
+  | .fade-out         | 渐隐                                     |
+  | .zoom-in          | 缩小                                     |
+  | .zoom-out         | 放大                                     |
 
 ### normalize.css
 

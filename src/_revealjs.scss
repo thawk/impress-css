@@ -1,5 +1,6 @@
 @import "effects";
 @import "markdown_mixins";
+@import "slide";
 
 :root {
   // for reveal.js
@@ -16,6 +17,7 @@
 .reveal {
   section {
     @include effects(fragment, visible, current-fragment);
+    @include slide;
   }
 
   section.title {
@@ -28,6 +30,20 @@
 
   section[data-markdown] {
     @include markdown;
+  }
+
+  // .vcenter让幻灯片垂直居中
+  .vcenter section,
+  &.vcenter section,
+  section.vcenter {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    &.tc {
+      justify-content: center;
+    }
   }
 
   .r-frame {

@@ -129,15 +129,6 @@ body.impress-enabled,
   font-weight: normal;
   color: var(--c-main-color);
   line-height: var(--c-main-line-height);
-  /* 块/段落引用 */
-  /* Inline code, no Highlight.js */
-  /* highlight.js uses table to show line number */
-  /* more text, smaller font size */
-  /* mermaid related */
-  /* style for main classes in mermaid classDiagram */
-  /* SVG styles */
-  /* Ensure certain elements are never larger than the slide itself */
-  /* if a svg not have any of bg-* class, add a semi-transparent background to it */
 }
 #impress .tl,
 .reveal .tl {
@@ -869,482 +860,6 @@ body.impress-enabled,
 .reveal .nt7 {
   margin-top: -16rem;
 }
-#impress ol, #impress dl, #impress ul,
-.reveal ol,
-.reveal dl,
-.reveal ul {
-  text-align: left;
-}
-#impress ul,
-.reveal ul {
-  list-style-type: disc;
-}
-#impress ul ul,
-.reveal ul ul {
-  list-style-type: circle;
-}
-#impress ul ul ul,
-.reveal ul ul ul {
-  list-style-type: square;
-}
-#impress ol,
-.reveal ol {
-  list-style-type: decimal;
-}
-#impress ol ol,
-.reveal ol ol {
-  list-style-type: lower-alpha;
-}
-#impress ol ol ol,
-.reveal ol ol ol {
-  list-style-type: lower-roman;
-}
-#impress li,
-.reveal li {
-  color: var(--c-list-color);
-}
-#impress li strong, #impress li b,
-.reveal li strong,
-.reveal li b {
-  color: var(--c-accent-color);
-  font-weight: bold;
-}
-#impress li em,
-.reveal li em {
-  color: var(--c-accent2-color);
-}
-#impress li li,
-.reveal li li {
-  color: var(--c-list-alt-color);
-  margin-left: 0.5em;
-}
-#impress li li strong, #impress li li b,
-.reveal li li strong,
-.reveal li li b {
-  color: var(--c-accent3-color);
-  font-weight: bold;
-}
-#impress li li em,
-.reveal li li em {
-  color: var(--c-accent4-color);
-}
-#impress li li li,
-.reveal li li li {
-  color: var(--c-list-color);
-}
-#impress li li li strong, #impress li li li b,
-.reveal li li li strong,
-.reveal li li li b {
-  color: var(--c-accent-color);
-  font-weight: bold;
-}
-#impress li li li em,
-.reveal li li li em {
-  color: var(--c-accent2-color);
-}
-#impress dt,
-.reveal dt {
-  font-weight: bold;
-}
-#impress dd,
-.reveal dd {
-  margin-left: 2em;
-}
-#impress input,
-.reveal input {
-  font-size: 1em;
-}
-#impress h1, #impress h2, #impress h3, #impress h4, #impress h5, #impress h6,
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-  color: var(--c-heading-color);
-  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-  margin: var(--c-heading-margin);
-  font-family: var(--c-heading-font);
-  font-weight: var(--c-heading-font-weight);
-  line-height: var(--c-heading-line-height);
-  letter-spacing: var(--c-heading-letter-spacing);
-  text-transform: var(--c-heading-text-transform);
-  text-shadow: var(--c-heading-text-shadow);
-  word-wrap: break-word;
-}
-#impress h1 strong, #impress h1 b, #impress h2 strong, #impress h2 b, #impress h3 strong, #impress h3 b, #impress h4 strong, #impress h4 b, #impress h5 strong, #impress h5 b, #impress h6 strong, #impress h6 b,
-.reveal h1 strong,
-.reveal h1 b,
-.reveal h2 strong,
-.reveal h2 b,
-.reveal h3 strong,
-.reveal h3 b,
-.reveal h4 strong,
-.reveal h4 b,
-.reveal h5 strong,
-.reveal h5 b,
-.reveal h6 strong,
-.reveal h6 b {
-  color: var(--c-accent-color);
-  font-weight: normal;
-}
-#impress h1,
-.reveal h1 {
-  font-size: var(--c-heading-1-size);
-}
-#impress h2,
-.reveal h2 {
-  font-size: var(--c-heading-2-size);
-}
-#impress h3,
-.reveal h3 {
-  font-size: var(--c-heading-3-size);
-}
-#impress h4,
-.reveal h4 {
-  font-size: var(--c-heading-4-size);
-}
-#impress h1,
-.reveal h1 {
-  text-shadow: var(--c-heading1-text-shadow);
-}
-#impress b, #impress strong,
-.reveal b,
-.reveal strong {
-  font-weight: bold;
-}
-#impress strong,
-.reveal strong {
-  color: var(--c-accent-color);
-}
-#impress em,
-.reveal em {
-  color: var(--c-accent3-color);
-}
-#impress q,
-.reveal q {
-  font-style: italic;
-  text-shadow: 0 6px 6px var(--c-border-color-3);
-  /* font-family: 'PT Serif'; */
-  /* font-weight: 400;     */
-}
-#impress blockquote,
-.reveal blockquote {
-  color: var(--c-blockquote-color);
-  border-left-color: var(--c-blockquote-border-color);
-  display: block;
-  position: relative;
-  font-style: italic;
-  font-weight: 400;
-  border-left: 1px solid;
-  padding-left: 1em;
-  margin: var(--c-block-margin) 3em var(--c-block-margin) 2em;
-}
-#impress a,
-.reveal a {
-  color: var(--c-link-color);
-  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
-  text-decoration: none;
-  padding: 0 0.1em;
-  border-radius: 0.2em;
-  border-bottom: 3px solid;
-  border-left: 3px solid;
-  border-bottom-color: var(--c-border-color-2);
-  border-left-color: var(--c-border-color-2);
-  transition: 0.5s;
-}
-#impress a:hover, #impress a:focus,
-.reveal a:hover,
-.reveal a:focus {
-  color: var(--c-link-color-hover);
-  background: var(--c-link-bg-color);
-  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
-}
-#impress code, #impress kbd, #impress samp,
-.reveal code,
-.reveal kbd,
-.reveal samp {
-  font-family: var(--c-code-font);
-}
-#impress pre,
-.reveal pre {
-  position: relative;
-  margin: var(--c-block-margin) auto;
-  text-align: left;
-  line-height: 1.2;
-  word-wrap: break-word;
-}
-#impress pre > code,
-.reveal pre > code {
-  display: block;
-  color: var(--c-main-color);
-  background-color: var(--c-code-bg-color);
-  padding: 0.5em;
-  border: 2px solid var(--c-border-color-3);
-  overflow: auto;
-  word-wrap: normal;
-  font-size: var(--c-code-font-size);
-}
-#impress table,
-.reveal table {
-  /* width: 100%; */
-  /* max-width: 100%; */
-  border: 1px solid;
-  border-color: var(--c-border-color);
-  border-collapse: collapse;
-  /* border-spacing: 0; */
-  margin-bottom: 1rem;
-  background-color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-}
-#impress table tbody + tbody,
-.reveal table tbody + tbody {
-  border-top: 2px solid;
-  border-top-color: var(--c-border-color);
-}
-#impress table table,
-.reveal table table {
-  background-color: var(--c-table-bg-color);
-}
-#impress table.borderless,
-#impress table.borderless th,
-#impress table.borderless td,
-#impress table.borderless thead th,
-#impress table.borderless thead td,
-.reveal table.borderless,
-.reveal table.borderless th,
-.reveal table.borderless td,
-.reveal table.borderless thead th,
-.reveal table.borderless thead td {
-  border: none;
-}
-#impress .hljs table,
-.reveal .hljs table {
-  border: none;
-}
-#impress th,
-.reveal th {
-  text-align: inherit;
-}
-#impress th, #impress td,
-.reveal th,
-.reveal td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid;
-  border-top-color: var(--c-border-color);
-}
-#impress thead,
-.reveal thead {
-  display: table-header-group;
-}
-#impress thead th,
-.reveal thead th {
-  vertical-align: bottom;
-}
-#impress thead th, #impress thead td,
-.reveal thead th,
-.reveal thead td {
-  border-bottom: 2px solid;
-  border-bottom-color: var(--c-border-color);
-}
-#impress .striped table tbody tr:nth-of-type(odd),
-#impress table.striped tbody tr:nth-of-type(odd),
-.reveal .striped table tbody tr:nth-of-type(odd),
-.reveal table.striped tbody tr:nth-of-type(odd) {
-  background-color: var(--c-border-color-05);
-}
-#impress .vstriped tbody td:nth-of-type(odd),
-#impress .vstriped thead th:nth-of-type(odd),
-.reveal .vstriped tbody td:nth-of-type(odd),
-.reveal .vstriped thead th:nth-of-type(odd) {
-  background-color: var(--c-border-color-05);
-}
-#impress .hover table tbody tr:hover,
-#impress table.hover tbody tr:hover,
-.reveal .hover table tbody tr:hover,
-.reveal table.hover tbody tr:hover {
-  background-color: var(--c-border-color-075);
-}
-#impress p,
-.reveal p {
-  margin: var(--c-block-margin) 0;
-  line-height: 1.3;
-  text-align: left;
-}
-#impress del, #impress s,
-.reveal del,
-.reveal s {
-  text-decoration-color: var(--c-accent2-color);
-}
-#impress li del, #impress li s,
-.reveal li del,
-.reveal li s {
-  text-decoration-color: var(--c-accent-color);
-}
-#impress li li del, #impress li li s,
-.reveal li li del,
-.reveal li li s {
-  text-decoration-color: var(--c-accent2-color);
-}
-#impress code,
-.reveal code {
-  line-height: 1;
-}
-#impress img,
-.reveal img {
-  margin: var(--c-block-margin) 0;
-}
-#impress .font-normalsize,
-.reveal .font-normalsize {
-  font-size: 100%;
-}
-#impress .font-smaller,
-#impress .font-smaller1,
-.reveal .font-smaller,
-.reveal .font-smaller1 {
-  font-size: 90%;
-}
-#impress .font-smaller2,
-.reveal .font-smaller2 {
-  font-size: 80%;
-}
-#impress .font-smaller3,
-.reveal .font-smaller3 {
-  font-size: 70%;
-}
-#impress .font-smaller4,
-.reveal .font-smaller4 {
-  font-size: 60%;
-}
-#impress .font-smaller5,
-.reveal .font-smaller5 {
-  font-size: 50%;
-}
-#impress .font-larger,
-#impress .font-larger1,
-.reveal .font-larger,
-.reveal .font-larger1 {
-  font-size: 110%;
-}
-#impress .font-larger2,
-.reveal .font-larger2 {
-  font-size: 120%;
-}
-#impress .font-larger3,
-.reveal .font-larger3 {
-  font-size: 130%;
-}
-#impress .font-larger4,
-.reveal .font-larger4 {
-  font-size: 150%;
-}
-#impress .font-larger5,
-.reveal .font-larger5 {
-  font-size: 200%;
-}
-#impress .more-text,
-.reveal .more-text {
-  font-size: 80%;
-}
-#impress .more-text .step,
-.reveal .more-text .step {
-  font-size: 65%;
-}
-#impress .more-text table,
-.reveal .more-text table {
-  font-size: 80%;
-}
-#impress .float-right,
-.reveal .float-right {
-  float: right;
-  margin-left: 1rem;
-  margin-right: 0rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#impress .float-left,
-.reveal .float-left {
-  float: left;
-  margin-right: 1rem;
-  margin-left: 0rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#impress .top,
-.reveal .top {
-  position: absolute;
-  top: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 0rem;
-}
-#impress .bottom,
-.reveal .bottom {
-  position: absolute;
-  bottom: 1rem;
-  margin-bottom: 0rem;
-  margin-top: 1rem;
-}
-#impress .right,
-.reveal .right {
-  position: absolute;
-  right: 0rem;
-  margin-left: 1rem;
-  margin-right: 0rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#impress .left,
-.reveal .left {
-  position: absolute;
-  left: 0rem;
-  margin-right: 1rem;
-  margin-left: 0rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-#impress .visible,
-.reveal .visible {
-  visibility: visible;
-}
-#impress .hidden,
-.reveal .hidden {
-  visibility: hidden;
-}
-#impress .mermaid .main_class,
-.reveal .mermaid .main_class {
-  fill: #ffdfdf;
-  text-align: center;
-}
-#impress .override-color path,
-.reveal .override-color path {
-  stroke: var(--c-main-color);
-}
-#impress ::selection, #impress ::-moz-selection,
-.reveal ::selection,
-.reveal ::-moz-selection {
-  color: var(--c-selection-color);
-  background: var(--c-selection-bg-color);
-  text-shadow: none;
-}
-#impress img,
-#impress video,
-#impress iframe,
-#impress svg,
-.reveal img,
-.reveal video,
-.reveal iframe,
-.reveal svg {
-  max-width: 95%;
-  max-height: 95%;
-  padding: 1rem;
-}
-#impress svg:not([class^=bg-], [class*=" bg-"]),
-.reveal svg:not([class^=bg-], [class*=" bg-"]) {
-  /* Add a background, so the line and text is visible in both light and dark theme */
-  background: rgba(255, 255, 255, 0.5);
-}
 
 :root {
   --c-default-step-width: 1800px;
@@ -1385,6 +900,17 @@ body.impress-enabled #impress-help {
   /*
   Zoom-in.
    */
+}
+#impress .step {
+  /* 块/段落引用 */
+  /* Inline code, no Highlight.js */
+  /* highlight.js uses table to show line number */
+  /* more text, smaller font size */
+  /* mermaid related */
+  /* style for main classes in mermaid classDiagram */
+  /* SVG styles */
+  /* Ensure certain elements are never larger than the slide itself */
+  /* if a svg not have any of bg-* class, add a semi-transparent background to it */
 }
 #impress .step .substep.is-curr-substep,
 #impress .step .substep .is-curr-substep {
@@ -1445,9 +971,374 @@ body.impress-enabled #impress-help {
 #impress .step .substep.substep-active li.is-curr-substep.remove-out {
   display: list-item;
 }
+#impress .step.tc > ol, #impress .step.tc > dl, #impress .step.tc > ul {
+  display: inline-block;
+}
+#impress .step ol, #impress .step dl, #impress .step ul {
+  text-align: left;
+}
+#impress .step ul {
+  list-style-type: disc;
+}
+#impress .step ul ul {
+  list-style-type: circle;
+}
+#impress .step ul ul ul {
+  list-style-type: square;
+}
+#impress .step ol {
+  list-style-type: decimal;
+}
+#impress .step ol ol {
+  list-style-type: lower-alpha;
+}
+#impress .step ol ol ol {
+  list-style-type: lower-roman;
+}
+#impress .step li {
+  color: var(--c-list-color);
+}
+#impress .step li strong, #impress .step li b {
+  color: var(--c-accent-color);
+  font-weight: bold;
+}
+#impress .step li em {
+  color: var(--c-accent2-color);
+}
+#impress .step li li {
+  color: var(--c-list-alt-color);
+  margin-left: 0.5em;
+}
+#impress .step li li strong, #impress .step li li b {
+  color: var(--c-accent3-color);
+  font-weight: bold;
+}
+#impress .step li li em {
+  color: var(--c-accent4-color);
+}
+#impress .step li li li {
+  color: var(--c-list-color);
+}
+#impress .step li li li strong, #impress .step li li li b {
+  color: var(--c-accent-color);
+  font-weight: bold;
+}
+#impress .step li li li em {
+  color: var(--c-accent2-color);
+}
+#impress .step dt {
+  font-weight: bold;
+}
+#impress .step dd {
+  margin-left: 2em;
+}
+#impress .step input {
+  font-size: 1em;
+}
+#impress .step h1, #impress .step h2, #impress .step h3, #impress .step h4, #impress .step h5, #impress .step h6 {
+  color: var(--c-heading-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  margin: var(--c-heading-margin);
+  font-family: var(--c-heading-font);
+  font-weight: var(--c-heading-font-weight);
+  line-height: var(--c-heading-line-height);
+  letter-spacing: var(--c-heading-letter-spacing);
+  text-transform: var(--c-heading-text-transform);
+  text-shadow: var(--c-heading-text-shadow);
+  word-wrap: break-word;
+}
+#impress .step h1 strong, #impress .step h1 b, #impress .step h2 strong, #impress .step h2 b, #impress .step h3 strong, #impress .step h3 b, #impress .step h4 strong, #impress .step h4 b, #impress .step h5 strong, #impress .step h5 b, #impress .step h6 strong, #impress .step h6 b {
+  color: var(--c-accent-color);
+  font-weight: normal;
+}
+#impress .step h1 {
+  font-size: var(--c-heading-1-size);
+}
+#impress .step h2 {
+  font-size: var(--c-heading-2-size);
+}
+#impress .step h3 {
+  font-size: var(--c-heading-3-size);
+}
+#impress .step h4 {
+  font-size: var(--c-heading-4-size);
+}
+#impress .step h1 {
+  text-shadow: var(--c-heading1-text-shadow);
+}
+#impress .step b, #impress .step strong {
+  font-weight: bold;
+}
+#impress .step strong {
+  color: var(--c-accent-color);
+}
+#impress .step em {
+  color: var(--c-accent3-color);
+}
+#impress .step q {
+  font-style: italic;
+  text-shadow: 0 6px 6px var(--c-border-color-3);
+  /* font-family: 'PT Serif'; */
+  /* font-weight: 400;     */
+}
+#impress .step blockquote {
+  color: var(--c-blockquote-color);
+  border-left-color: var(--c-blockquote-border-color);
+  display: block;
+  position: relative;
+  font-style: italic;
+  font-weight: 400;
+  border-left: 1px solid;
+  padding-left: 1em;
+  margin: var(--c-block-margin) 3em var(--c-block-margin) 2em;
+}
+#impress .step a {
+  color: var(--c-link-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  text-decoration: none;
+  padding: 0 0.1em;
+  border-radius: 0.2em;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-bottom-color: var(--c-border-color-2);
+  border-left-color: var(--c-border-color-2);
+  transition: 0.5s;
+}
+#impress .step a:hover, #impress .step a:focus {
+  color: var(--c-link-color-hover);
+  background: var(--c-link-bg-color);
+  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
+}
+#impress .step code, #impress .step kbd, #impress .step samp {
+  font-family: var(--c-code-font);
+}
+#impress .step pre {
+  position: relative;
+  margin: var(--c-block-margin) auto;
+  text-align: left;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+#impress .step pre > code {
+  display: block;
+  color: var(--c-main-color);
+  background-color: var(--c-code-bg-color);
+  padding: 0.5em;
+  border: 2px solid var(--c-border-color-3);
+  overflow: auto;
+  word-wrap: normal;
+  font-size: var(--c-code-font-size);
+}
+#impress .step table {
+  /* width: 100%; */
+  /* max-width: 100%; */
+  border: 1px solid;
+  border-color: var(--c-border-color);
+  border-collapse: collapse;
+  /* border-spacing: 0; */
+  margin-bottom: 1rem;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+#impress .step table tbody + tbody {
+  border-top: 2px solid;
+  border-top-color: var(--c-border-color);
+}
+#impress .step table table {
+  background-color: var(--c-table-bg-color);
+}
+#impress .step table.borderless,
+#impress .step table.borderless th,
+#impress .step table.borderless td,
+#impress .step table.borderless thead th,
+#impress .step table.borderless thead td {
+  border: none;
+}
+#impress .step .hljs table {
+  border: none;
+}
+#impress .step th {
+  text-align: inherit;
+}
+#impress .step th, #impress .step td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid;
+  border-top-color: var(--c-border-color);
+}
+#impress .step thead {
+  display: table-header-group;
+}
+#impress .step thead th {
+  vertical-align: bottom;
+}
+#impress .step thead th, #impress .step thead td {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--c-border-color);
+}
+#impress .step .striped table tbody tr:nth-of-type(odd),
+#impress .step table.striped tbody tr:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+#impress .step .vstriped tbody td:nth-of-type(odd),
+#impress .step .vstriped thead th:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+#impress .step .hover table tbody tr:hover,
+#impress .step table.hover tbody tr:hover {
+  background-color: var(--c-border-color-075);
+}
+#impress .step p {
+  margin: var(--c-block-margin) 0;
+  line-height: 1.3;
+  text-align: left;
+}
+#impress .step del, #impress .step s {
+  text-decoration-color: var(--c-accent2-color);
+}
+#impress .step li del, #impress .step li s {
+  text-decoration-color: var(--c-accent-color);
+}
+#impress .step li li del, #impress .step li li s {
+  text-decoration-color: var(--c-accent2-color);
+}
+#impress .step code {
+  line-height: 1;
+}
+#impress .step img {
+  margin: var(--c-block-margin) 0;
+}
+#impress .step .font-normalsize {
+  font-size: 100%;
+}
+#impress .step .font-smaller,
+#impress .step .font-smaller1 {
+  font-size: 90%;
+}
+#impress .step .font-smaller2 {
+  font-size: 80%;
+}
+#impress .step .font-smaller3 {
+  font-size: 70%;
+}
+#impress .step .font-smaller4 {
+  font-size: 60%;
+}
+#impress .step .font-smaller5 {
+  font-size: 50%;
+}
+#impress .step .font-larger,
+#impress .step .font-larger1 {
+  font-size: 110%;
+}
+#impress .step .font-larger2 {
+  font-size: 120%;
+}
+#impress .step .font-larger3 {
+  font-size: 130%;
+}
+#impress .step .font-larger4 {
+  font-size: 150%;
+}
+#impress .step .font-larger5 {
+  font-size: 200%;
+}
+#impress .step .more-text {
+  font-size: 80%;
+}
+#impress .step .more-text .step {
+  font-size: 65%;
+}
+#impress .step .more-text table {
+  font-size: 80%;
+}
+#impress .step .float-right {
+  float: right;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#impress .step .float-left {
+  float: left;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#impress .step .top {
+  position: absolute;
+  top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+#impress .step .bottom {
+  position: absolute;
+  bottom: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+#impress .step .right {
+  position: absolute;
+  right: 0rem;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#impress .step .left {
+  position: absolute;
+  left: 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+#impress .step .visible {
+  visibility: visible;
+}
+#impress .step .hidden {
+  visibility: hidden;
+}
+#impress .step .mermaid .main_class {
+  fill: #ffdfdf;
+  text-align: center;
+}
+#impress .step .override-color path {
+  stroke: var(--c-main-color);
+}
+#impress .step ::selection, #impress .step ::-moz-selection {
+  color: var(--c-selection-color);
+  background: var(--c-selection-bg-color);
+  text-shadow: none;
+}
+#impress .step img,
+#impress .step video,
+#impress .step iframe,
+#impress .step svg {
+  max-width: 95%;
+  max-height: 95%;
+  padding: 1rem;
+}
+#impress .step svg:not([class^=bg-], [class*=" bg-"]) {
+  /* Add a background, so the line and text is visible in both light and dark theme */
+  background: rgba(255, 255, 255, 0.5);
+}
 #impress .step.markdown em,
 #impress .step .markdown em {
   font-style: normal;
+}
+#impress .vcenter .step, #impress.vcenter .step,
+#impress .step.vcenter {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+#impress .vcenter .step.tc, #impress.vcenter .step.tc,
+#impress .step.vcenter.tc {
+  justify-content: center;
 }
 #impress .box {
   background-color: var(--c-box-bg-color);
@@ -1658,6 +1549,17 @@ body.impress-enabled #impress-help {
    * PROGRESS BAR
    *********************************************/
 }
+.reveal section {
+  /* 块/段落引用 */
+  /* Inline code, no Highlight.js */
+  /* highlight.js uses table to show line number */
+  /* more text, smaller font size */
+  /* mermaid related */
+  /* style for main classes in mermaid classDiagram */
+  /* SVG styles */
+  /* Ensure certain elements are never larger than the slide itself */
+  /* if a svg not have any of bg-* class, add a semi-transparent background to it */
+}
 .reveal section .fragment.is-curr-substep,
 .reveal section .fragment .is-curr-substep {
   opacity: 0;
@@ -1717,6 +1619,360 @@ body.impress-enabled #impress-help {
 .reveal section .fragment.current-fragment li.is-curr-substep.remove-out {
   display: list-item;
 }
+.reveal section.tc > ol, .reveal section.tc > dl, .reveal section.tc > ul {
+  display: inline-block;
+}
+.reveal section ol, .reveal section dl, .reveal section ul {
+  text-align: left;
+}
+.reveal section ul {
+  list-style-type: disc;
+}
+.reveal section ul ul {
+  list-style-type: circle;
+}
+.reveal section ul ul ul {
+  list-style-type: square;
+}
+.reveal section ol {
+  list-style-type: decimal;
+}
+.reveal section ol ol {
+  list-style-type: lower-alpha;
+}
+.reveal section ol ol ol {
+  list-style-type: lower-roman;
+}
+.reveal section li {
+  color: var(--c-list-color);
+}
+.reveal section li strong, .reveal section li b {
+  color: var(--c-accent-color);
+  font-weight: bold;
+}
+.reveal section li em {
+  color: var(--c-accent2-color);
+}
+.reveal section li li {
+  color: var(--c-list-alt-color);
+  margin-left: 0.5em;
+}
+.reveal section li li strong, .reveal section li li b {
+  color: var(--c-accent3-color);
+  font-weight: bold;
+}
+.reveal section li li em {
+  color: var(--c-accent4-color);
+}
+.reveal section li li li {
+  color: var(--c-list-color);
+}
+.reveal section li li li strong, .reveal section li li li b {
+  color: var(--c-accent-color);
+  font-weight: bold;
+}
+.reveal section li li li em {
+  color: var(--c-accent2-color);
+}
+.reveal section dt {
+  font-weight: bold;
+}
+.reveal section dd {
+  margin-left: 2em;
+}
+.reveal section input {
+  font-size: 1em;
+}
+.reveal section h1, .reveal section h2, .reveal section h3, .reveal section h4, .reveal section h5, .reveal section h6 {
+  color: var(--c-heading-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  margin: var(--c-heading-margin);
+  font-family: var(--c-heading-font);
+  font-weight: var(--c-heading-font-weight);
+  line-height: var(--c-heading-line-height);
+  letter-spacing: var(--c-heading-letter-spacing);
+  text-transform: var(--c-heading-text-transform);
+  text-shadow: var(--c-heading-text-shadow);
+  word-wrap: break-word;
+}
+.reveal section h1 strong, .reveal section h1 b, .reveal section h2 strong, .reveal section h2 b, .reveal section h3 strong, .reveal section h3 b, .reveal section h4 strong, .reveal section h4 b, .reveal section h5 strong, .reveal section h5 b, .reveal section h6 strong, .reveal section h6 b {
+  color: var(--c-accent-color);
+  font-weight: normal;
+}
+.reveal section h1 {
+  font-size: var(--c-heading-1-size);
+}
+.reveal section h2 {
+  font-size: var(--c-heading-2-size);
+}
+.reveal section h3 {
+  font-size: var(--c-heading-3-size);
+}
+.reveal section h4 {
+  font-size: var(--c-heading-4-size);
+}
+.reveal section h1 {
+  text-shadow: var(--c-heading1-text-shadow);
+}
+.reveal section b, .reveal section strong {
+  font-weight: bold;
+}
+.reveal section strong {
+  color: var(--c-accent-color);
+}
+.reveal section em {
+  color: var(--c-accent3-color);
+}
+.reveal section q {
+  font-style: italic;
+  text-shadow: 0 6px 6px var(--c-border-color-3);
+  /* font-family: 'PT Serif'; */
+  /* font-weight: 400;     */
+}
+.reveal section blockquote {
+  color: var(--c-blockquote-color);
+  border-left-color: var(--c-blockquote-border-color);
+  display: block;
+  position: relative;
+  font-style: italic;
+  font-weight: 400;
+  border-left: 1px solid;
+  padding-left: 1em;
+  margin: var(--c-block-margin) 3em var(--c-block-margin) 2em;
+}
+.reveal section a {
+  color: var(--c-link-color);
+  text-shadow: -2px 2px 4px var(--c-shadow-color-9);
+  text-decoration: none;
+  padding: 0 0.1em;
+  border-radius: 0.2em;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-bottom-color: var(--c-border-color-2);
+  border-left-color: var(--c-border-color-2);
+  transition: 0.5s;
+}
+.reveal section a:hover, .reveal section a:focus {
+  color: var(--c-link-color-hover);
+  background: var(--c-link-bg-color);
+  text-shadow: -2px 2px 3px var(--c-shadow-color-5);
+}
+.reveal section code, .reveal section kbd, .reveal section samp {
+  font-family: var(--c-code-font);
+}
+.reveal section pre {
+  position: relative;
+  margin: var(--c-block-margin) auto;
+  text-align: left;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+.reveal section pre > code {
+  display: block;
+  color: var(--c-main-color);
+  background-color: var(--c-code-bg-color);
+  padding: 0.5em;
+  border: 2px solid var(--c-border-color-3);
+  overflow: auto;
+  word-wrap: normal;
+  font-size: var(--c-code-font-size);
+}
+.reveal section table {
+  /* width: 100%; */
+  /* max-width: 100%; */
+  border: 1px solid;
+  border-color: var(--c-border-color);
+  border-collapse: collapse;
+  /* border-spacing: 0; */
+  margin-bottom: 1rem;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal section table tbody + tbody {
+  border-top: 2px solid;
+  border-top-color: var(--c-border-color);
+}
+.reveal section table table {
+  background-color: var(--c-table-bg-color);
+}
+.reveal section table.borderless,
+.reveal section table.borderless th,
+.reveal section table.borderless td,
+.reveal section table.borderless thead th,
+.reveal section table.borderless thead td {
+  border: none;
+}
+.reveal section .hljs table {
+  border: none;
+}
+.reveal section th {
+  text-align: inherit;
+}
+.reveal section th, .reveal section td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid;
+  border-top-color: var(--c-border-color);
+}
+.reveal section thead {
+  display: table-header-group;
+}
+.reveal section thead th {
+  vertical-align: bottom;
+}
+.reveal section thead th, .reveal section thead td {
+  border-bottom: 2px solid;
+  border-bottom-color: var(--c-border-color);
+}
+.reveal section .striped table tbody tr:nth-of-type(odd),
+.reveal section table.striped tbody tr:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+.reveal section .vstriped tbody td:nth-of-type(odd),
+.reveal section .vstriped thead th:nth-of-type(odd) {
+  background-color: var(--c-border-color-05);
+}
+.reveal section .hover table tbody tr:hover,
+.reveal section table.hover tbody tr:hover {
+  background-color: var(--c-border-color-075);
+}
+.reveal section p {
+  margin: var(--c-block-margin) 0;
+  line-height: 1.3;
+  text-align: left;
+}
+.reveal section del, .reveal section s {
+  text-decoration-color: var(--c-accent2-color);
+}
+.reveal section li del, .reveal section li s {
+  text-decoration-color: var(--c-accent-color);
+}
+.reveal section li li del, .reveal section li li s {
+  text-decoration-color: var(--c-accent2-color);
+}
+.reveal section code {
+  line-height: 1;
+}
+.reveal section img {
+  margin: var(--c-block-margin) 0;
+}
+.reveal section .font-normalsize {
+  font-size: 100%;
+}
+.reveal section .font-smaller,
+.reveal section .font-smaller1 {
+  font-size: 90%;
+}
+.reveal section .font-smaller2 {
+  font-size: 80%;
+}
+.reveal section .font-smaller3 {
+  font-size: 70%;
+}
+.reveal section .font-smaller4 {
+  font-size: 60%;
+}
+.reveal section .font-smaller5 {
+  font-size: 50%;
+}
+.reveal section .font-larger,
+.reveal section .font-larger1 {
+  font-size: 110%;
+}
+.reveal section .font-larger2 {
+  font-size: 120%;
+}
+.reveal section .font-larger3 {
+  font-size: 130%;
+}
+.reveal section .font-larger4 {
+  font-size: 150%;
+}
+.reveal section .font-larger5 {
+  font-size: 200%;
+}
+.reveal section .more-text {
+  font-size: 80%;
+}
+.reveal section .more-text .step {
+  font-size: 65%;
+}
+.reveal section .more-text table {
+  font-size: 80%;
+}
+.reveal section .float-right {
+  float: right;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.reveal section .float-left {
+  float: left;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.reveal section .top {
+  position: absolute;
+  top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+.reveal section .bottom {
+  position: absolute;
+  bottom: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+.reveal section .right {
+  position: absolute;
+  right: 0rem;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.reveal section .left {
+  position: absolute;
+  left: 0rem;
+  margin-right: 1rem;
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.reveal section .visible {
+  visibility: visible;
+}
+.reveal section .hidden {
+  visibility: hidden;
+}
+.reveal section .mermaid .main_class {
+  fill: #ffdfdf;
+  text-align: center;
+}
+.reveal section .override-color path {
+  stroke: var(--c-main-color);
+}
+.reveal section ::selection, .reveal section ::-moz-selection {
+  color: var(--c-selection-color);
+  background: var(--c-selection-bg-color);
+  text-shadow: none;
+}
+.reveal section img,
+.reveal section video,
+.reveal section iframe,
+.reveal section svg {
+  max-width: 95%;
+  max-height: 95%;
+  padding: 1rem;
+}
+.reveal section svg:not([class^=bg-], [class*=" bg-"]) {
+  /* Add a background, so the line and text is visible in both light and dark theme */
+  background: rgba(255, 255, 255, 0.5);
+}
 .reveal section.title {
   display: flex !important;
   flex-direction: column;
@@ -1726,6 +1982,17 @@ body.impress-enabled #impress-help {
 }
 .reveal section[data-markdown] em {
   font-style: normal;
+}
+.reveal .vcenter section, .reveal.vcenter section,
+.reveal section.vcenter {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.reveal .vcenter section.tc, .reveal.vcenter section.tc,
+.reveal section.vcenter.tc {
+  justify-content: center;
 }
 .reveal .r-frame {
   border: 4px solid var(--c-main-color);
