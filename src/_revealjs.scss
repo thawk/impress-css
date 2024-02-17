@@ -38,11 +38,11 @@
   section.vcenter {
     display: flex !important;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     height: 100%;
 
     &.tc {
-      justify-content: center;
+      align-items: center;
     }
   }
 

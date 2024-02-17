@@ -1987,12 +1987,12 @@ body.impress-enabled #impress-help {
 .reveal section.vcenter {
   display: flex !important;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 .reveal .vcenter section.tc, .reveal.vcenter section.tc,
 .reveal section.vcenter.tc {
-  justify-content: center;
+  align-items: center;
 }
 .reveal .r-frame {
   border: 4px solid var(--c-main-color);
