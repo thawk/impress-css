@@ -1,7 +1,7 @@
 @mixin effects($trigger, $effected, $current) {
   .#{$trigger} {
-    &.is-curr-substep,
-    .is-curr-substep {
+    &.current-visible,
+    .current-visible {
       opacity: 0;
       transition: opacity 1s;
     }
@@ -42,8 +42,8 @@
     }
 
     &.#{$current} {
-      &.is-curr-substep,
-      .is-curr-substep {
+      &.current-visible,
+      .current-visible {
         opacity: 1;
         transition: opacity 1s;
       }
@@ -70,18 +70,18 @@
     }
   }
 
-  .#{$trigger}.is-curr-substep.remove-out,
-  .#{$trigger} .is-curr-substep.remove-out {
+  .#{$trigger}.current-visible.remove-out,
+  .#{$trigger} .current-visible.remove-out {
     display: none;
   }
 
-  .#{$trigger}.#{$current}.is-curr-substep.remove-out,
-  .#{$trigger}.#{$current} .is-curr-substep.remove-out {
+  .#{$trigger}.#{$current}.current-visible.remove-out,
+  .#{$trigger}.#{$current} .current-visible.remove-out {
     display: unset;
   }
 
-  li.#{$trigger}.#{$current}.is-curr-substep.remove-out,
-  .#{$trigger}.#{$current} li.is-curr-substep.remove-out {
+  li.#{$trigger}.#{$current}.current-visible.remove-out,
+  .#{$trigger}.#{$current} li.current-visible.remove-out {
     display: list-item;
   }
 }

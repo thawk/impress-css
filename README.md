@@ -63,6 +63,7 @@
   | .title            | 标题页                                   |
   | .borderless       | 应用到table上，没有表格边框              |
   | .striped          | 应用到table上，奇偶行底色不同            |
+  | .vstriped         | 应用到table上，奇偶列底色不同            |
   | .hover            | 应用到table上，鼠标放上去变化背景色      |
   | .font-normalsize  | font-size: 100%                          |
   | .font-larger      | font-size: 110%                          |
@@ -110,10 +111,10 @@
 
   | 类名             | 作用                               |
   |------------------|------------------------------------|
-  | .remove-out      | 配合.is-curr-substep，删除而非隐藏 |
+  | .remove-out      | 配合.current-visible，删除而非隐藏 |
   | .strike-in       | 加删除线                           |
   | .accent-in       | 改用强调色                         |
-  | .is-curr-substep | 仅在当前substep激活时可见          |
+  | .current-visible | 仅在当前步骤可见                   |
   | .blur-in         | 进入后模糊                         |
   | .unblur-in       | 进入前模糊，进入后清晰             |
 
@@ -130,7 +131,6 @@
   | .slide            | 有确定的宽度和高度，缺省没有边框         |
   | .box              | 加边框                                   |
   | .hidestep         | 代替step，可以禁用一个step               |
-  | .is-curr-step     | 只在当前step可见                         |
   | .subslide         | 仅在当前步骤可见，如堆叠的页面           |
   | .substep          | 该元素按键后才显示                       |
   | .show-on-overview | 在overview页面显示                       |

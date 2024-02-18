@@ -135,19 +135,19 @@ body.impress-enabled {
       background-color: var(--c-debug-color);
   }
 
-  .future.is-curr-step,
-  .past.is-curr-step {
+  .future.current-visible,
+  .past.current-visible {
     display: none;
   }
 
-  .future .is-curr-step,
-  .past .is-curr-step {
+  .future .current-visible,
+  .past .current-visible {
     opacity: 0;
     transition: opacity 1s;
   }
 
-  .present.is-curr-step,
-  .present .is-curr-step {
+  .present.current-visible,
+  .present .current-visible {
     opacity: 1;
     transition: opacity 1s;
   }

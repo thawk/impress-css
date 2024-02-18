@@ -912,8 +912,8 @@ body.impress-enabled #impress-help {
   /* Ensure certain elements are never larger than the slide itself */
   /* if a svg not have any of bg-* class, add a semi-transparent background to it */
 }
-#impress .step .substep.is-curr-substep,
-#impress .step .substep .is-curr-substep {
+#impress .step .substep.current-visible,
+#impress .step .substep .current-visible {
   opacity: 0;
   transition: opacity 1s;
 }
@@ -942,8 +942,8 @@ body.impress-enabled #impress-help {
   text-decoration-color: var(--c-accent2-color);
   text-decoration: line-through;
 }
-#impress .step .substep.substep-active.is-curr-substep,
-#impress .step .substep.substep-active .is-curr-substep {
+#impress .step .substep.substep-active.current-visible,
+#impress .step .substep.substep-active .current-visible {
   opacity: 1;
   transition: opacity 1s;
 }
@@ -959,16 +959,16 @@ body.impress-enabled #impress-help {
 #impress .step li.substep.substep-visible.strike-in, #impress .step li.substep.substep-visible .strike-in {
   text-decoration-color: var(--c-accent-color);
 }
-#impress .step .substep.is-curr-substep.remove-out,
-#impress .step .substep .is-curr-substep.remove-out {
+#impress .step .substep.current-visible.remove-out,
+#impress .step .substep .current-visible.remove-out {
   display: none;
 }
-#impress .step .substep.substep-active.is-curr-substep.remove-out,
-#impress .step .substep.substep-active .is-curr-substep.remove-out {
+#impress .step .substep.substep-active.current-visible.remove-out,
+#impress .step .substep.substep-active .current-visible.remove-out {
   display: unset;
 }
-#impress .step li.substep.substep-active.is-curr-substep.remove-out,
-#impress .step .substep.substep-active li.is-curr-substep.remove-out {
+#impress .step li.substep.substep-active.current-visible.remove-out,
+#impress .step .substep.substep-active li.current-visible.remove-out {
   display: list-item;
 }
 #impress .step.tc > ol, #impress .step.tc > dl, #impress .step.tc > ul {
@@ -1402,17 +1402,17 @@ body.impress-enabled #impress-help {
   /* for layout debuggind */
   background-color: var(--c-debug-color);
 }
-#impress .future.is-curr-step,
-#impress .past.is-curr-step {
+#impress .future.current-visible,
+#impress .past.current-visible {
   display: none;
 }
-#impress .future .is-curr-step,
-#impress .past .is-curr-step {
+#impress .future .current-visible,
+#impress .past .current-visible {
   opacity: 0;
   transition: opacity 1s;
 }
-#impress .present.is-curr-step,
-#impress .present .is-curr-step {
+#impress .present.current-visible,
+#impress .present .current-visible {
   opacity: 1;
   transition: opacity 1s;
 }
@@ -1560,8 +1560,8 @@ body.impress-enabled #impress-help {
   /* Ensure certain elements are never larger than the slide itself */
   /* if a svg not have any of bg-* class, add a semi-transparent background to it */
 }
-.reveal section .fragment.is-curr-substep,
-.reveal section .fragment .is-curr-substep {
+.reveal section .fragment.current-visible,
+.reveal section .fragment .current-visible {
   opacity: 0;
   transition: opacity 1s;
 }
@@ -1590,8 +1590,8 @@ body.impress-enabled #impress-help {
   text-decoration-color: var(--c-accent2-color);
   text-decoration: line-through;
 }
-.reveal section .fragment.current-fragment.is-curr-substep,
-.reveal section .fragment.current-fragment .is-curr-substep {
+.reveal section .fragment.current-fragment.current-visible,
+.reveal section .fragment.current-fragment .current-visible {
   opacity: 1;
   transition: opacity 1s;
 }
@@ -1607,16 +1607,16 @@ body.impress-enabled #impress-help {
 .reveal section li.fragment.visible.strike-in, .reveal section li.fragment.visible .strike-in {
   text-decoration-color: var(--c-accent-color);
 }
-.reveal section .fragment.is-curr-substep.remove-out,
-.reveal section .fragment .is-curr-substep.remove-out {
+.reveal section .fragment.current-visible.remove-out,
+.reveal section .fragment .current-visible.remove-out {
   display: none;
 }
-.reveal section .fragment.current-fragment.is-curr-substep.remove-out,
-.reveal section .fragment.current-fragment .is-curr-substep.remove-out {
+.reveal section .fragment.current-fragment.current-visible.remove-out,
+.reveal section .fragment.current-fragment .current-visible.remove-out {
   display: unset;
 }
-.reveal section li.fragment.current-fragment.is-curr-substep.remove-out,
-.reveal section .fragment.current-fragment li.is-curr-substep.remove-out {
+.reveal section li.fragment.current-fragment.current-visible.remove-out,
+.reveal section .fragment.current-fragment li.current-visible.remove-out {
   display: list-item;
 }
 .reveal section.tc > ol, .reveal section.tc > dl, .reveal section.tc > ul {
