@@ -1000,7 +1000,6 @@ body.impress-enabled #impress-help {
 }
 #impress .step li strong, #impress .step li b {
   color: var(--c-accent-color);
-  font-weight: bold;
 }
 #impress .step li em {
   color: var(--c-accent2-color);
@@ -1011,7 +1010,6 @@ body.impress-enabled #impress-help {
 }
 #impress .step li li strong, #impress .step li li b {
   color: var(--c-accent3-color);
-  font-weight: bold;
 }
 #impress .step li li em {
   color: var(--c-accent4-color);
@@ -1021,7 +1019,6 @@ body.impress-enabled #impress-help {
 }
 #impress .step li li li strong, #impress .step li li li b {
   color: var(--c-accent-color);
-  font-weight: bold;
 }
 #impress .step li li li em {
   color: var(--c-accent2-color);
@@ -1049,7 +1046,7 @@ body.impress-enabled #impress-help {
 }
 #impress .step h1 strong, #impress .step h1 b, #impress .step h2 strong, #impress .step h2 b, #impress .step h3 strong, #impress .step h3 b, #impress .step h4 strong, #impress .step h4 b, #impress .step h5 strong, #impress .step h5 b, #impress .step h6 strong, #impress .step h6 b {
   color: var(--c-accent-color);
-  font-weight: normal;
+  font-weight: var(--c-heading-font-weight);
 }
 #impress .step h1 {
   font-size: var(--c-heading-1-size);
@@ -1648,7 +1645,6 @@ body.impress-enabled #impress-help {
 }
 .reveal section li strong, .reveal section li b {
   color: var(--c-accent-color);
-  font-weight: bold;
 }
 .reveal section li em {
   color: var(--c-accent2-color);
@@ -1659,7 +1655,6 @@ body.impress-enabled #impress-help {
 }
 .reveal section li li strong, .reveal section li li b {
   color: var(--c-accent3-color);
-  font-weight: bold;
 }
 .reveal section li li em {
   color: var(--c-accent4-color);
@@ -1669,7 +1664,6 @@ body.impress-enabled #impress-help {
 }
 .reveal section li li li strong, .reveal section li li li b {
   color: var(--c-accent-color);
-  font-weight: bold;
 }
 .reveal section li li li em {
   color: var(--c-accent2-color);
@@ -1697,7 +1691,7 @@ body.impress-enabled #impress-help {
 }
 .reveal section h1 strong, .reveal section h1 b, .reveal section h2 strong, .reveal section h2 b, .reveal section h3 strong, .reveal section h3 b, .reveal section h4 strong, .reveal section h4 b, .reveal section h5 strong, .reveal section h5 b, .reveal section h6 strong, .reveal section h6 b {
   color: var(--c-accent-color);
-  font-weight: normal;
+  font-weight: var(--c-heading-font-weight);
 }
 .reveal section h1 {
   font-size: var(--c-heading-1-size);

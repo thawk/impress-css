@@ -47,7 +47,7 @@
 
     strong, b {
       color: var(--c-accent-color);
-      font-weight: bold;
+      // font-weight: bold;
     }
 
     em {
@@ -60,7 +60,7 @@
 
       strong, b {
         color: var(--c-accent3-color);
-        font-weight: bold;
+        // font-weight: bold;
       }
 
       em {
@@ -72,7 +72,7 @@
 
         strong, b {
           color: var(--c-accent-color);
-          font-weight: bold;
+          // font-weight: bold;
         }
 
         em {
@@ -110,7 +110,8 @@
 
     strong, b {
       color: var(--c-accent-color);
-      font-weight: normal;
+      // font-weight: normal;
+      font-weight: var(--c-heading-font-weight);
     }
   }
 

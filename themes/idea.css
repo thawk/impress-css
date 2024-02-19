@@ -19,7 +19,7 @@
   --c-blockquote-color: rgba(0, 0, 0, 0.7);
   --c-blockquote-border-color: #1abc9c;
   --c-list-color: #000;
-  --c-list-alt-color: #000;
+  --c-list-alt-color: black;
   --c-border-color: #808080;
   --c-border-color-2: rgba(128, 128, 128, 0.2);
   --c-border-color-3: rgba(128, 128, 128, 0.3);
@@ -34,7 +34,7 @@
   --c-error-color: #ee675d;
   --c-dark-color: #546778;
   --c-light-color: #dde5ee;
-  --c-accent2-color: #000;
+  --c-accent2-color: #000040;
   --c-accent3-color: #ac94e8;
   --c-accent4-color: #60d2b6;
   --c-navy-color: #546778;

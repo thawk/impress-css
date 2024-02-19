@@ -20,14 +20,16 @@ $selection-bg-color: #ac94e8 !default;
 $heading-color: #4e91e4 !default;
 
 $accent-color : #ee675d !default;
-$accent2-color : $heading-color !default;
+// $accent2-color : $heading-color !default;
+$accent2-color : color.mix($accent-color, $heading-color) !default;
 $accent3-color : #ac94e8 !default;
 $accent4-color : #60d2b6 !default;
 
 $blockquote-color: rgba($main-color, 0.7) !default;
 $blockquote-border-color: #1abc9c !default;
 $list-color: $main-color !default;
-$list-alt-color: $heading-color !default;
+// $list-alt-color: $heading-color !default;
+$list-alt-color: color.mix($heading-color, $main-color, 50%) !default;
 
 $border-color: $heading-color !default;
 $link-bg-color: color.mix($heading-color, $bg-color, 50%) !default;
