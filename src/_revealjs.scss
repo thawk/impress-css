@@ -18,6 +18,10 @@
   section {
     @include effects(fragment, visible, current-fragment);
     @include slide;
+
+    pre.code-wrapper {
+      width: 100%;
+    }
   }
 
   section.title {

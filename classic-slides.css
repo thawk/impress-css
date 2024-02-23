@@ -1446,8 +1446,7 @@ body.impress-enabled #impress-help {
 }
 #impress .future .fly-in {
   transform: translateY(-2100px);
-  opacity: 0;
-  /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
+  opacity: 0; /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
 }
 #impress .present .fly-in {
   transform: translateY(0px);
@@ -1966,6 +1965,9 @@ body.impress-enabled #impress-help {
 .reveal section svg:not([class^=bg-], [class*=" bg-"]) {
   /* Add a background, so the line and text is visible in both light and dark theme */
   background: rgba(255, 255, 255, 0.5);
+}
+.reveal section pre.code-wrapper {
+  width: 100%;
 }
 .reveal section.title {
   display: flex !important;
