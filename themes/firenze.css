@@ -1,7 +1,7 @@
 :root {
   --c-bg-color: #ffee89;
   --c-is-dark-bg: false;
-  --c-debug-color: #F0808020;
+  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
   --c-box-bg-color: #fff5bc;
   --c-table-bg-color: #fffdef;
   --c-code-bg-color: #fff5bc;

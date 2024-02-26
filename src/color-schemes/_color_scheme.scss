@@ -121,3 +121,8 @@ $light-gray-color: #eeeeee !default;
   --c-gray-color: #{$gray-color};
   --c-light-gray-color: #{$light-gray-color};
 }
+
+@mixin bodyBackground() {
+	background: $bg-color;
+}
+

@@ -1,0 +1,12 @@
+@use 'color_scheme' with (
+    $bg-color: #86f0fa,
+    $main-color: #203864,
+    $heading-color: #2f5597, 
+    // $accent-color: #ffc000,
+);
+
+@mixin bodyBackground() {
+	background: 100% 100% url("../images/浅蓝背景1.png");
+}
+
+@import 'background';

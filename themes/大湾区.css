@@ -1,0 +1,60 @@
+@charset "UTF-8";
+:root {
+  --c-bg-color: #86f0fa;
+  --c-is-dark-bg: false;
+  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-box-bg-color: #b7f6fc;
+  --c-table-bg-color: #e8fcfe;
+  --c-code-bg-color: #b7f6fc;
+  --c-box-code-bg-color: #e8fcfe;
+  --c-shadow-color: #24e4f6;
+  --c-shadow-color-1: rgba(36, 228, 246, 0.1);
+  --c-shadow-color-2: rgba(36, 228, 246, 0.2);
+  --c-shadow-color-5: rgba(36, 228, 246, 0.5);
+  --c-shadow-color-9: rgba(36, 228, 246, 0.9);
+  --c-main-color: #203864;
+  --c-selection-color: #ffffff;
+  --c-selection-bg-color: #ac94e8;
+  --c-heading-color: #2f5597;
+  --c-accent-color: #ee675d ;
+  --c-blockquote-color: rgba(32, 56, 100, 0.7);
+  --c-blockquote-border-color: #1abc9c;
+  --c-list-color: #203864;
+  --c-list-alt-color: #28477e;
+  --c-border-color: #2f5597;
+  --c-border-color-2: rgba(47, 85, 151, 0.2);
+  --c-border-color-3: rgba(47, 85, 151, 0.3);
+  --c-border-color-05: rgba(47, 85, 151, 0.05);
+  --c-border-color-075: rgba(47, 85, 151, 0.075);
+  --c-link-bg-color: #5ba3c9;
+  --c-link-color: #203864;
+  --c-link-color-hover: #070d17;
+  --c-primary-color: #4e91e4;
+  --c-success-color: #4acf7f;
+  --c-warning-color: #fbc850;
+  --c-error-color: #ee675d;
+  --c-dark-color: #546778;
+  --c-light-color: #dde5ee;
+  --c-accent2-color: #8f5e7a;
+  --c-accent3-color: #ac94e8;
+  --c-accent4-color: #60d2b6;
+  --c-navy-color: #546778;
+  --c-green-color: #93d260;
+  --c-teal-color: #60d2b6;
+  --c-blue-color: #4e91e4;
+  --c-purple-color: #ac94e8;
+  --c-pink-color: #e77eb8;
+  --c-red-color: #ee675d;
+  --c-orange-color: #f78055;
+  --c-yellow-color: #fbc850;
+  --c-gray-color: #dde5ee;
+  --c-light-gray-color: #eeeeee;
+}
+
+body.impress-enabled,
+.reveal-viewport {
+  background: 100% 100% url("../images/浅蓝背景1.png");
+  background-color: var(--c-bg-color);
+}
+
+/*# sourceMappingURL=%E5%A4%A7%E6%B9%BE%E5%8C%BA.css.map */

@@ -1,0 +1,5 @@
+body.impress-enabled,
+.reveal-viewport {
+  @include bodyBackground();
+  background-color: var(--c-bg-color);
+}
