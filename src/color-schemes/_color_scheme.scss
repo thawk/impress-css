@@ -17,13 +17,31 @@ $selection-color: #ffffff !default;
 $selection-bg-color: #ac94e8 !default;
 
 // Headings
-$heading-color: #4e91e4 !default;
+$heading-color: #4e91e4 !default; // hsl(213, 74%, 60%)
 
-$accent-color : #ee675d !default;
-// $accent2-color : $heading-color !default;
-$accent2-color : color.mix($accent-color, $heading-color) !default;
-$accent3-color : #ac94e8 !default;
-$accent4-color : #60d2b6 !default;
+$heading-bg-deg: color.hue($heading-color) - color.hue($bg-color);
+$accent-direction: -1;
+@if $heading-bg-deg <= -180 or $heading-bg-deg >=0 and $heading-bg-deg < 180 {
+  $accent-direction: 1;   // heading-color在bg-color正方向180度内
+}
+
+$accent-offset: 60deg !default;
+$accent-lightness: if($is-dark-bg, 0%, -0%) !default;
+$accent-color:  color.adjust($heading-color, $hue: $accent-direction * $accent-offset,
+  $lightness: $accent-lightness) !default;
+$accent2-color: color.adjust($heading-color, $hue: 2 * $accent-direction * $accent-offset,
+  $lightness: $accent-lightness) !default;
+$accent3-color: color.adjust($heading-color, $hue: -1 * $accent-direction * $accent-offset,
+  $lightness: $accent-lightness) !default;
+$accent4-color: color.adjust($heading-color, $hue: -2 * $accent-direction * $accent-offset,
+  $lightness: $accent-lightness) !default;
+// @debug "accent-direction: #{$accent-direction}, accent-offset: #{$accent-offset}, heading-color: #{$heading-color}, accent-color: #{$accent-color}, accent2-color: #{$accent2-color}, accent3-color: #{$accent3-color}, accent4-color: #{$accent4-color}";
+
+//$accent-color : #ee675d !default; // hsl(4, 81%, 65%)
+//// $accent2-color : $heading-color !default;
+//$accent2-color : color.mix($accent-color, $heading-color) !default;
+//$accent3-color : #ac94e8 !default; // hsl(257, 65%, 75%)
+//$accent4-color : #60d2b6 !default; // hsl(165, 56%, 60%)
 
 $blockquote-color: rgba($main-color, 0.7) !default;
 $blockquote-border-color: #1abc9c !default;
@@ -81,7 +99,6 @@ $light-gray-color: #eeeeee !default;
   // Headings
   --c-heading-color: #{$heading-color};
 
-  --c-accent-color : #{$accent-color} ;
   --c-blockquote-color: #{$blockquote-color};
   --c-blockquote-border-color: #{$blockquote-border-color};
   --c-list-color: #{$list-color};
@@ -104,6 +121,7 @@ $light-gray-color: #eeeeee !default;
   --c-dark-color: #{$dark-color};
   --c-light-color: #{$light-color};
 
+  --c-accent-color : #{$accent-color} ;
   --c-accent2-color: #{$accent2-color};
   --c-accent3-color: #{$accent3-color};
   --c-accent4-color: #{$accent4-color};

@@ -1,7 +1,7 @@
 :root {
   --c-bg-color: #272822;
   --c-is-dark-bg: true;
-  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-debug-color: #F0808020;
   --c-box-bg-color: #0c0c0b;
   --c-table-bg-color: black;
   --c-code-bg-color: #0c0c0b;
@@ -15,7 +15,6 @@
   --c-selection-color: #ffffff;
   --c-selection-bg-color: #ac94e8;
   --c-heading-color: #a6e22e;
-  --c-accent-color: #f92672 ;
   --c-blockquote-color: rgba(221, 221, 221, 0.7);
   --c-blockquote-border-color: #1abc9c;
   --c-list-color: #ddd;
@@ -34,9 +33,10 @@
   --c-error-color: #ee675d;
   --c-dark-color: #546778;
   --c-light-color: #dde5ee;
-  --c-accent2-color: #d08450;
-  --c-accent3-color: #ac94e8;
-  --c-accent4-color: #60d2b6;
+  --c-accent-color: #f92672 ;
+  --c-accent2-color: #2ea6e2;
+  --c-accent3-color: #e26a2e;
+  --c-accent4-color: #e22ea6;
   --c-navy-color: #546778;
   --c-green-color: #93d260;
   --c-teal-color: #60d2b6;
