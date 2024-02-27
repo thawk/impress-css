@@ -7,7 +7,7 @@
   --c-heading-font: [League Gothic, Impact, sans-serif];
   --c-heading-line-height: 1.2;
   --c-heading-letter-spacing: normal;
-  --c-heading-text-transform: uppercase;
+  --c-heading-text-transform: none;
   --c-heading-text-shadow: none;
   --c-heading-font-weight: normal;
   --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);

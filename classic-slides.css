@@ -8,7 +8,7 @@
   --c-heading-font: -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Arial, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif;
   --c-heading-line-height: 1.2;
   --c-heading-letter-spacing: normal;
-  --c-heading-text-transform: uppercase;
+  --c-heading-text-transform: none;
   --c-heading-text-shadow: none;
   --c-heading-font-weight: bold;
   --c-heading-1-text-shadow: -2px 2px 4px var(--c-shadow-color-9);
@@ -1446,7 +1446,8 @@ body.impress-enabled #impress-help {
 }
 #impress .future .fly-in {
   transform: translateY(-2100px);
-  opacity: 0; /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
+  opacity: 0;
+  /* Make it invisible, just so it doesn't clutter some other slide that might be in the position where we moved it */
 }
 #impress .present .fly-in {
   transform: translateY(0px);

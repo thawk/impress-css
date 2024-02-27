@@ -2,7 +2,7 @@
 :root {
   --c-bg-color: #86f0fa;
   --c-is-dark-bg: false;
-  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-debug-color: #F0808020;
   --c-box-bg-color: #b7f6fc;
   --c-table-bg-color: #e8fcfe;
   --c-code-bg-color: #b7f6fc;
@@ -59,12 +59,12 @@ body.impress-enabled,
 
 #impress .step,
 .reveal section:not(.stack) {
-  background: url("../images/深交所.png") left 50px bottom 20px/120px auto no-repeat, url("../images/深证通.png") right 50px bottom 28px/150px auto no-repeat;
+  background: url("../images/深交所.png") left 5.21% bottom 3%/12.5% auto no-repeat fixed, url("../images/深证通.png") right 5.21% bottom 3.1%/15.63% auto no-repeat fixed;
 }
 
 #impress .step.title,
 .reveal section:not(.stack).title {
-  background: url("../images/深交所.png") left 35% bottom 50px/120px auto no-repeat fixed, url("../images/深证通.png") right 35% bottom 58px/150px auto no-repeat;
+  background: url("../images/深交所.png") left 35% bottom 7.14%/12.5% auto no-repeat fixed, url("../images/深证通.png") right 35% bottom 8.29%/15.63% auto no-repeat fixed;
 }
 
 /*# sourceMappingURL=%E5%A4%A7%E6%B9%BE%E5%8C%BA.css.map */
