@@ -5,11 +5,11 @@ body.impress-enabled,
 }
 
 #impress .step,
-.reveal section {
+.reveal section:not(.stack) {
   @include slideBackground();
 }
 
 #impress .step.title,
-.reveal section.title {
+.reveal section:not(.stack).title {
   @include titleSlideBackground();
 }

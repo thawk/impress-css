@@ -8,10 +8,10 @@ TARGETS = \
 
 all: $(TARGETS)
 
-themes/%.css:src/color-schemes/%.scss src/color-schemes/_color_scheme.scss
+themes/%.css:src/color-schemes/%.scss $(wildcard src/color-schemes/_*.scss)
 	npx sass --no-error-css $< $@
 
-layouts/%.css:src/layouts/%.scss src/layouts/_layout.scss
+layouts/%.css:src/layouts/%.scss $(wildcard src/layouts/_*.scss)
 	npx sass --no-error-css $< $@
 
 classic-slides.css:src/classic-slides.scss $(wildcard src/_*.scss) src/layouts/_layout.scss
