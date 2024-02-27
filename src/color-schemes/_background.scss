@@ -3,3 +3,13 @@ body.impress-enabled,
   @include bodyBackground();
   background-color: var(--c-bg-color);
 }
+
+#impress .step,
+.reveal section {
+  @include slideBackground();
+}
+
+#impress .step.title,
+.reveal section.title {
+  @include titleSlideBackground();
+}

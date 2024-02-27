@@ -57,4 +57,14 @@ body.impress-enabled,
   background-color: var(--c-bg-color);
 }
 
+#impress .step,
+.reveal section {
+  background: url("../images/深交所.png") left 50px bottom 20px/120px auto no-repeat, url("../images/深证通.png") right 50px bottom 28px/150px auto no-repeat;
+}
+
+#impress .step.title,
+.reveal section.title {
+  background: url("../images/深交所.png") left 35% bottom 50px/120px auto no-repeat fixed, url("../images/深证通.png") right 35% bottom 58px/150px auto no-repeat;
+}
+
 /*# sourceMappingURL=%E5%A4%A7%E6%B9%BE%E5%8C%BA.css.map */
