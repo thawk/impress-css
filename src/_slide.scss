@@ -1,3 +1,5 @@
+@import 'util';
+
 @mixin slide {
   &.tc > ol,
   &.tc > dl,
@@ -227,14 +229,12 @@
     table {
       background-color: var(--c-table-bg-color);
     }
-  }
 
-  table.borderless,
-  table.borderless th,
-  table.borderless td,
-  table.borderless thead th,
-  table.borderless thead td {
-    border: none;
+    &.borderless {
+      &, th, td, thead th, thead td {
+        border: none;
+      }
+    }
   }
 
   /* highlight.js uses table to show line number */
@@ -348,12 +348,12 @@
     font-size: 80%;
   }
 
-  .more-text .step {
-    font-size: 65%;
-  }
-
   .more-text table {
     font-size: 80%;
+  }
+
+  @include most-outer-selector('.more-text') {
+    font-size: 65%;
   }
 
   .float-right {

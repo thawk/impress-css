@@ -1,0 +1,26 @@
+@use 'sass:list';
+
+/*
+ * @include most-outer-selector('.bold') {
+ *   font-weight: bold;
+ * }
+ */
+@mixin most-outer-selector($new-class) {
+ $current-selector: &;
+
+ %style {
+   @content;
+ }
+
+ @each $item in $current-selector {
+   $first-item: nth($item, 1);
+
+   $appended-item: $first-item + $new-class;
+
+   $new-item: set-nth($item, 1, $appended-item);
+
+   @at-root #{$new-item} {
+     @extend %style;
+   }
+ }
+}
