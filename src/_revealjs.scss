@@ -1,5 +1,6 @@
 @import "effects";
 @import "markdown_mixins";
+@import "tachyons_mixins";
 @import "slide";
 
 :root {
@@ -18,9 +19,12 @@
   section {
     @include effects(fragment, visible, current-fragment);
     @include slide;
+    @include tachyons_styles();
 
     pre.code-wrapper {
       width: 100%;
+
+      @include tachyons_styles();
     }
   }
 
@@ -46,6 +50,11 @@
     height: 100%;
 
     &.tc {
+      align-items: center;
+    }
+    // 左右布局
+    &.flex-row {
+      flex-direction: row;
       align-items: center;
     }
   }
