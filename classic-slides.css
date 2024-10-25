@@ -1642,42 +1642,42 @@ body.impress-enabled #impress-help {
 #impress .step .font-normalsize {
   font-size: 100%;
 }
-#impress .step .font-smaller,
-#impress .step .font-smaller1 {
+#impress .step .font-smaller, #impress .step.font-smaller,
+#impress .step .font-smaller1, #impress .step.font-smaller1 {
   font-size: 90%;
 }
-#impress .step .font-smaller2 {
+#impress .step .font-smaller2, #impress .step.font-smaller2 {
   font-size: 80%;
 }
-#impress .step .font-smaller3 {
+#impress .step .font-smaller3, #impress .step.font-smaller3 {
   font-size: 70%;
 }
-#impress .step .font-smaller4 {
+#impress .step .font-smaller4, #impress .step.font-smaller4 {
   font-size: 60%;
 }
-#impress .step .font-smaller5 {
+#impress .step .font-smaller5, #impress .step.font-smaller5 {
   font-size: 50%;
 }
-#impress .step .font-larger,
-#impress .step .font-larger1 {
+#impress .step .font-larger, #impress .step.font-larger,
+#impress .step .font-larger1, #impress .step.font-larger1 {
   font-size: 110%;
 }
-#impress .step .font-larger2 {
+#impress .step .font-larger2, #impress .step.font-larger2 {
   font-size: 120%;
 }
-#impress .step .font-larger3 {
+#impress .step .font-larger3, #impress .step.font-larger3 {
   font-size: 130%;
 }
-#impress .step .font-larger4 {
+#impress .step .font-larger4, #impress .step.font-larger4 {
   font-size: 150%;
 }
-#impress .step .font-larger5 {
+#impress .step .font-larger5, #impress .step.font-larger5 {
   font-size: 200%;
 }
-#impress .step .more-text {
+#impress .step .more-text, #impress .step.more-text {
   font-size: 80%;
 }
-#impress .step .more-text table {
+#impress .step .more-text table, #impress .step.more-text table {
   font-size: 80%;
 }
 #impress.more-text .step .step {
@@ -2295,42 +2295,42 @@ body.impress-enabled #impress-help {
 .reveal section .font-normalsize {
   font-size: 100%;
 }
-.reveal section .font-smaller,
-.reveal section .font-smaller1 {
+.reveal section .font-smaller, .reveal section.font-smaller,
+.reveal section .font-smaller1, .reveal section.font-smaller1 {
   font-size: 90%;
 }
-.reveal section .font-smaller2 {
+.reveal section .font-smaller2, .reveal section.font-smaller2 {
   font-size: 80%;
 }
-.reveal section .font-smaller3 {
+.reveal section .font-smaller3, .reveal section.font-smaller3 {
   font-size: 70%;
 }
-.reveal section .font-smaller4 {
+.reveal section .font-smaller4, .reveal section.font-smaller4 {
   font-size: 60%;
 }
-.reveal section .font-smaller5 {
+.reveal section .font-smaller5, .reveal section.font-smaller5 {
   font-size: 50%;
 }
-.reveal section .font-larger,
-.reveal section .font-larger1 {
+.reveal section .font-larger, .reveal section.font-larger,
+.reveal section .font-larger1, .reveal section.font-larger1 {
   font-size: 110%;
 }
-.reveal section .font-larger2 {
+.reveal section .font-larger2, .reveal section.font-larger2 {
   font-size: 120%;
 }
-.reveal section .font-larger3 {
+.reveal section .font-larger3, .reveal section.font-larger3 {
   font-size: 130%;
 }
-.reveal section .font-larger4 {
+.reveal section .font-larger4, .reveal section.font-larger4 {
   font-size: 150%;
 }
-.reveal section .font-larger5 {
+.reveal section .font-larger5, .reveal section.font-larger5 {
   font-size: 200%;
 }
-.reveal section .more-text {
+.reveal section .more-text, .reveal section.more-text {
   font-size: 80%;
 }
-.reveal section .more-text table {
+.reveal section .more-text table, .reveal section.more-text table {
   font-size: 80%;
 }
 .reveal.more-text section section {

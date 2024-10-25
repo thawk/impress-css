@@ -310,45 +310,45 @@
   .font-normalsize {
     font-size: 100%;
   }
-  .font-smaller,
-  .font-smaller1 {
+  .font-smaller, &.font-smaller,
+  .font-smaller1, &.font-smaller1 {
     font-size: 90%;
   }
-  .font-smaller2 {
+  .font-smaller2, &.font-smaller2 {
     font-size: 80%;
   }
-  .font-smaller3 {
+  .font-smaller3, &.font-smaller3 {
     font-size: 70%;
   }
-  .font-smaller4 {
+  .font-smaller4, &.font-smaller4 {
     font-size: 60%;
   }
-  .font-smaller5 {
+  .font-smaller5, &.font-smaller5 {
     font-size: 50%;
   }
-  .font-larger,
-  .font-larger1 {
+  .font-larger, &.font-larger,
+  .font-larger1, &.font-larger1 {
     font-size: 110%;
   }
-  .font-larger2 {
+  .font-larger2, &.font-larger2 {
     font-size: 120%;
   }
-  .font-larger3 {
+  .font-larger3, &.font-larger3 {
     font-size: 130%;
   }
-  .font-larger4 {
+  .font-larger4, &.font-larger4 {
     font-size: 150%;
   }
-  .font-larger5 {
+  .font-larger5, &.font-larger5 {
     font-size: 200%;
   }
 
   /* more text, smaller font size */
-  .more-text {
+  .more-text, &.more-text {
     font-size: 80%;
   }
 
-  .more-text table {
+  .more-text table, &.more-text table {
     font-size: 80%;
   }
 
