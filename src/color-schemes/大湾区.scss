@@ -12,6 +12,7 @@ $szse-logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAFoCAYAAACv5J9AA
 
 @mixin bodyBackground() {
 	background: 100% 100% url(#{$bg-img}) no-repeat;
+    background-size: cover;
 }
 
 @mixin slideBackground() {
