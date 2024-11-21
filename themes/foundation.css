@@ -1,11 +1,11 @@
 :root {
   --c-bg-color: #eee;
   --c-is-dark-bg: false;
-  --c-debug-color: #F0808020;
-  --c-box-bg-color: white;
-  --c-table-bg-color: white;
-  --c-code-bg-color: white;
-  --c-box-code-bg-color: white;
+  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-box-bg-color: hsl(0, 0%, 103.3333333333%);
+  --c-table-bg-color: hsl(0, 0%, 113.3333333333%);
+  --c-code-bg-color: hsl(0, 0%, 103.3333333333%);
+  --c-box-code-bg-color: hsl(0, 0%, 113.3333333333%);
   --c-shadow-color: #bbbbbb;
   --c-shadow-color-1: rgba(187, 187, 187, 0.1);
   --c-shadow-color-2: rgba(187, 187, 187, 0.2);
@@ -18,13 +18,13 @@
   --c-blockquote-color: rgba(0, 0, 0, 0.7);
   --c-blockquote-border-color: #1abc9c;
   --c-list-color: black;
-  --c-list-alt-color: #4d0000;
+  --c-list-alt-color: rgb(76.5, 0, 0);
   --c-border-color: #998;
   --c-border-color-2: rgba(153, 153, 136, 0.2);
   --c-border-color-3: rgba(153, 153, 136, 0.3);
   --c-border-color-05: rgba(153, 153, 136, 0.05);
   --c-border-color-075: rgba(153, 153, 136, 0.075);
-  --c-link-bg-color: #c47777;
+  --c-link-bg-color: rgb(195.5, 119, 119);
   --c-link-color: #070;
   --c-link-color-hover: #001100;
   --c-primary-color: #4e91e4;

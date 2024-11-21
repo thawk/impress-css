@@ -1959,11 +1959,6 @@ body.impress-enabled #impress-help {
   opacity: 0;
 }
 
-/*
- * @include most-outer-selector('.bold') {
- *   font-weight: bold;
- * }
- */
 :root {
   --r-background-color: $bg-color;
   --r-main-color: $main-color;

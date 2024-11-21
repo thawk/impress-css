@@ -2,7 +2,7 @@
 
 // Background of the presentation
 $bg-color: #cccccc !default;
-$is-dark-bg: (color.lightness($bg-color) < 50) !default;
+$is-dark-bg: (color.channel($bg-color, "lightness", $space: hsl) < 50) !default;
 $debug-color: #F0808020 !default;
 
 $box-bg-color:   color.adjust($bg-color, $lightness: if($is-dark-bg, -10%,  10%)) !default;
@@ -19,7 +19,7 @@ $selection-bg-color: #ac94e8 !default;
 // Headings
 $heading-color: #4e91e4 !default; // hsl(213, 74%, 60%)
 
-$heading-bg-deg: color.hue($heading-color) - color.hue($bg-color);
+$heading-bg-deg: color.channel($heading-color, "hue", $space:hsl) - color.channel($bg-color, "hue", $space:hsl);
 $accent-direction: -1;
 @if $heading-bg-deg <= -180 or $heading-bg-deg >=0 and $heading-bg-deg < 180 {
   $accent-direction: 1;   // heading-color在bg-color正方向180度内

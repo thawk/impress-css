@@ -1,16 +1,16 @@
 :root {
   --c-bg-color: #282b2e;
   --c-is-dark-bg: true;
-  --c-debug-color: #F0808020;
-  --c-box-bg-color: #101213;
-  --c-table-bg-color: black;
-  --c-code-bg-color: #101213;
-  --c-box-code-bg-color: black;
-  --c-shadow-color: #575e65;
-  --c-shadow-color-1: rgba(87, 94, 101, 0.1);
-  --c-shadow-color-2: rgba(87, 94, 101, 0.2);
-  --c-shadow-color-5: rgba(87, 94, 101, 0.5);
-  --c-shadow-color-9: rgba(87, 94, 101, 0.9);
+  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-box-bg-color: rgb(16.2790697674, 17.5, 18.7209302326);
+  --c-table-bg-color: hsl(210, 6.976744186%, -3.137254902%);
+  --c-code-bg-color: rgb(16.2790697674, 17.5, 18.7209302326);
+  --c-box-code-bg-color: hsl(210, 6.976744186%, -3.137254902%);
+  --c-shadow-color: rgb(87.4418604651, 94, 100.5581395349);
+  --c-shadow-color-1: rgba(87.4418604651, 94, 100.5581395349, 0.1);
+  --c-shadow-color-2: rgba(87.4418604651, 94, 100.5581395349, 0.2);
+  --c-shadow-color-5: rgba(87.4418604651, 94, 100.5581395349, 0.5);
+  --c-shadow-color-9: rgba(87.4418604651, 94, 100.5581395349, 0.9);
   --c-main-color: #e0e2e4;
   --c-selection-color: #ffffff;
   --c-selection-bg-color: #ac94e8;
@@ -24,9 +24,9 @@
   --c-border-color-3: rgba(129, 142, 150, 0.3);
   --c-border-color-05: rgba(129, 142, 150, 0.05);
   --c-border-color-075: rgba(129, 142, 150, 0.075);
-  --c-link-bg-color: #949597;
+  --c-link-bg-color: rgb(147.5, 149, 150.5);
   --c-link-color: #d39745;
-  --c-link-color-hover: #e7c597;
+  --c-link-color-hover: rgb(230.5130434783, 197.1217391304, 151.4869565217);
   --c-primary-color: #4e91e4;
   --c-success-color: #4acf7f;
   --c-warning-color: #fbc850;

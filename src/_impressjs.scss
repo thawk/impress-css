@@ -1,6 +1,6 @@
-@import "effects";
-@import "markdown_mixins";
-@import "slide";
+@use "effects";
+@use "markdown_mixins";
+@use "slide";
 
 :root {
   --c-default-step-width: 1800px;
@@ -26,13 +26,13 @@ body.impress-enabled {
 
 #impress {
   .step {
-    @include effects(substep, substep-visible, substep-active);
-    @include slide;
+    @include effects.effects(substep, substep-visible, substep-active);
+    @include slide.slide;
   }
 
   .step.markdown,
   .step .markdown {
-    @include markdown;
+    @include markdown_mixins.markdown;
   }
 
   // .vcenter让幻灯片垂直居中

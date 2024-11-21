@@ -1,11 +1,11 @@
 :root {
   --c-bg-color: #fefefe;
   --c-is-dark-bg: false;
-  --c-debug-color: #F0808020;
-  --c-box-bg-color: white;
-  --c-table-bg-color: white;
-  --c-code-bg-color: white;
-  --c-box-code-bg-color: white;
+  --c-debug-color: rgba(240, 128, 128, 0.1254901961);
+  --c-box-bg-color: hsl(0, 0%, 109.6078431373%);
+  --c-table-bg-color: hsl(0, 0%, 119.6078431373%);
+  --c-code-bg-color: hsl(0, 0%, 109.6078431373%);
+  --c-box-code-bg-color: hsl(0, 0%, 119.6078431373%);
   --c-shadow-color: #cbcbcb;
   --c-shadow-color-1: rgba(203, 203, 203, 0.1);
   --c-shadow-color-2: rgba(203, 203, 203, 0.2);
@@ -24,9 +24,9 @@
   --c-border-color-3: rgba(105, 105, 105, 0.3);
   --c-border-color-05: rgba(105, 105, 105, 0.05);
   --c-border-color-075: rgba(105, 105, 105, 0.075);
-  --c-link-bg-color: #7fbfd4;
+  --c-link-bg-color: rgb(127, 190.5, 212);
   --c-link-color: #aa5d00;
-  --c-link-color-hover: #442500;
+  --c-link-color-hover: rgb(68, 37.2, 0);
   --c-primary-color: #4e91e4;
   --c-success-color: #4acf7f;
   --c-warning-color: #fbc850;

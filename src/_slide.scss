@@ -1,4 +1,4 @@
-@import 'util';
+@use 'util';
 
 @mixin slide {
   &.tc > ol,
@@ -352,7 +352,7 @@
     font-size: 80%;
   }
 
-  @include most-outer-selector('.more-text') {
+  @include util.most-outer-selector('.more-text') {
     font-size: 65%;
   }
 

@@ -1,7 +1,7 @@
-@import "effects";
-@import "markdown_mixins";
-@import "tachyons_mixins";
-@import "slide";
+@use "effects";
+@use "markdown_mixins";
+@use "tachyons_mixins";
+@use "slide";
 
 :root {
   // for reveal.js
@@ -17,14 +17,14 @@
 
 .reveal {
   section {
-    @include effects(fragment, visible, current-fragment);
-    @include slide;
-    @include tachyons_styles();
+    @include effects.effects(fragment, visible, current-fragment);
+    @include slide.slide;
+    @include tachyons_mixins.tachyons_styles();
 
     pre.code-wrapper {
       width: 100%;
 
-      @include tachyons_styles();
+      @include tachyons_mixins.tachyons_styles();
     }
   }
 
@@ -37,7 +37,7 @@
   }
 
   section[data-markdown] {
-    @include markdown;
+    @include markdown_mixins.markdown;
   }
 
   // .vcenter让幻灯片垂直居中

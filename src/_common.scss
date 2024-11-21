@@ -19,7 +19,7 @@
 //     list-style: none;
 // }
 
-@import "tachyons_mixins";
+@use "tachyons_mixins";
 
 .noaccent         { color: var(--c-main-color); }
 .accent, .accent1 { color: var(--c-accent-color); }
@@ -68,6 +68,6 @@ body.impress-enabled,
   color: var(--c-main-color);
   line-height: var(--c-main-line-height);
 
-  @include tachyons_styles();
+  @include tachyons_mixins.tachyons_styles();
 }
 
